@@ -11,6 +11,7 @@ import { registerFireOutlookLayer } from './fire-outlook.ts';
 import { registerFuelMoistureLayer } from './fuels.ts';
 import { registerMetarLayer } from './metars.ts';
 import { registerRainGaugesLayer } from './rain-gauges.ts';
+import { registerSpotRequestsLayer } from './spot-requests.ts';
 import { registerRainTotalsLayer } from './rain-totals.ts';
 import {
     arcgisExportTileUrl,
@@ -196,6 +197,7 @@ export function registerCatalogLayers(): void {
 
     registerRainGaugesLayer();
     registerFuelMoistureLayer();
+    registerSpotRequestsLayer();
 
     createGeoLayer({
         id: 'buoys',
