@@ -16,6 +16,7 @@ import {
     spot,
     statusLabel,
     statusTone,
+    type SpotRequest,
 } from '../spot/spot.ts';
 import { escapeHtml, linkHtml, registerFeatureLayers, unregisterFeatureLayers } from './feature-popup.ts';
 import {
@@ -44,7 +45,8 @@ let moveTimer: ReturnType<typeof setTimeout> | null = null;
 let moveHandler: (() => void) | null = null;
 let stopWatch: WatchStopHandle | null = null;
 
-function detailHtml(props: Record<string, unknown>): string {
+/** Popup card for a spot request feature (also used by the temporary Zoom marker). */
+export function spotDetailHtml(props: Record<string, unknown>): string {
     const id = String(props.id || '');
     const tz = String(props.timeZone || '');
     const when = (raw: unknown): string => {
@@ -91,6 +93,24 @@ function inView(map: LiveWxMap, lat: number, lon: number): boolean {
     return false;
 }
 
+/** GeoJSON properties for a spot request (map layer and temporary marker). */
+export function spotFeatureProps(r: SpotRequest): Record<string, unknown> {
+    return {
+        id: r.id,
+        projectName: r.projectName,
+        incidentName: r.incidentName,
+        actionStatus: r.actionStatus,
+        office: r.office,
+        officeCity: r.officeCity,
+        agency: r.agency,
+        timeZone: r.timeZone,
+        deliverAt: r.deliverAt ?? '',
+        filledAt: r.filledAt ?? '',
+        update: r.update ?? '',
+        color: TONE_COLORS[statusTone(r.actionStatus)],
+    };
+}
+
 function buildFeatures(map: LiveWxMap): FeatureCollection {
     const features: FeatureCollection['features'] = [];
     for (const r of spot.requests) {
@@ -99,20 +119,7 @@ function buildFeatures(map: LiveWxMap): FeatureCollection {
         features.push({
             type: 'Feature',
             geometry: { type: 'Point', coordinates: [r.lon, r.lat] },
-            properties: {
-                id: r.id,
-                projectName: r.projectName,
-                incidentName: r.incidentName,
-                actionStatus: r.actionStatus,
-                office: r.office,
-                officeCity: r.officeCity,
-                agency: r.agency,
-                timeZone: r.timeZone,
-                deliverAt: r.deliverAt ?? '',
-                filledAt: r.filledAt ?? '',
-                update: r.update ?? '',
-                color: TONE_COLORS[statusTone(r.actionStatus)],
-            },
+            properties: spotFeatureProps(r),
         });
     }
     return { type: 'FeatureCollection', features };
@@ -177,7 +184,7 @@ function registerPopup(): void {
     registerFeatureLayers([CIRCLE_ID], {
         label: 'Spot Forecast',
         titleKeys: ['projectName'],
-        detailHtml,
+        detailHtml: spotDetailHtml,
     });
 }
 
