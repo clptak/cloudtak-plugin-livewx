@@ -6,6 +6,7 @@
 import { watch, type WatchStopHandle } from 'vue';
 import type { FeatureCollection } from '../core/geojson.ts';
 import { firstSymbolLayer, mapOf } from '../core/map-host.ts';
+import { CLOUD_STAR_ICON, ensureMapIcons, removeMapIcons } from '../core/map-icons.ts';
 import type { LiveWxMap } from '../core/map-types.ts';
 import { state } from '../core/state.ts';
 import { formatInTimeZone } from '../core/timezone.ts';
@@ -31,11 +32,15 @@ import {
 const LAYER_ID = 'spot_requests';
 const SOURCE_ID = 'livewx-spot-src';
 const CIRCLE_ID = 'livewx-spot-circle';
+const ICON_ID = 'livewx-spot-icon';
+/** Spot Forecasts markers: yellow circle with a cloud-star icon; status shows as the ring. */
+const SPOT_FILL = '#fab005';
 
+/** Status ring colors; darker than the page badges so they stand out on the yellow circle. */
 const TONE_COLORS: Record<string, string> = {
-    complete: '#2fb344',
-    pending: '#f59f00',
-    other: '#ae3ec9',
+    complete: '#2b8a3e',
+    pending: '#c92a2a',
+    other: '#862e9c',
 };
 
 let running = false;
@@ -133,12 +138,26 @@ function paint(map: LiveWxMap): void {
             type: 'circle',
             source: SOURCE_ID,
             paint: {
-                'circle-radius': 7,
-                'circle-color': ['get', 'color'],
-                'circle-stroke-width': 1.5,
-                'circle-stroke-color': '#fff',
+                'circle-radius': 11,
+                'circle-color': SPOT_FILL,
+                // Status (complete / requested / other) as the ring color.
+                'circle-stroke-width': 2.5,
+                'circle-stroke-color': ['get', 'color'],
             },
         }, firstSymbolLayer(map));
+    }
+    // Style swaps drop images, so (re-)add the icon on every paint.
+    if (ensureMapIcons(map, [CLOUD_STAR_ICON]) && !map.getLayer(ICON_ID)) {
+        map.addLayer({
+            id: ICON_ID,
+            type: 'symbol',
+            source: SOURCE_ID,
+            layout: {
+                'icon-image': CLOUD_STAR_ICON.id,
+                'icon-allow-overlap': true,
+                'icon-ignore-placement': true,
+            },
+        });
     }
 }
 
@@ -181,7 +200,7 @@ function unbindMove(): void {
 }
 
 function registerPopup(): void {
-    registerFeatureLayers([CIRCLE_ID], {
+    registerFeatureLayers([CIRCLE_ID, ICON_ID], {
         label: 'Spot Forecast',
         titleKeys: ['projectName'],
         detailHtml: spotDetailHtml,
@@ -212,10 +231,12 @@ export function registerSpotRequestsLayer(): void {
             stopWatch?.();
             stopWatch = null;
             unbindMove();
-            unregisterFeatureLayers([CIRCLE_ID]);
+            unregisterFeatureLayers([CIRCLE_ID, ICON_ID]);
             const map = mapOf();
             if (map) {
+                removeLayerSafe(map, ICON_ID);
                 removeLayerSafe(map, CIRCLE_ID);
+                removeMapIcons(map, [CLOUD_STAR_ICON]);
                 removeSourceSafe(map, SOURCE_ID);
             }
             data = emptyFc();
