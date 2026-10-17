@@ -10,6 +10,7 @@ import { markRaw, reactive } from 'vue';
 import { fetchJson, roundCoord, TtlCache } from '../core/egress.ts';
 
 export const SPOT_SERVICE = 'https://mapservices.weather.noaa.gov/vector/rest/services/fire_weather/nws_fire_weather_spot/MapServer/0';
+const SPOT_FIELDS = 'snumunum,name,type,tid,lat,lon,rmade,rfill,stat,wfo,deliverdtg';
 export const SPOT_SITE = 'https://spot.weather.gov';
 export const NEW_REQUEST_URL = `${SPOT_SITE}/new-request`;
 /** Reuse the national list for this long before refetching (~230 KB). */
@@ -177,15 +178,9 @@ export function loadSpotRequests(force = false): Promise<void> {
     spot.loading = true;
     inflight = (async () => {
         try {
-            const q = new URLSearchParams({
-                where: '1=1',
-                outFields: 'snumunum,name,type,tid,lat,lon,rmade,rfill,stat,wfo,deliverdtg',
-                returnGeometry: 'true',
-                outSR: '4326',
-                f: 'geojson',
-            });
+            // Query values stay unencoded: the LiveWX proxy encodes them upstream.
             const raw = await fetchJson<{ features?: unknown; error?: { message?: string } }>(
-                `${SPOT_SERVICE}/query?${q.toString()}`,
+                `${SPOT_SERVICE}/query?where=1=1&outFields=${SPOT_FIELDS}&returnGeometry=true&outSR=4326&f=geojson`,
             );
             if (raw?.error) throw new Error(raw.error.message || 'Spot Monitor service error');
             if (!Array.isArray(raw?.features)) throw new Error('Unexpected Spot Monitor response');
