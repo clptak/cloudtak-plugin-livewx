@@ -35,6 +35,15 @@ Requires CloudTAK **13.102** or newer. Apache-2.0 clean-room implementation (not
 - **Request a Spot Forecast** opens the official NWS request form in its own window — requests are submitted there, not from CloudTAK
 - Optional **Spot Forecasts** map layer (More) with a popup card linking to the forecast
 
+### Snow Tables (Northern Arizona)
+
+- Forecast snowfall from the [NWS Flagstaff Snow Tables](https://www.weather.gov/fgz/SnowTables) — the only NWS office that publishes them, so this is Northern Arizona only
+- Pick Counties / Tribal / Roadways, then a county, tribe or road, then a location or milepost: six **12-hour periods** (Day / Night, Arizona time) plus a **72-hour total**, using the NWS range labels and colors; nothing beyond 72 hours
+- **Zoom**, **Point forecast** and **Open on weather.gov** (small window) for the selected location
+- Optional **Snow Tables (N. Arizona)** map layer (More): locations colored by 72-hour total; click for the same 12-hour table; roadway mileposts optional
+- Location coordinates are not published by NWS — they are built from NWS, USGS GNIS, ADOT and OpenStreetMap data. Decisions, known limitations and how to correct them: [`data/snowtables/README.md`](data/snowtables/README.md)
+- Needs the updated server route (`www.weather.gov` added to the proxy allowlist)
+
 ### Layer catalog
 
 Foldable groups with consent dialogs, map keys, and status lines:
@@ -103,6 +112,7 @@ Symlink this checkout to `CloudTAK/app/plugins/livewx-radar`, copy or symlink `s
 - Forecast / alerts / many layers: [NWS API](https://www.weather.gov/documentation/services-web-api) and NOAA map services
 - Open-Meteo: [open-meteo.com](https://open-meteo.com/) (CC BY 4.0)
 - Spot forecasts: [NWS Spot Forecast Monitor](https://spot.weather.gov/) (read-only; unauthenticated active-request list)
+- Snow Tables: [NWS Flagstaff](https://www.weather.gov/fgz/SnowTables); location coordinates from USGS GNIS, ADOT milepost data (AZGeo) and © OpenStreetMap contributors (ODbL) — see [`data/snowtables/README.md`](data/snowtables/README.md)
 - Lightning: [Blitzortung.org](https://www.blitzortung.org/) & contributors (CC BY-SA 4.0); display adapted from [cmlaird/CloudTAK-Plugin-Lightning](https://github.com/cmlaird/CloudTAK-Plugin-Lightning) (MIT)
 - Site list / product taxonomy adapted from [Supercell Wx](https://github.com/dpaulat/supercell-wx) (MIT)
 - Feature parity inspired by [takwerx/atmosphere](https://github.com/takwerx/atmosphere) (independent reimplementation)
