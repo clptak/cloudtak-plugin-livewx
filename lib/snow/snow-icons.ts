@@ -4,8 +4,10 @@
  *
  * Paths are Tabler Icons "snowflake", "snowflake-off" and "temperature-snow"
  * (outline, v3.49, https://tabler.io/icons — MIT License, © Paweł Kuna). Drawn
- * white with a dark outline so they read on any basemap and colored circle.
+ * white with a dark outline (shared drawing in core/map-icons.ts) so they read
+ * on any basemap and colored circle.
  */
+import { ensureMapIcons, removeMapIcons, type MapIcon } from '../core/map-icons.ts';
 import type { LiveWxMap } from '../core/map-types.ts';
 
 export const SNOWFLAKE_ICON_ID = 'livewx-snowflake';
@@ -61,50 +63,17 @@ const ICONS: Record<string, string[]> = {
     [TEMP_SNOW_ICON_ID]: TEMPERATURE_SNOW,
 };
 
-/** Rendered size in device pixels (registered at pixelRatio 2 → 20 px on screen). */
-const SIZE = 40;
-/** Small margin so the outline is not clipped. */
-const PAD = 2;
-
-function draw(paths: string[]): ImageData | null {
-    const canvas = document.createElement('canvas');
-    canvas.width = SIZE;
-    canvas.height = SIZE;
-    const ctx = canvas.getContext('2d');
-    if (!ctx || typeof Path2D === 'undefined') return null;
-    ctx.clearRect(0, 0, SIZE, SIZE);
-    const scale = (SIZE - PAD * 2) / 24;
-    ctx.translate(PAD, PAD);
-    ctx.scale(scale, scale);
-    ctx.lineCap = 'round';
-    ctx.lineJoin = 'round';
-    const shapes = paths.map((d) => new Path2D(d));
-    // Dark outline first, then the white glyph on top.
-    ctx.strokeStyle = 'rgba(15, 23, 42, 0.9)';
-    ctx.lineWidth = 4.2;
-    for (const p of shapes) ctx.stroke(p);
-    ctx.strokeStyle = '#ffffff';
-    ctx.lineWidth = 2;
-    for (const p of shapes) ctx.stroke(p);
-    return ctx.getImageData(0, 0, SIZE, SIZE);
-}
-
 const SNOWFLAKES = [SNOWFLAKE_ICON_ID, SNOWFLAKE_OFF_ICON_ID];
+
+function icons(ids: string[]): MapIcon[] {
+    return ids.filter((id) => ICONS[id]).map((id) => ({ id, paths: ICONS[id], style: 'light' }));
+}
 
 /** Add the given icons to the map style if missing; false if the browser cannot draw them. */
 export function ensureSnowIcons(map: LiveWxMap, ids: string[] = SNOWFLAKES): boolean {
-    if (!map.addImage) return false;
-    for (const id of ids) {
-        if (map.hasImage?.(id)) continue;
-        const image = draw(ICONS[id] ?? []);
-        if (!image) return false;
-        map.addImage(id, image, { pixelRatio: 2 });
-    }
-    return true;
+    return ensureMapIcons(map, icons(ids));
 }
 
 export function removeSnowIcons(map: LiveWxMap, ids: string[] = SNOWFLAKES): void {
-    for (const id of ids) {
-        try { if (map.hasImage?.(id)) map.removeImage?.(id); } catch { /* ignore */ }
-    }
+    removeMapIcons(map, icons(ids));
 }
