@@ -29,7 +29,7 @@
 
         <dl class='ch-dl'>
             <dt>Official forecast</dt>
-            <dd>{{ rangeLabel(loc.official) }} <span class='ch-sub'>({{ exactLabel(loc.official) }})</span></dd>
+            <dd>{{ amountText(loc.official) }}</dd>
             <template v-if='likely'>
                 <dt>Most likely</dt>
                 <dd>{{ likely.label }} <span class='ch-sub'>({{ likely.pct }}%)</span></dd>
@@ -100,7 +100,7 @@ import {
     probPageUrl,
     snowProbs,
 } from '../../snow/snow-probs.ts';
-import { SNOW_TZ, exactLabel, rangeLabel } from '../../snow/snow-tables.ts';
+import { SNOW_TZ, amountText, rangeText as percentileRange } from '../../snow/snow-tables.ts';
 
 const props = defineProps<{
     /** Snow Tables place name. */
@@ -126,8 +126,7 @@ const likely = computed(() => (loc.value ? mostLikely(loc.value) : null));
 
 const rangeText = computed(() => {
     const p = loc.value?.percentiles;
-    if (!p || p.p10 == null || p.p90 == null) return '—';
-    return `${exactLabel(p.p10)} – ${exactLabel(p.p90)}`;
+    return p ? percentileRange(p.p10, p.p90) : '—';
 });
 
 const updatedLine = computed(() => {

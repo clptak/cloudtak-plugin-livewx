@@ -1,8 +1,9 @@
 /**
  * NWS Flagstaff Snow Tables locations on the map (Northern Arizona only).
- * Points in view, colored by their 72-hour total on the NWS scale; clicking one
- * shows its 12-hour periods. Uses the cached Snow Tables feed and the bundled
- * coordinate files — no extra requests per point.
+ * Points in view: a Tabler temperature-snow icon on a circle colored by the
+ * 72-hour total (NWS scale), labelled with the current 12-hour period's amount
+ * when that period has snow. Clicking one shows its 12-hour periods. Uses the
+ * cached Snow Tables feed and the bundled coordinate files — no extra requests.
  */
 import { watch, type WatchStopHandle } from 'vue';
 import type { FeatureCollection } from '../core/geojson.ts';
@@ -10,15 +11,17 @@ import { firstSymbolLayer, mapOf } from '../core/map-host.ts';
 import type { LiveWxMap } from '../core/map-types.ts';
 import { state } from '../core/state.ts';
 import { formatInTimeZone } from '../core/timezone.ts';
+import { TEMP_SNOW_ICON_ID, ensureSnowIcons, removeSnowIcons } from '../snow/snow-icons.ts';
 import { coordFor, loadSnowCoords, pointForecastUrl, snowCoords } from '../snow/snow-locations.ts';
 import {
     SNOW_TABS,
     SNOW_TZ,
+    amountText,
     exactLabel,
     loadSnowTables,
     officialUrl,
-    rangeLabel,
     seriesFor,
+    showExact,
     snowColor,
     snowTables,
     twelveHourPeriods,
@@ -37,6 +40,8 @@ import {
 const LAYER_ID = 'snow_tables';
 const SOURCE_ID = 'livewx-snow-src';
 const CIRCLE_ID = 'livewx-snow-circle';
+const SYMBOL_ID = 'livewx-snow-symbol';
+const ICONS = [TEMP_SNOW_ICON_ID];
 /** Locations with no snow in the next 72 hours. */
 const NO_SNOW_COLOR = '#6c757d';
 
@@ -69,7 +74,9 @@ function buildFeatures(map: LiveWxMap): FeatureCollection {
                 if (!c || !inView(map, c.lat, c.lon)) continue;
                 seen.add(key);
                 const series = seriesFor(table, tab, group, name);
-                const total = series ? twelveHourPeriods(table, series).total : null;
+                const periods = series ? twelveHourPeriods(table, series) : null;
+                const total = periods?.total ?? null;
+                const now = periods?.periods.find((x) => x.current)?.inches ?? null;
                 features.push({
                     type: 'Feature',
                     geometry: { type: 'Point', coordinates: [c.lon, c.lat] },
@@ -83,6 +90,8 @@ function buildFeatures(map: LiveWxMap): FeatureCollection {
                         kind: tab === 'roadways' ? 'road' : 'place',
                         total: total ?? '',
                         color: snowColor(total) ?? NO_SNOW_COLOR,
+                        // Current 12-hour period's amount; no label when it has no snow.
+                        label: showExact(now) ? exactLabel(now) : '',
                     },
                 });
             }
@@ -111,9 +120,9 @@ export function snowDetailHtml(props: Record<string, unknown>): string {
         for (const p of periods) {
             const fmt = (ms: number) => formatInTimeZone(ms, SNOW_TZ, { weekday: 'short', hour: 'numeric' });
             const label = `${fmt(p.start)} – ${fmt(p.end)}${p.current ? ' (now)' : ''}`;
-            rows.push(`<dt>${escapeHtml(label)}</dt><dd>${escapeHtml(`${rangeLabel(p.inches)} (${exactLabel(p.inches)})`)}</dd>`);
+            rows.push(`<dt>${escapeHtml(label)}</dt><dd>${escapeHtml(amountText(p.inches))}</dd>`);
         }
-        rows.push(`<dt><strong>72-hour total</strong></dt><dd><strong>${escapeHtml(`${rangeLabel(total)} (${exactLabel(total)})`)}</strong></dd>`);
+        rows.push(`<dt><strong>72-hour total</strong></dt><dd><strong>${escapeHtml(amountText(total))}</strong></dd>`);
     } else {
         rows.push('<dt>Forecast</dt><dd>Not loaded</dd>');
     }
@@ -134,19 +143,45 @@ export function snowDetailHtml(props: Record<string, unknown>): string {
 
 function paint(map: LiveWxMap): void {
     ensureGeoJsonSource(map, SOURCE_ID, data);
+    // Style swaps drop images too, so re-add the icon every time.
+    const icons = ensureSnowIcons(map, ICONS);
     if (!map.getLayer(CIRCLE_ID)) {
         map.addLayer({
             id: CIRCLE_ID,
             type: 'circle',
             source: SOURCE_ID,
             paint: {
-                'circle-radius': ['match', ['get', 'kind'], 'road', 4, 6],
+                'circle-radius': ['match', ['get', 'kind'], 'road', 8, 11],
+                'circle-opacity': 0.85,
                 'circle-color': ['get', 'color'],
                 'circle-stroke-width': 1,
                 // NWS colors "<1"" white; give those a dark edge so they stay visible.
                 'circle-stroke-color': ['case', ['==', ['get', 'color'], '#ffffff'], '#334155', '#ffffff'],
             },
         }, firstSymbolLayer(map));
+    }
+    if (icons && !map.getLayer(SYMBOL_ID)) {
+        map.addLayer({
+            id: SYMBOL_ID,
+            type: 'symbol',
+            source: SOURCE_ID,
+            layout: {
+                'icon-image': TEMP_SNOW_ICON_ID,
+                'icon-size': ['match', ['get', 'kind'], 'road', 0.75, 1],
+                'icon-allow-overlap': true,
+                'icon-ignore-placement': true,
+                'text-field': ['get', 'label'],
+                'text-size': 12,
+                'text-offset': [0, 1.35],
+                'text-anchor': 'top',
+                'text-optional': true,
+            },
+            paint: {
+                'text-color': '#ffffff',
+                'text-halo-color': '#0f172a',
+                'text-halo-width': 1.5,
+            },
+        });
     }
 }
 
@@ -189,7 +224,7 @@ function unbindMove(): void {
 }
 
 function registerPopup(): void {
-    registerFeatureLayers([CIRCLE_ID], {
+    registerFeatureLayers([CIRCLE_ID, SYMBOL_ID], {
         label: 'Snow Tables',
         titleKeys: ['name'],
         detailHtml: snowDetailHtml,
@@ -220,11 +255,13 @@ export function registerSnowTablesLayer(): void {
             stopWatch?.();
             stopWatch = null;
             unbindMove();
-            unregisterFeatureLayers([CIRCLE_ID]);
+            unregisterFeatureLayers([CIRCLE_ID, SYMBOL_ID]);
             const map = mapOf();
             if (map) {
+                removeLayerSafe(map, SYMBOL_ID);
                 removeLayerSafe(map, CIRCLE_ID);
                 removeSourceSafe(map, SOURCE_ID);
+                removeSnowIcons(map, ICONS);
             }
             data = emptyFc();
             featureCount = 0;
@@ -240,7 +277,8 @@ export function registerSnowTablesLayer(): void {
             if (snowTables.error && snowTables.fetchedAt == null) return snowTables.error;
             if (snowCoords.error) return snowCoords.error;
             if (snowTables.fetchedAt == null || !snowCoords.data) return 'Loading…';
-            return `${featureCount} in view`;
+            const snowing = data.features.filter((f) => f.properties?.label).length;
+            return `${featureCount} in view · ${snowing} with snow this period`;
         },
     });
 }

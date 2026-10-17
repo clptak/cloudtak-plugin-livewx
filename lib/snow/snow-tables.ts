@@ -188,6 +188,24 @@ export function exactLabel(inches: number | null): string {
     return `${inches.toFixed(1)}"`;
 }
 
+/** True when the exact amount adds information beyond the range label (not for zero / trace). */
+export function showExact(inches: number | null): boolean {
+    return inches != null && inches >= TRACE;
+}
+
+/** Range label, plus the exact amount only when it adds information: '0"', 'Trace', '<1" (0.3")'. */
+export function amountText(inches: number | null): string {
+    if (!showExact(inches)) return rangeLabel(inches);
+    return `${rangeLabel(inches)} (${exactLabel(inches)})`;
+}
+
+/** 10th–90th percentile range; '0"' when both ends are zero. */
+export function rangeText(low: number | null, high: number | null): string {
+    if (low == null || high == null) return '—';
+    if (!showExact(high)) return rangeLabel(high);
+    return `${exactLabel(low)} – ${exactLabel(high)}`;
+}
+
 const COLOR_SCALE: Array<{ threshold: number; color: string }> = [
     { threshold: 72, color: '#a870cf' },
     { threshold: 48, color: '#8d009d' },

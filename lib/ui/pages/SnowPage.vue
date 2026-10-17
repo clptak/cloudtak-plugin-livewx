@@ -153,7 +153,10 @@
                                 />
                                 {{ rangeLabel(p.inches) }}
                             </span>
-                            <div class='sn-sub'>
+                            <div
+                                v-if='showExact(p.inches)'
+                                class='sn-sub'
+                            >
                                 {{ exactLabel(p.inches) }}
                             </div>
                         </td>
@@ -173,7 +176,10 @@
                                 />
                                 {{ rangeLabel(table.total) }}
                             </span>
-                            <div class='sn-sub'>
+                            <div
+                                v-if='showExact(table.total)'
+                                class='sn-sub'
+                            >
                                 {{ exactLabel(table.total) }}
                             </div>
                         </td>
@@ -248,6 +254,7 @@ import {
     officialUrl,
     rangeLabel,
     seriesFor,
+    showExact,
     snowColor,
     snowTables,
     twelveHourPeriods,

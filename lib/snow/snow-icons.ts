@@ -1,14 +1,16 @@
 /**
- * Snowflake map icons for the Snow Chances layer, drawn into MapLibre images.
+ * Snow map icons for the Snow Chances and Snow Tables layers, drawn into
+ * MapLibre images.
  *
- * Paths are Tabler Icons "snowflake" and "snowflake-off" (outline, v3.49,
- * https://tabler.io/icons — MIT License, © Paweł Kuna). Drawn white with a dark
- * outline so they read on any basemap and on the chance-colored circle.
+ * Paths are Tabler Icons "snowflake", "snowflake-off" and "temperature-snow"
+ * (outline, v3.49, https://tabler.io/icons — MIT License, © Paweł Kuna). Drawn
+ * white with a dark outline so they read on any basemap and colored circle.
  */
 import type { LiveWxMap } from '../core/map-types.ts';
 
 export const SNOWFLAKE_ICON_ID = 'livewx-snowflake';
 export const SNOWFLAKE_OFF_ICON_ID = 'livewx-snowflake-off';
+export const TEMP_SNOW_ICON_ID = 'livewx-temperature-snow';
 
 const SNOWFLAKE = [
     'M10 4l2 1l2 -1',
@@ -41,6 +43,24 @@ const SNOWFLAKE_OFF = [
     'M3 3l18 18',
 ];
 
+const TEMPERATURE_SNOW = [
+    'M4 13.5a4 4 0 1 0 4 0v-8.5a2 2 0 1 0 -4 0v8.5',
+    'M4 9h4',
+    'M14.75 4l1 2h2.25',
+    'M17 4l-3 5l2 3',
+    'M20.25 10l-1.25 2l1.25 2',
+    'M22 12h-6l-2 3',
+    'M18 18h-2.25l-1 2',
+    'M17 20l-3 -5h-1',
+    'M12 9l2.088 .008',
+];
+
+const ICONS: Record<string, string[]> = {
+    [SNOWFLAKE_ICON_ID]: SNOWFLAKE,
+    [SNOWFLAKE_OFF_ICON_ID]: SNOWFLAKE_OFF,
+    [TEMP_SNOW_ICON_ID]: TEMPERATURE_SNOW,
+};
+
 /** Rendered size in device pixels (registered at pixelRatio 2 → 20 px on screen). */
 const SIZE = 40;
 /** Small margin so the outline is not clipped. */
@@ -69,20 +89,22 @@ function draw(paths: string[]): ImageData | null {
     return ctx.getImageData(0, 0, SIZE, SIZE);
 }
 
-/** Add both icons to the map style if missing; false if the browser cannot draw them. */
-export function ensureSnowIcons(map: LiveWxMap): boolean {
+const SNOWFLAKES = [SNOWFLAKE_ICON_ID, SNOWFLAKE_OFF_ICON_ID];
+
+/** Add the given icons to the map style if missing; false if the browser cannot draw them. */
+export function ensureSnowIcons(map: LiveWxMap, ids: string[] = SNOWFLAKES): boolean {
     if (!map.addImage) return false;
-    for (const [id, paths] of [[SNOWFLAKE_ICON_ID, SNOWFLAKE], [SNOWFLAKE_OFF_ICON_ID, SNOWFLAKE_OFF]] as const) {
+    for (const id of ids) {
         if (map.hasImage?.(id)) continue;
-        const image = draw([...paths]);
+        const image = draw(ICONS[id] ?? []);
         if (!image) return false;
         map.addImage(id, image, { pixelRatio: 2 });
     }
     return true;
 }
 
-export function removeSnowIcons(map: LiveWxMap): void {
-    for (const id of [SNOWFLAKE_ICON_ID, SNOWFLAKE_OFF_ICON_ID]) {
+export function removeSnowIcons(map: LiveWxMap, ids: string[] = SNOWFLAKES): void {
+    for (const id of ids) {
         try { if (map.hasImage?.(id)) map.removeImage?.(id); } catch { /* ignore */ }
     }
 }

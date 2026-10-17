@@ -21,7 +21,7 @@ import {
     probPageUrl,
     snowProbs,
 } from '../snow/snow-probs.ts';
-import { SNOW_TZ, exactLabel, rangeLabel } from '../snow/snow-tables.ts';
+import { SNOW_TZ, amountText, rangeText } from '../snow/snow-tables.ts';
 import { escapeHtml, linkHtml, registerFeatureLayers, unregisterFeatureLayers } from './feature-popup.ts';
 import {
     emptyFc,
@@ -112,10 +112,10 @@ export function snowChancesDetailHtml(props: Record<string, unknown>): string {
     const p = loc.percentiles;
     const rows: Array<[string, string]> = [
         ['Window', `${fmt(win.start)} – ${fmt(win.end)} MST`],
-        ['Official', `${rangeLabel(loc.official)} (${exactLabel(loc.official)})`],
+        ['Official', amountText(loc.official)],
     ];
     if (likely) rows.push(['Most likely', `${likely.label} (${likely.pct}%)`]);
-    if (p.p10 != null && p.p90 != null) rows.push(['Likely range', `${exactLabel(p.p10)} – ${exactLabel(p.p90)} (10th–90th %)`]);
+    if (p.p10 != null && p.p90 != null) rows.push(['Likely range', `${rangeText(p.p10, p.p90)} (10th–90th %)`]);
     rows.push(['Snow begins', timing(loc.start)], ['Most intense', timing(loc.peak)], ['Snow ends', timing(loc.end)]);
     for (const e of loc.exceed) rows.push([`Chance ${e.label}`, e.pct == null ? '—' : `${e.pct}%`]);
     const dl = rows.map(([k, v]) => `<dt>${escapeHtml(k)}</dt><dd>${escapeHtml(v)}</dd>`).join('');
