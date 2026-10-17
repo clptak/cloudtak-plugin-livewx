@@ -75,6 +75,8 @@ export interface PersistedSettings {
     snowTab: SnowTab;
     snowGroup: string;
     snowLocation: string;
+    /** Snow Tables map layer: also plot roadway mileposts (dense; off by default). */
+    snowMapRoads: boolean;
 }
 
 export interface LiveWxState extends PersistedSettings {
@@ -123,6 +125,7 @@ function load(): PersistedSettings {
         snowTab: 'counties',
         snowGroup: '',
         snowLocation: '',
+        snowMapRoads: false,
     };
     try {
         const raw = localStorage.getItem(STORAGE_KEY);
@@ -177,6 +180,7 @@ function load(): PersistedSettings {
             snowTab: normalizeSnowTab(parsed.snowTab),
             snowGroup: typeof parsed.snowGroup === 'string' ? parsed.snowGroup : '',
             snowLocation: typeof parsed.snowLocation === 'string' ? parsed.snowLocation : '',
+            snowMapRoads: Boolean(parsed.snowMapRoads),
         };
     } catch {
         return defaults;
@@ -269,6 +273,7 @@ function payload(): PersistedSettings {
         snowTab: state.snowTab,
         snowGroup: state.snowGroup,
         snowLocation: state.snowLocation,
+        snowMapRoads: state.snowMapRoads,
     };
 }
 
@@ -431,5 +436,10 @@ export function setSnowSelection(patch: { tab?: SnowTab; group?: string; locatio
         state.snowLocation = '';
     }
     if (patch.location !== undefined) state.snowLocation = patch.location;
+    persist();
+}
+
+export function setSnowMapRoads(on: boolean): void {
+    state.snowMapRoads = on;
     persist();
 }

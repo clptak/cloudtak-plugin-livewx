@@ -309,6 +309,24 @@
                     >{{ row.label }}</label>
                 </div>
                 <div
+                    v-if='enabled[row.id] && row.id === "snow_tables"'
+                    class='opacity-row'
+                >
+                    <div class='form-check mb-0'>
+                        <input
+                            id='m-snow-roads'
+                            class='form-check-input'
+                            type='checkbox'
+                            :checked='state.snowMapRoads'
+                            @change='onSnowRoads'
+                        >
+                        <label
+                            class='form-check-label small'
+                            for='m-snow-roads'
+                        >Include roadway mileposts</label>
+                    </div>
+                </div>
+                <div
                     v-if='enabled[row.id] && row.opacity'
                     class='opacity-row'
                 >
@@ -371,7 +389,7 @@
 <script setup lang='ts'>
 import { computed, onMounted } from 'vue';
 import { ageLabelMs } from '../../core/egress.ts';
-import { setLightningStaleSec, setPage, state } from '../../core/state.ts';
+import { setLightningStaleSec, setPage, setSnowMapRoads, state } from '../../core/state.ts';
 import { forecast } from '../../forecast/engine.ts';
 import { listSources } from '../../forecast/sources.ts';
 import {
@@ -417,6 +435,7 @@ const moreRows = [
     { id: 'snow_depth', label: 'Snow Depth', opacity: true },
     { id: 'earthquakes', label: 'Earthquakes', opacity: false },
     { id: 'spot_requests', label: 'Spot Forecasts', opacity: false },
+    { id: 'snow_tables', label: 'Snow Tables (N. Arizona)', opacity: false },
 ];
 
 const allIds = [
@@ -514,6 +533,10 @@ function onRainWindow(ev: Event): void {
 
 function go(page: 'forecast' | 'radar' | 'spot' | 'snow'): void {
     setPage(page);
+}
+
+function onSnowRoads(ev: Event): void {
+    setSnowMapRoads((ev.target as HTMLInputElement).checked);
 }
 
 function onLifetime(ev: Event): void {

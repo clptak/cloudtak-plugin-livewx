@@ -11,6 +11,7 @@ import { registerFireOutlookLayer } from './fire-outlook.ts';
 import { registerFuelMoistureLayer } from './fuels.ts';
 import { registerMetarLayer } from './metars.ts';
 import { registerRainGaugesLayer } from './rain-gauges.ts';
+import { registerSnowTablesLayer } from './snow-tables-layer.ts';
 import { registerSpotRequestsLayer } from './spot-requests.ts';
 import { registerRainTotalsLayer } from './rain-totals.ts';
 import {
@@ -198,6 +199,7 @@ export function registerCatalogLayers(): void {
     registerRainGaugesLayer();
     registerFuelMoistureLayer();
     registerSpotRequestsLayer();
+    registerSnowTablesLayer();
 
     createGeoLayer({
         id: 'buoys',

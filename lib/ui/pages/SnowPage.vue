@@ -94,11 +94,23 @@
             v-if='table'
             class='sn-table-block'
         >
-            <h4 class='sn-title'>
-                {{ state.snowLocation }}
-            </h4>
+            <div class='sn-title-row'>
+                <h4 class='sn-title'>
+                    {{ state.snowLocation }}
+                </h4>
+                <button
+                    v-if='coord'
+                    class='btn btn-sm btn-outline-secondary'
+                    type='button'
+                    @click='zoomTo'
+                >
+                    Zoom
+                </button>
+            </div>
             <p class='sn-hint mt-0 mb-2'>
-                {{ state.snowGroup }} · next 72 hours
+                {{ state.snowGroup }} · next 72 hours<template v-if='coord && coord.elevFt'>
+                    · {{ coord.elevFt.toLocaleString() }} ft
+                </template>
             </p>
             <table class='table table-sm sn-table mb-2'>
                 <thead>
@@ -191,7 +203,20 @@
                 rel='noopener noreferrer'
                 @click.prevent='openOfficial'
             >Open on weather.gov</a>
+            <a
+                v-if='coord'
+                :href='pointForecastUrl(coord.lat, coord.lon)'
+                target='_blank'
+                rel='noopener noreferrer'
+                @click.prevent='openPointForecast'
+            >Point forecast</a>
         </div>
+        <p
+            v-if='table && snowCoords.data && !coord'
+            class='sn-hint'
+        >
+            This location is not on the map (no verified coordinates).
+        </p>
 
         <p class='sn-attr'>
             Snow amounts from the NWS Flagstaff Snow Tables (weather.gov/fgz). Forecasts beyond 72 hours are not shown.
@@ -202,9 +227,11 @@
 <script setup lang='ts'>
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue';
 import { ageLabelMs } from '../../core/egress.ts';
+import { mapOf } from '../../core/map-host.ts';
 import { setSnowSelection, state, type SnowTab } from '../../core/state.ts';
 import { formatInTimeZone } from '../../core/timezone.ts';
 import { openLinkWindow } from '../../layers/feature-popup.ts';
+import { coordFor, loadSnowCoords, pointForecastUrl, snowCoords } from '../../snow/snow-locations.ts';
 import {
     SNOW_TABS,
     SNOW_TZ,
@@ -229,6 +256,7 @@ let tickTimer: ReturnType<typeof setInterval> | null = null;
 
 onMounted(() => {
     void loadSnowTables();
+    void loadSnowCoords();
     tickTimer = setInterval(() => {
         now.value = Date.now();
         void loadSnowTables();
@@ -269,6 +297,12 @@ const table = computed(() => {
     const series = seriesFor(data, state.snowTab, state.snowGroup, state.snowLocation);
     if (!series) return null;
     return twelveHourPeriods(data, series, now.value);
+});
+
+const coord = computed(() => {
+    void snowCoords.data;
+    if (!state.snowLocation) return null;
+    return coordFor(state.snowTab, state.snowGroup, state.snowLocation);
 });
 
 const ageLine = computed(() => {
@@ -329,6 +363,18 @@ function reload(): void {
     void loadSnowTables(true);
 }
 
+function zoomTo(): void {
+    const map = mapOf();
+    const c = coord.value;
+    if (!map?.flyTo || !c) return;
+    map.flyTo({ center: [c.lon, c.lat], zoom: Math.max(map.getZoom?.() ?? 0, 10) });
+}
+
+function openPointForecast(): void {
+    const c = coord.value;
+    if (c) openLinkWindow(pointForecastUrl(c.lat, c.lon));
+}
+
 function openOfficial(): void {
     if (state.snowGroup) openLinkWindow(officialUrl(state.snowTab, state.snowGroup));
 }
@@ -378,6 +424,12 @@ function openOfficial(): void {
 .sn-age {
     font-size: 0.8rem;
     color: var(--tblr-secondary, inherit);
+}
+.sn-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
 }
 .sn-title {
     margin: 0;
@@ -435,6 +487,9 @@ function openOfficial(): void {
     font-weight: 700;
 }
 .sn-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
     margin-top: 0.5rem;
     font-size: 0.85rem;
 }
