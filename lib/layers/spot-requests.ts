@@ -33,13 +33,10 @@ const LAYER_ID = 'spot_requests';
 const SOURCE_ID = 'livewx-spot-src';
 const CIRCLE_ID = 'livewx-spot-circle';
 const ICON_ID = 'livewx-spot-icon';
-/** Spot Forecasts markers: yellow circle with a cloud-star icon; status shows as the ring. */
-const SPOT_FILL = '#fab005';
-
-/** Status ring colors; darker than the page badges so they stand out on the yellow circle. */
+/** Spot Forecasts markers: cloud-star icon on a circle filled with the status color (same as the page badges). */
 const STATUS_COLORS: Record<SpotStatus, string> = {
-    complete: '#2b8a3e',
-    pending: '#c92a2a',
+    complete: '#2fb344',
+    pending: '#f59f00',
 };
 
 let running = false;
@@ -133,10 +130,9 @@ function paint(map: LiveWxMap): void {
             source: SOURCE_ID,
             paint: {
                 'circle-radius': 11,
-                'circle-color': SPOT_FILL,
-                // Status (complete / pending) as the ring color.
-                'circle-stroke-width': 2.5,
-                'circle-stroke-color': ['get', 'color'],
+                'circle-color': ['get', 'color'],
+                'circle-stroke-width': 1.5,
+                'circle-stroke-color': '#ffffff',
             },
         }, firstSymbolLayer(map));
     }
