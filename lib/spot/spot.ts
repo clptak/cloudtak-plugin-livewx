@@ -1,17 +1,18 @@
 /**
- * NWS Spot Forecast Monitor (spot.weather.gov) — read-only.
+ * NWS Spot Forecast Monitor — read-only.
  *
- * Only the unauthenticated national list of active requests is used. Office
- * filtering and forecast/detail endpoints need an API key, so filtering is
- * done here and forecasts are opened on the official site instead.
+ * The spot.weather.gov API needs a key, so the national list of current
+ * requests comes from NOAA's public "SPOT Forecast Monitor" map service
+ * (refreshed upstream every ~15 minutes). Filtering is done here; forecasts
+ * and the request form open on the official site.
  */
 import { markRaw, reactive } from 'vue';
 import { fetchJson, roundCoord, TtlCache } from '../core/egress.ts';
 
-export const SPOT_API = 'https://spot.weather.gov/cms/api/1.0';
+export const SPOT_SERVICE = 'https://mapservices.weather.noaa.gov/vector/rest/services/fire_weather/nws_fire_weather_spot/MapServer/0';
 export const SPOT_SITE = 'https://spot.weather.gov';
 export const NEW_REQUEST_URL = `${SPOT_SITE}/new-request`;
-/** Reuse the national list for this long before refetching (~730 KB). */
+/** Reuse the national list for this long before refetching (~230 KB). */
 export const SPOT_CACHE_MS = 5 * 60_000;
 
 export const SPOT_RADII_MI = [25, 50, 100, 250] as const;
@@ -24,43 +25,46 @@ export const SPOT_CATEGORIES = [
 ] as const;
 
 export type SpotScope = 'office' | 'radius' | 'all';
+export type SpotStatus = 'complete' | 'pending';
 
-/** Subset of a /cms/api/1.0/requests item. */
-type SpotRequestRaw = {
-    id?: string | number;
-    projectName?: string;
-    requesterAgency?: string;
-    latitude?: number;
-    longitude?: number;
-    state?: string;
-    incident?: { name?: string; category?: string };
-    office?: { nativeSiteId?: string; city?: string };
-    actionStatus?: string;
-    submittedAt?: string;
-    deliverAt?: string;
-    isArchived?: boolean;
-    spotForecasts?: Array<{ update_number?: number; request_filled_at?: string }>;
-    Timezone?: { IANA?: string };
+/** Subset of a SPOT Forecast Monitor feature's properties (all strings upstream). */
+type SpotFeatureProps = {
+    snumunum?: string | null;
+    name?: string | null;
+    /** Category then delivery time, e.g. "Fire 2026-10-17 07:00:00 AM MDT". */
+    type?: string | null;
+    tid?: string | null;
+    lat?: string | number | null;
+    lon?: string | number | null;
+    rmade?: string | null;
+    /** Time filled, or "Incomplete". */
+    rfill?: string | null;
+    /** C = complete, P = pending (initial forecast or an update). */
+    stat?: string | null;
+    wfo?: string | null;
+    deliverdtg?: string | null;
+};
+
+type SpotFeatureRaw = {
+    properties?: SpotFeatureProps | null;
+    geometry?: { type?: string; coordinates?: unknown } | null;
 };
 
 export type SpotRequest = {
+    /** Spot request number, as used by spot.weather.gov/forecasts/{id}. */
     id: string;
     projectName: string;
-    agency: string;
+    /** Wildfire / Prescribed, else the category. */
+    requestType: string;
     lat: number;
     lon: number;
-    state: string;
-    incidentName: string;
     incidentCategory: string;
     office: string;
-    officeCity: string;
-    actionStatus: string;
+    status: SpotStatus;
     submittedAt: number | null;
     deliverAt: number | null;
-    timeZone: string;
-    /** Latest issued forecast update, if any. */
-    update: number | null;
     filledAt: number | null;
+    timeZone: string;
 };
 
 export type SpotFilter = {
@@ -88,49 +92,80 @@ export const spot = reactive({
 let inflight: Promise<void> | null = null;
 const officeCache = new TtlCache<string>(24 * 60 * 60_000);
 
-function parseMs(raw: unknown): number | null {
-    if (typeof raw !== 'string' || !raw) return null;
-    const t = Date.parse(raw);
+/** Zone abbreviations on the service's timestamps: UTC offset (hours) and a zone for display. */
+const ZONES: Record<string, { offset: number; iana: string }> = {
+    EDT: { offset: -4, iana: 'America/New_York' },
+    EST: { offset: -5, iana: 'America/New_York' },
+    CDT: { offset: -5, iana: 'America/Chicago' },
+    CST: { offset: -6, iana: 'America/Chicago' },
+    MDT: { offset: -6, iana: 'America/Denver' },
+    MST: { offset: -7, iana: 'America/Phoenix' },
+    PDT: { offset: -7, iana: 'America/Los_Angeles' },
+    PST: { offset: -8, iana: 'America/Los_Angeles' },
+    AKDT: { offset: -8, iana: 'America/Anchorage' },
+    AKST: { offset: -9, iana: 'America/Anchorage' },
+    HST: { offset: -10, iana: 'Pacific/Honolulu' },
+    AST: { offset: -4, iana: 'America/Puerto_Rico' },
+    SST: { offset: -11, iana: 'Pacific/Pago_Pago' },
+    CHST: { offset: 10, iana: 'Pacific/Guam' },
+};
+
+/** Request types by `tid`; other codes fall back to the category. */
+const REQUEST_TYPES: Record<string, string> = {
+    0: 'Wildfire',
+    1: 'Prescribed',
+};
+
+const STAMP_RE = /(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})(?: [AP]M)? ([A-Za-z]+)$/;
+
+/** "2026-10-17 13:00:03 PM MDT" → epoch ms. The hour is already 24-hour; AM/PM is redundant. */
+function parseStamp(raw: unknown): number | null {
+    const m = typeof raw === 'string' ? STAMP_RE.exec(raw.trim()) : null;
+    const zone = m ? ZONES[m[7].toUpperCase()] : undefined;
+    if (!m || !zone) return null;
+    const [y, mo, d, h, mi, s] = m.slice(1, 7).map(Number);
+    const t = Date.UTC(y, mo - 1, d, h - zone.offset, mi, s);
     return Number.isFinite(t) ? t : null;
 }
 
-function normalize(r: SpotRequestRaw): SpotRequest | null {
-    const lat = Number(r.latitude);
-    const lon = Number(r.longitude);
-    const office = String(r.office?.nativeSiteId || '').toUpperCase();
-    if (r.id == null || !Number.isFinite(lat) || !Number.isFinite(lon) || !office) return null;
-    if (r.isArchived) return null;
-    let update: number | null = null;
-    let filledAt: number | null = null;
-    for (const f of r.spotForecasts ?? []) {
-        const n = Number(f.update_number);
-        if (Number.isFinite(n) && (update == null || n >= update)) {
-            update = n;
-            filledAt = parseMs(f.request_filled_at);
-        }
-    }
+function zoneOf(raw: unknown): string {
+    const m = typeof raw === 'string' ? STAMP_RE.exec(raw.trim()) : null;
+    return (m && ZONES[m[7].toUpperCase()]?.iana) || '';
+}
+
+function normalize(f: SpotFeatureRaw): SpotRequest | null {
+    const p = f.properties;
+    if (!p) return null;
+    const coords = f.geometry?.type === 'Point' && Array.isArray(f.geometry.coordinates)
+        ? f.geometry.coordinates as unknown[]
+        : [];
+    const lon = Number(coords[0] ?? p.lon);
+    const lat = Number(coords[1] ?? p.lat);
+    const id = String(p.snumunum ?? '').trim();
+    const office = String(p.wfo || '').trim().toUpperCase();
+    if (!/^\d+$/.test(id) || !Number.isFinite(lat) || !Number.isFinite(lon) || !office) return null;
+    const type = String(p.type || '').trim();
+    // The category is whatever precedes the delivery time.
+    const category = type.replace(/\s*\d{4}-\d{2}-\d{2}.*$/, '').trim();
+    const deliver = p.deliverdtg || type;
     return {
-        id: String(r.id),
-        projectName: String(r.projectName || 'Unnamed request').trim(),
-        agency: String(r.requesterAgency || ''),
+        id,
+        projectName: String(p.name || 'Unnamed request').trim(),
+        requestType: REQUEST_TYPES[String(p.tid ?? '')] || category,
         lat,
         lon,
-        state: String(r.state || ''),
-        incidentName: String(r.incident?.name || ''),
-        incidentCategory: String(r.incident?.category || ''),
+        incidentCategory: category,
         office,
-        officeCity: String(r.office?.city || ''),
-        actionStatus: String(r.actionStatus || ''),
-        submittedAt: parseMs(r.submittedAt),
-        deliverAt: parseMs(r.deliverAt),
-        timeZone: String(r.Timezone?.IANA || ''),
-        update,
-        filledAt,
+        status: String(p.stat || '').toUpperCase() === 'C' ? 'complete' : 'pending',
+        submittedAt: parseStamp(p.rmade),
+        deliverAt: parseStamp(deliver),
+        filledAt: parseStamp(p.rfill),
+        timeZone: zoneOf(deliver) || zoneOf(p.rmade),
     };
 }
 
 /**
- * Load the national list of active requests. Reuses the cached list while it
+ * Load the national list of current requests. Reuses the cached list while it
  * is fresh unless `force`; concurrent callers share one request. On failure
  * the previous list is kept and `spot.error` is set.
  */
@@ -142,10 +177,20 @@ export function loadSpotRequests(force = false): Promise<void> {
     spot.loading = true;
     inflight = (async () => {
         try {
-            const raw = await fetchJson<unknown>(`${SPOT_API}/requests?isArchived=false`);
-            if (!Array.isArray(raw)) throw new Error('Unexpected Spot Monitor response');
+            const q = new URLSearchParams({
+                where: '1=1',
+                outFields: 'snumunum,name,type,tid,lat,lon,rmade,rfill,stat,wfo,deliverdtg',
+                returnGeometry: 'true',
+                outSR: '4326',
+                f: 'geojson',
+            });
+            const raw = await fetchJson<{ features?: unknown; error?: { message?: string } }>(
+                `${SPOT_SERVICE}/query?${q.toString()}`,
+            );
+            if (raw?.error) throw new Error(raw.error.message || 'Spot Monitor service error');
+            if (!Array.isArray(raw?.features)) throw new Error('Unexpected Spot Monitor response');
             const list: SpotRequest[] = [];
-            for (const item of raw as SpotRequestRaw[]) {
+            for (const item of raw.features as SpotFeatureRaw[]) {
                 const n = normalize(item);
                 if (n) list.push(n);
             }
@@ -190,26 +235,11 @@ export async function refreshAutoOffice(lat: number | null, lon: number | null):
 }
 
 export function isComplete(r: SpotRequest): boolean {
-    return r.actionStatus === 'ST_COMPLETE';
+    return r.status === 'complete';
 }
 
-const STATUS_LABELS: Record<string, string> = {
-    ST_COMPLETE: 'Complete',
-    ST_STARTRQST: 'Requested',
-    ST_CHANGERQST: 'Change requested',
-    AS_NEWOBS: 'New observations',
-    AS_FEEDBACK: 'Feedback',
-};
-
-export function statusLabel(actionStatus: string): string {
-    return STATUS_LABELS[actionStatus] || actionStatus || 'Unknown';
-}
-
-/** Badge tone: complete, awaiting a forecast, or another open action. */
-export function statusTone(actionStatus: string): 'complete' | 'pending' | 'other' {
-    if (actionStatus === 'ST_COMPLETE') return 'complete';
-    if (actionStatus === 'ST_STARTRQST') return 'pending';
-    return 'other';
+export function statusLabel(status: SpotStatus): string {
+    return status === 'complete' ? 'Complete' : 'Pending';
 }
 
 export function forecastUrl(id: string): string {
@@ -258,13 +288,7 @@ export function filterSpotRequests(list: SpotRequest[], f: SpotFilter): SpotRow[
     return rows;
 }
 
-/** Offices present in the list, sorted, as `{ id, city }`. */
-export function listOffices(list: SpotRequest[]): Array<{ id: string; city: string }> {
-    const seen = new Map<string, string>();
-    for (const r of list) {
-        if (!seen.has(r.office)) seen.set(r.office, r.officeCity);
-    }
-    return [...seen.entries()]
-        .map(([id, city]) => ({ id, city }))
-        .sort((a, b) => a.id.localeCompare(b.id));
+/** Offices present in the list, sorted. */
+export function listOffices(list: SpotRequest[]): string[] {
+    return [...new Set(list.map((r) => r.office))].sort((a, b) => a.localeCompare(b));
 }
