@@ -77,6 +77,8 @@ export interface PersistedSettings {
     snowLocation: string;
     /** Snow Tables map layer: also plot roadway mileposts (dense; off by default). */
     snowMapRoads: boolean;
+    /** Snow Chances map layer: color by chance of at least this many inches. */
+    snowChanceInches: number;
 }
 
 export interface LiveWxState extends PersistedSettings {
@@ -126,6 +128,7 @@ function load(): PersistedSettings {
         snowGroup: '',
         snowLocation: '',
         snowMapRoads: false,
+        snowChanceInches: 1,
     };
     try {
         const raw = localStorage.getItem(STORAGE_KEY);
@@ -181,6 +184,7 @@ function load(): PersistedSettings {
             snowGroup: typeof parsed.snowGroup === 'string' ? parsed.snowGroup : '',
             snowLocation: typeof parsed.snowLocation === 'string' ? parsed.snowLocation : '',
             snowMapRoads: Boolean(parsed.snowMapRoads),
+            snowChanceInches: normalizeSnowChance(parsed.snowChanceInches),
         };
     } catch {
         return defaults;
@@ -190,6 +194,11 @@ function load(): PersistedSettings {
 function normalizeRainWindow(raw: unknown): string {
     const allowed = new Set(['1h', '6h', '24h', '72h', '7d']);
     return typeof raw === 'string' && allowed.has(raw) ? raw : '24h';
+}
+
+function normalizeSnowChance(raw: unknown): number {
+    const n = Number(raw);
+    return [1, 2, 4, 6, 8, 12].includes(n) ? n : 1;
 }
 
 function normalizeSnowTab(raw: unknown): SnowTab {
@@ -274,6 +283,7 @@ function payload(): PersistedSettings {
         snowGroup: state.snowGroup,
         snowLocation: state.snowLocation,
         snowMapRoads: state.snowMapRoads,
+        snowChanceInches: state.snowChanceInches,
     };
 }
 
@@ -441,5 +451,10 @@ export function setSnowSelection(patch: { tab?: SnowTab; group?: string; locatio
 
 export function setSnowMapRoads(on: boolean): void {
     state.snowMapRoads = on;
+    persist();
+}
+
+export function setSnowChanceInches(inches: number): void {
+    state.snowChanceInches = normalizeSnowChance(inches);
     persist();
 }

@@ -186,6 +186,11 @@
             >
                 {{ issuedLine }}
             </p>
+            <SnowChances
+                v-if='state.snowTab !== "roadways"'
+                :name='state.snowLocation'
+                :show-missing='snowProbs.fetchedAt != null'
+            />
         </section>
 
         <p
@@ -232,6 +237,7 @@ import { setSnowSelection, state, type SnowTab } from '../../core/state.ts';
 import { formatInTimeZone } from '../../core/timezone.ts';
 import { openLinkWindow } from '../../layers/feature-popup.ts';
 import { coordFor, loadSnowCoords, pointForecastUrl, snowCoords } from '../../snow/snow-locations.ts';
+import { loadSnowProbs, snowProbs } from '../../snow/snow-probs.ts';
 import {
     SNOW_TABS,
     SNOW_TZ,
@@ -246,6 +252,7 @@ import {
     snowTables,
     twelveHourPeriods,
 } from '../../snow/snow-tables.ts';
+import SnowChances from './SnowChances.vue';
 
 const TICK_MS = 30_000;
 const tabs = SNOW_TABS;
@@ -257,9 +264,11 @@ let tickTimer: ReturnType<typeof setInterval> | null = null;
 onMounted(() => {
     void loadSnowTables();
     void loadSnowCoords();
+    void loadSnowProbs();
     tickTimer = setInterval(() => {
         now.value = Date.now();
         void loadSnowTables();
+        void loadSnowProbs();
     }, TICK_MS);
 });
 
@@ -361,6 +370,7 @@ function onLocation(e: Event): void {
 
 function reload(): void {
     void loadSnowTables(true);
+    void loadSnowProbs(true);
 }
 
 function zoomTo(): void {

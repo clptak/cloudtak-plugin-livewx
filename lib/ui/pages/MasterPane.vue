@@ -327,6 +327,29 @@
                     </div>
                 </div>
                 <div
+                    v-if='enabled[row.id] && row.id === "snow_chances"'
+                    class='opacity-row'
+                >
+                    <label
+                        class='form-label small mb-1'
+                        for='m-snow-chance'
+                    >Color by chance of at least</label>
+                    <select
+                        id='m-snow-chance'
+                        class='form-select form-select-sm mb-2'
+                        :value='state.snowChanceInches'
+                        @change='onSnowChance'
+                    >
+                        <option
+                            v-for='t in snowChanceThresholds'
+                            :key='t'
+                            :value='t'
+                        >
+                            {{ t }}"
+                        </option>
+                    </select>
+                </div>
+                <div
                     v-if='enabled[row.id] && row.opacity'
                     class='opacity-row'
                 >
@@ -389,7 +412,7 @@
 <script setup lang='ts'>
 import { computed, onMounted } from 'vue';
 import { ageLabelMs } from '../../core/egress.ts';
-import { setLightningStaleSec, setPage, setSnowMapRoads, state } from '../../core/state.ts';
+import { setLightningStaleSec, setPage, setSnowChanceInches, setSnowMapRoads, state } from '../../core/state.ts';
 import { forecast } from '../../forecast/engine.ts';
 import { listSources } from '../../forecast/sources.ts';
 import {
@@ -404,10 +427,12 @@ import {
     setLayerEnabled,
     setLayerOpacity,
 } from '../../layers/registry.ts';
+import { MAP_THRESHOLDS } from '../../snow/snow-probs.ts';
 import { rangeLabel, seriesFor, snowTables, twelveHourPeriods } from '../../snow/snow-tables.ts';
 import { filterSpotRequests, spot } from '../../spot/spot.ts';
 
 const rainWindows = RAIN_TOTAL_WINDOWS;
+const snowChanceThresholds = MAP_THRESHOLDS;
 
 const radarRows = [
     { id: 'satellite', label: 'Infrared Cloud Tops' },
@@ -436,6 +461,7 @@ const moreRows = [
     { id: 'earthquakes', label: 'Earthquakes', opacity: false },
     { id: 'spot_requests', label: 'Spot Forecasts', opacity: false },
     { id: 'snow_tables', label: 'Snow Tables (N. Arizona)', opacity: false },
+    { id: 'snow_chances', label: 'Snow Chances (N. Arizona)', opacity: false },
 ];
 
 const allIds = [
@@ -533,6 +559,10 @@ function onRainWindow(ev: Event): void {
 
 function go(page: 'forecast' | 'radar' | 'spot' | 'snow'): void {
     setPage(page);
+}
+
+function onSnowChance(ev: Event): void {
+    setSnowChanceInches(Number((ev.target as HTMLSelectElement).value));
 }
 
 function onSnowRoads(ev: Event): void {

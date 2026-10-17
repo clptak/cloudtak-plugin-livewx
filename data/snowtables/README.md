@@ -22,6 +22,10 @@ Keys must match the Snow Tables feed exactly (`https://www.weather.gov/source/fg
 6. **Three places are excluded from the map on purpose** (no reliable location): *Rim Top Trail* (Gila County), *San Juan* (Navajo Nation, NM), *Stoneman Lake Rd at Lake Mary Rd* (Coconino County). They still appear in the tables.
 7. **Roadway mileposts are off by default** on the map (dense along I-40 / I-17 / US-89); *Include roadway mileposts* turns them on.
 8. **Map colors follow the NWS Snow Tables scale.** No snow in 72 hours is gray; NWS's `<1"` color is white, drawn with a dark outline so it stays visible.
+9. **Probabilities come from a second FGZ feed** (`www.weather.gov/source/fgz/data/ProbSnow_WebData.json`, behind `weather.gov/fgz/snow-forecast`), also unofficial. It covers 106 locations with NWS's own coordinates: official amount, timing (shown as ±1 hour, like NWS), chance of at least trace … 18", amount bands, and 10th–90th percentile amounts, per storm window.
+10. **Chances are matched to Snow Tables places by name** (normalized, e.g. `Flagstaff - Airport` = `Flagstaff Airport`) plus four explicit same-place aliases: `GCNP - North Rim` / `GCNP - South Rim` → `Grand Canyon - North/South Rim`, `Sunrise Ski Resort` → `Sunrise Park`, `Mishongovi` → `Mishongnovi`. Nearby-but-different places (e.g. `Heber` vs `Heber-Overgaard`, `Pinetop` / `Lakeside` vs `Pinetop-Lakeside`, `Prescott Courthouse` vs `Prescott Downtown`) are **not** matched, so a location never shows another place's probabilities.
+11. **The Snow Chances map layer uses the probability feed's own 106 points**, colored by the chance of at least a selectable amount (1", 2", 4", 6", 8", 12"; default 1").
+12. **Snow Chances icons and labels follow the most likely amount band.** A Tabler `snowflake` icon marks a location whose most likely band is not "None" (snow expected), with that band (e.g. `<1"`, `2-4"`, `12"+`) as its label; otherwise a `snowflake-off` icon with no label, to keep the map uncluttered. The circle color still shows the chance of at least the selected amount. `≥12"` is labelled `12"+` because the map label font may not include `≥`.
 
 ## Known limitations
 
@@ -32,7 +36,9 @@ Keys must match the Snow Tables feed exactly (`https://www.weather.gov/source/fg
 - **SR 64 MP 240, 250, 260 are not on the map.** That stretch is Desert View Drive inside Grand Canyon National Park (Park Service–maintained); ADOT has no posts between MP 237 and MP 267.
 - **Three mileposts are interpolated** between neighbouring ADOT posts: SR 89 MP 315, SR 89A MP 370, SR 89A MP 400.
 - **Name drift.** If FGZ renames or adds a location, its table still works but it is not on the map until these files are regenerated (the page says "not on the map").
-- **Feed changes.** FGZ can change its feed format or URL without notice; the page and map would then show an error and keep the last loaded data.
+- **Probabilities cover 89 of 218 places**, and no roadway mileposts — the rest show "No probabilistic forecast for this location".
+- **Probability-only locations.** 17 Snow Forecast locations (e.g. Camp Verde, Chino Valley, Village of Oak Creek) are not in the Snow Tables; they appear on the Snow Chances map but cannot be picked on the Snow Tables page.
+- **Feed changes.** FGZ can change either feed's format or URL without notice; the page and map would then show an error and keep the last loaded data.
 
 ## Correcting or regenerating
 
@@ -50,4 +56,5 @@ Review files (not committed; written to `plans/snowtables/`) can be imported int
 
 ## Attribution
 
+Map icons: [Tabler Icons](https://tabler.io/icons) `snowflake` / `snowflake-off` (MIT License).
 NWS Flagstaff (Snow Tables and Snow Forecast feeds), USGS Geographic Names Information System, ADOT milepost data (AZGeo), © OpenStreetMap contributors (ODbL) for the 11 places geocoded with Nominatim.

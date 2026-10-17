@@ -41,6 +41,7 @@ Requires CloudTAK **13.102** or newer. Apache-2.0 clean-room implementation (not
 - Pick Counties / Tribal / Roadways, then a county, tribe or road, then a location or milepost: six **12-hour periods** (Day / Night, Arizona time) plus a **72-hour total**, using the NWS range labels and colors; nothing beyond 72 hours
 - **Zoom**, **Point forecast** and **Open on weather.gov** (small window) for the selected location
 - Optional **Snow Tables (N. Arizona)** map layer (More): locations colored by 72-hour total; click for the same 12-hour table; roadway mileposts optional
+- **Chances** panel (from the NWS Flagstaff [Snow Forecast](https://www.weather.gov/fgz/snow-forecast)): official amount, most likely amount, 10th–90th percentile range, snow timing, and chance of at least trace … 18" for places it covers; optional **Snow Chances (N. Arizona)** map layer: a snowflake icon labelled with the most likely amount where snow is expected (snowflake-off where it is not), on a circle colored by the chance of at least a selectable amount
 - Location coordinates are not published by NWS — they are built from NWS, USGS GNIS, ADOT and OpenStreetMap data. Decisions, known limitations and how to correct them: [`data/snowtables/README.md`](data/snowtables/README.md)
 - Needs the updated server route (`www.weather.gov` added to the proxy allowlist)
 
