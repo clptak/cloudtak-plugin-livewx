@@ -37,6 +37,8 @@ export const ALLOWED_HOSTS = new Set([
     'earthquake.usgs.gov',
     'services.dat.noaa.gov',
     'spot.weather.gov',
+    // NWS Flagstaff Snow Tables / Snow Forecast feeds (www.weather.gov/source/fgz/...)
+    'www.weather.gov',
     'gacc.nifc.gov',
     'radar.weather.gov',
     'aviationweather.gov',

@@ -20,6 +20,7 @@
             :api='api'
         />
         <SpotPage v-else-if='state.page === "spot"' />
+        <SnowPage v-else-if='state.page === "snow"' />
     </div>
 </template>
 
@@ -29,6 +30,7 @@ import { setPage, state } from '../core/state.ts';
 import RadarContainer from '../radar/RadarContainer.vue';
 import ForecastPage from './pages/ForecastPage.vue';
 import MasterPane from './pages/MasterPane.vue';
+import SnowPage from './pages/SnowPage.vue';
 import SpotPage from './pages/SpotPage.vue';
 
 defineProps<{ api: PluginAPI }>();

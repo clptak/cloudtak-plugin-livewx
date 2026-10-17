@@ -333,6 +333,24 @@
         <section class='sec'>
             <div class='sec-head'>
                 <h3 class='sec-title'>
+                    Snow Tables
+                </h3>
+                <button
+                    class='btn btn-sm btn-outline-secondary'
+                    type='button'
+                    @click='go("snow")'
+                >
+                    Open
+                </button>
+            </div>
+            <p class='sec-meta mb-0'>
+                {{ snowLine }}
+            </p>
+        </section>
+
+        <section class='sec'>
+            <div class='sec-head'>
+                <h3 class='sec-title'>
                     Spot Forecasts
                 </h3>
                 <button
@@ -368,6 +386,7 @@ import {
     setLayerEnabled,
     setLayerOpacity,
 } from '../../layers/registry.ts';
+import { rangeLabel, seriesFor, snowTables, twelveHourPeriods } from '../../snow/snow-tables.ts';
 import { filterSpotRequests, spot } from '../../spot/spot.ts';
 
 const rainWindows = RAIN_TOTAL_WINDOWS;
@@ -443,6 +462,18 @@ const forecastLine = computed(() => {
     return `${name} · ${place}`;
 });
 
+/** Summary from the cached Snow Tables feed only; the home pane never fetches it. */
+const snowLine = computed(() => {
+    const data = snowTables.data;
+    if (!data || snowTables.fetchedAt == null) return 'Northern Arizona (NWS Flagstaff) · Not loaded';
+    const age = `updated ${ageLabelMs(snowTables.fetchedAt)}`;
+    if (!state.snowLocation) return `Northern Arizona (NWS Flagstaff) · ${age}`;
+    const series = seriesFor(data, state.snowTab, state.snowGroup, state.snowLocation);
+    if (!series) return `Northern Arizona (NWS Flagstaff) · ${age}`;
+    const { total } = twelveHourPeriods(data, series);
+    return `${state.snowLocation} · next 72 h: ${rangeLabel(total)} · ${age}`;
+});
+
 /** Summary from the cached list only; the home pane never fetches it. */
 const spotLine = computed(() => {
     if (spot.fetchedAt == null) return 'Not loaded';
@@ -481,7 +512,7 @@ function onRainWindow(ev: Event): void {
     setRainTotalsWindow((ev.target as HTMLSelectElement).value as RainTotalWindowId);
 }
 
-function go(page: 'forecast' | 'radar' | 'spot'): void {
+function go(page: 'forecast' | 'radar' | 'spot' | 'snow'): void {
     setPage(page);
 }
 

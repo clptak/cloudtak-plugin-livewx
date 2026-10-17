@@ -19,6 +19,8 @@ export type PointMode = 'self' | 'center' | 'pick' | 'favorite';
 
 export type SpotScope = 'office' | 'radius' | 'all';
 
+export type SnowTab = 'counties' | 'tribal' | 'roadways';
+
 export interface FavoritePoint {
     id: string;
     name: string;
@@ -69,6 +71,10 @@ export interface PersistedSettings {
     /** Incident category; '' = all. */
     spotCategory: string;
     spotHideComplete: boolean;
+    /** Snow Tables (NWS Flagstaff) selection; '' = not chosen yet. */
+    snowTab: SnowTab;
+    snowGroup: string;
+    snowLocation: string;
 }
 
 export interface LiveWxState extends PersistedSettings {
@@ -114,6 +120,9 @@ function load(): PersistedSettings {
         spotOffice: '',
         spotCategory: '',
         spotHideComplete: false,
+        snowTab: 'counties',
+        snowGroup: '',
+        snowLocation: '',
     };
     try {
         const raw = localStorage.getItem(STORAGE_KEY);
@@ -121,7 +130,7 @@ function load(): PersistedSettings {
         const parsed = JSON.parse(raw) as Partial<PersistedSettings>;
         const pageRaw = parsed.page as string | undefined;
         const page: AppPageId = pageRaw === 'forecast' || pageRaw === 'radar' || pageRaw === 'spot'
-            || pageRaw === 'home'
+            || pageRaw === 'snow' || pageRaw === 'home'
             ? pageRaw
             : 'home';
         return {
@@ -165,6 +174,9 @@ function load(): PersistedSettings {
             spotOffice: typeof parsed.spotOffice === 'string' ? parsed.spotOffice.toUpperCase() : '',
             spotCategory: typeof parsed.spotCategory === 'string' ? parsed.spotCategory : '',
             spotHideComplete: Boolean(parsed.spotHideComplete),
+            snowTab: normalizeSnowTab(parsed.snowTab),
+            snowGroup: typeof parsed.snowGroup === 'string' ? parsed.snowGroup : '',
+            snowLocation: typeof parsed.snowLocation === 'string' ? parsed.snowLocation : '',
         };
     } catch {
         return defaults;
@@ -174,6 +186,10 @@ function load(): PersistedSettings {
 function normalizeRainWindow(raw: unknown): string {
     const allowed = new Set(['1h', '6h', '24h', '72h', '7d']);
     return typeof raw === 'string' && allowed.has(raw) ? raw : '24h';
+}
+
+function normalizeSnowTab(raw: unknown): SnowTab {
+    return raw === 'tribal' || raw === 'roadways' ? raw : 'counties';
 }
 
 function normalizeSpotScope(raw: unknown): SpotScope {
@@ -250,6 +266,9 @@ function payload(): PersistedSettings {
         spotOffice: state.spotOffice,
         spotCategory: state.spotCategory,
         spotHideComplete: state.spotHideComplete,
+        snowTab: state.snowTab,
+        snowGroup: state.snowGroup,
+        snowLocation: state.snowLocation,
     };
 }
 
@@ -397,5 +416,20 @@ export function setSpotFilter(patch: Partial<Pick<
     if (patch.spotOffice !== undefined) state.spotOffice = patch.spotOffice.toUpperCase();
     if (patch.spotCategory !== undefined) state.spotCategory = patch.spotCategory;
     if (patch.spotHideComplete !== undefined) state.spotHideComplete = patch.spotHideComplete;
+    persist();
+}
+
+/** Snow Tables selection; changing the tab or group clears what is below it. */
+export function setSnowSelection(patch: { tab?: SnowTab; group?: string; location?: string }): void {
+    if (patch.tab !== undefined && patch.tab !== state.snowTab) {
+        state.snowTab = normalizeSnowTab(patch.tab);
+        state.snowGroup = '';
+        state.snowLocation = '';
+    }
+    if (patch.group !== undefined && patch.group !== state.snowGroup) {
+        state.snowGroup = patch.group;
+        state.snowLocation = '';
+    }
+    if (patch.location !== undefined) state.snowLocation = patch.location;
     persist();
 }
