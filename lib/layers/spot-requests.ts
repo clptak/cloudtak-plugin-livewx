@@ -1,5 +1,5 @@
 /**
- * Active NWS Spot Forecast requests (spot.weather.gov) as map points.
+ * Current NWS Spot Forecast requests (NOAA SPOT Forecast Monitor service) as map points.
  * Uses the shared cached national list from spot/spot.ts; shows requests in
  * the current view and honors the Spot page's incident / hide-complete filters.
  */
@@ -16,8 +16,8 @@ import {
     matchesContent,
     spot,
     statusLabel,
-    statusTone,
     type SpotRequest,
+    type SpotStatus,
 } from '../spot/spot.ts';
 import { escapeHtml, linkHtml, registerFeatureLayers, unregisterFeatureLayers } from './feature-popup.ts';
 import {
@@ -37,10 +37,9 @@ const ICON_ID = 'livewx-spot-icon';
 const SPOT_FILL = '#fab005';
 
 /** Status ring colors; darker than the page badges so they stand out on the yellow circle. */
-const TONE_COLORS: Record<string, string> = {
+const STATUS_COLORS: Record<SpotStatus, string> = {
     complete: '#2b8a3e',
     pending: '#c92a2a',
-    other: '#862e9c',
 };
 
 let running = false;
@@ -62,16 +61,13 @@ export function spotDetailHtml(props: Record<string, unknown>): string {
         };
         return tz ? formatInTimeZone(ms, tz, opts) : new Date(ms).toLocaleString(undefined, opts);
     };
-    // update_number 0 is the initial forecast; later numbers are updates.
-    const n = props.update === '' || props.update == null ? null : Number(props.update);
-    const update = n == null ? 'None yet' : n === 0 ? 'Initial forecast' : `#${n}`;
+    const status = props.status === 'complete' ? 'complete' : 'pending';
     const rows: Array<[string, string]> = [
-        ['Incident', String(props.incidentName || '—')],
-        ['Status', statusLabel(String(props.actionStatus || ''))],
-        ['Office', [props.office, props.officeCity].filter(Boolean).join(' — ') || '—'],
-        ['Agency', String(props.agency || '—')],
+        ['Type', String(props.requestType || '—')],
+        ['Status', statusLabel(status)],
+        ['Office', String(props.office || '—')],
+        ['Requested', when(props.submittedAt)],
         ['Deliver', when(props.deliverAt)],
-        ['Update', update],
         ['Filled', when(props.filledAt)],
     ];
     const dl = rows.map(([k, v]) => `<dt>${escapeHtml(k)}</dt><dd>${escapeHtml(v)}</dd>`).join('');
@@ -103,16 +99,14 @@ export function spotFeatureProps(r: SpotRequest): Record<string, unknown> {
     return {
         id: r.id,
         projectName: r.projectName,
-        incidentName: r.incidentName,
-        actionStatus: r.actionStatus,
+        requestType: r.requestType,
+        status: r.status,
         office: r.office,
-        officeCity: r.officeCity,
-        agency: r.agency,
         timeZone: r.timeZone,
+        submittedAt: r.submittedAt ?? '',
         deliverAt: r.deliverAt ?? '',
         filledAt: r.filledAt ?? '',
-        update: r.update ?? '',
-        color: TONE_COLORS[statusTone(r.actionStatus)],
+        color: STATUS_COLORS[r.status],
     };
 }
 
@@ -140,7 +134,7 @@ function paint(map: LiveWxMap): void {
             paint: {
                 'circle-radius': 11,
                 'circle-color': SPOT_FILL,
-                // Status (complete / requested / other) as the ring color.
+                // Status (complete / pending) as the ring color.
                 'circle-stroke-width': 2.5,
                 'circle-stroke-color': ['get', 'color'],
             },
@@ -212,8 +206,8 @@ export function registerSpotRequestsLayer(): void {
         id: LAYER_ID,
         group: 'more',
         label: 'Spot Forecasts',
-        description: 'Active NWS Spot Forecast requests (spot.weather.gov)',
-        hosts: ['spot.weather.gov'],
+        description: 'Current NWS Spot Forecast requests (NOAA SPOT Forecast Monitor)',
+        hosts: ['mapservices.weather.noaa.gov'],
         sends: 'Nothing (national list, filtered locally)',
         start: async () => {
             running = true;

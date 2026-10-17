@@ -75,10 +75,10 @@
                         </option>
                         <option
                             v-for='o in offices'
-                            :key='o.id'
-                            :value='o.id'
+                            :key='o'
+                            :value='o'
                         >
-                            {{ o.city ? `${o.id} — ${o.city}` : o.id }}
+                            {{ o }}
                         </option>
                     </select>
                 </div>
@@ -227,8 +227,8 @@
                         </div>
                         <span
                             class='sp-badge'
-                            :class='`sp-badge-${statusTone(row.actionStatus)}`'
-                        >{{ statusLabel(row.actionStatus) }}</span>
+                            :class='`sp-badge-${row.status}`'
+                        >{{ statusLabel(row.status) }}</span>
                     </div>
                     <div class='sp-sub'>
                         {{ subLine(row) }}
@@ -303,7 +303,7 @@
         </section>
 
         <p class='sp-attr'>
-            Data from the NWS Spot Forecast Monitor (spot.weather.gov). Read-only; request forecasts through the official form.
+            Data from the NWS Spot Forecast Monitor via NOAA map services (updated about every 15 minutes). Read-only; request forecasts through the official form.
         </p>
     </div>
 </template>
@@ -335,7 +335,6 @@ import {
     refreshAutoOffice,
     spot,
     statusLabel,
-    statusTone,
     type SpotRow,
 } from '../../spot/spot.ts';
 
@@ -380,9 +379,9 @@ const activeOffice = computed(() => state.spotOffice || spot.autoOffice);
 const offices = computed(() => {
     const list = listOffices(spot.requests);
     for (const id of [state.spotOffice, spot.autoOffice]) {
-        if (id && !list.some((o) => o.id === id)) list.push({ id, city: '' });
+        if (id && !list.includes(id)) list.push(id);
     }
-    return list.sort((a, b) => a.id.localeCompare(b.id));
+    return list.sort((a, b) => a.localeCompare(b));
 });
 
 const placeLine = computed(() => {
@@ -443,7 +442,7 @@ const errorLine = computed(() => {
 });
 
 function subLine(row: SpotRow): string {
-    const parts = [row.incidentName, row.office, row.state].filter(Boolean);
+    const parts = [row.requestType, row.office].filter(Boolean);
     if (row.distanceMi != null) {
         const d = convertLength(row.distanceMi * 1609.34, state.units);
         parts.push(`${d.value} ${d.unit}`);
@@ -466,14 +465,10 @@ function timeLine(row: SpotRow): string {
     void now.value;
     const parts: string[] = [];
     if (row.deliverAt != null) parts.push(`Deliver ${formatWhen(row.deliverAt, row.timeZone)}`);
-    if (row.update != null) {
-        // update_number 0 is the initial forecast; later numbers are updates.
-        const what = row.update === 0 ? 'Forecast issued' : `Update #${row.update}`;
-        const sep = row.update === 0 ? ' ' : ', ';
-        const filled = row.filledAt != null ? `${sep}${ageLabelMs(row.filledAt)}` : '';
-        parts.push(`${what}${filled}`);
+    if (row.status === 'pending') {
+        parts.push('Awaiting forecast');
     } else {
-        parts.push('No forecast issued yet');
+        parts.push(row.filledAt != null ? `Forecast issued ${ageLabelMs(row.filledAt)}` : 'Forecast issued');
     }
     return parts.join(' · ');
 }
@@ -712,9 +707,6 @@ function zoomTo(row: SpotRow): void {
 }
 .sp-badge-pending {
     color: #f59f00;
-}
-.sp-badge-other {
-    color: #ae3ec9;
 }
 .sp-attr {
     margin: 0.85rem 0 0;
