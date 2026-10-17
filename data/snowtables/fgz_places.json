@@ -1,0 +1,1507 @@
+{
+  "Alamo": {
+    "lat": 34.42089,
+    "lon": -107.51088,
+    "source": "gnis",
+    "ref": "GNIS 1852622 Alamo (Populated Place, Socorro Co., NM)",
+    "confidence": "high"
+  },
+  "Alpine": {
+    "lat": 33.84,
+    "lon": -109.13,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Alpine",
+    "confidence": "high"
+  },
+  "Arizona Snowbowl": {
+    "lat": 35.33,
+    "lon": -111.71,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Arizona Snowbowl",
+    "confidence": "high"
+  },
+  "Ash Fork": {
+    "lat": 35.25,
+    "lon": -112.48,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Ash Fork",
+    "confidence": "high"
+  },
+  "Baca": {
+    "lat": 35.37171,
+    "lon": -107.99009,
+    "source": "gnis",
+    "ref": "GNIS 2419303 Baca Chapter (Civil, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "Bacavi": {
+    "lat": 35.92,
+    "lon": -110.66,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Bacavi",
+    "confidence": "high"
+  },
+  "Bagdad": {
+    "lat": 34.58113,
+    "lon": -113.20464,
+    "source": "gnis",
+    "ref": "GNIS 949 Bagdad (Populated Place, Yavapai Co., AZ)",
+    "confidence": "high"
+  },
+  "Bahast'lah": {
+    "lat": 35.70809,
+    "lon": -108.80615,
+    "source": "gnis",
+    "ref": "GNIS 2419505 Twin Lakes Chapter (Civil, McKinley Co., NM)",
+    "confidence": "medium"
+  },
+  "Becenti": {
+    "lat": 35.87978,
+    "lon": -108.1552,
+    "source": "gnis",
+    "ref": "GNIS 2419305 Becenti Chapter (Civil, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "Beclabito": {
+    "lat": 36.84139,
+    "lon": -109.01954,
+    "source": "gnis",
+    "ref": "GNIS 899530 Beclabito (Populated Place, San Juan Co., NM)",
+    "confidence": "high"
+  },
+  "Bellemont": {
+    "lat": 35.23,
+    "lon": -111.83,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Bellemont",
+    "confidence": "high"
+  },
+  "Bird Springs": {
+    "lat": 35.26246,
+    "lon": -110.73475,
+    "source": "gnis",
+    "ref": "GNIS 2419312 Bird Springs Chapter (Civil, Navajo Co., AZ)",
+    "confidence": "high"
+  },
+  "Black Mesa": {
+    "lat": 36.33319,
+    "lon": -110.02977,
+    "source": "gnis",
+    "ref": "GNIS 2419314 Black Mesa Chapter (Civil, Navajo Co., AZ)",
+    "confidence": "high"
+  },
+  "Blue Gap": {
+    "lat": 36.17084,
+    "lon": -109.94651,
+    "source": "gnis",
+    "ref": "GNIS 25260 Blue Gap (Populated Place, Apache Co., AZ)",
+    "confidence": "high"
+  },
+  "Bodaway Gap": {
+    "lat": 36.30416,
+    "lon": -111.46052,
+    "source": "osm",
+    "ref": "OSM node/4681990225 Bodaway Gap, Coconino County, Arizona, United States",
+    "confidence": "low"
+  },
+  "Bredsprngs": {
+    "lat": 35.39836,
+    "lon": -108.66703,
+    "source": "gnis",
+    "ref": "GNIS 904071 Bread Springs (Populated Place, McKinley Co., NM)",
+    "confidence": "low"
+  },
+  "Buffalo Pass": {
+    "lat": 36.46,
+    "lon": -109.14,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Buffalo Pass",
+    "confidence": "high"
+  },
+  "Burnham": {
+    "lat": 36.3268,
+    "lon": -108.42569,
+    "source": "gnis",
+    "ref": "GNIS 2419325 Burnham Chapter (Civil, San Juan Co., NM)",
+    "confidence": "high"
+  },
+  "Burnside": {
+    "lat": 35.75112,
+    "lon": -109.62455,
+    "source": "gnis",
+    "ref": "GNIS 1853156 Burnside (Populated Place, Apache Co., AZ)",
+    "confidence": "high"
+  },
+  "Cameron": {
+    "lat": 35.85,
+    "lon": -111.43,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Cameron",
+    "confidence": "high"
+  },
+  "Canyon Day": {
+    "lat": 33.78477,
+    "lon": -110.02649,
+    "source": "gnis",
+    "ref": "GNIS 2435 Canyon Day (Populated Place, Gila Co., AZ)",
+    "confidence": "high"
+  },
+  "Canyon de Chelly N.M.": {
+    "lat": 36.14335,
+    "lon": -109.44164,
+    "source": "osm",
+    "ref": "OSM relation/5813412 Canyon de Chelly National Monument, Apache County, Arizona, United States",
+    "confidence": "low"
+  },
+  "Carrizo": {
+    "lat": 33.89,
+    "lon": -110.17,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Carrizo",
+    "confidence": "high"
+  },
+  "Casamero Lake": {
+    "lat": 35.54202,
+    "lon": -108.00208,
+    "source": "gnis",
+    "ref": "GNIS 2419332 Casamero Lake Chapter (Civil, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "Cedar Creek": {
+    "lat": 33.99,
+    "lon": -110.28,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Cedar Creek",
+    "confidence": "high"
+  },
+  "Chichiltah": {
+    "lat": 35.24947,
+    "lon": -108.90786,
+    "source": "gnis",
+    "ref": "GNIS 902802 Chi Chil Tah (Populated Place, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "Chilchnbto": {
+    "lat": 36.52722,
+    "lon": -110.08235,
+    "source": "gnis",
+    "ref": "GNIS 2822 Chilchinbito (Populated Place, Navajo Co., AZ)",
+    "confidence": "low"
+  },
+  "Chinle": {
+    "lat": 36.15,
+    "lon": -109.55,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Chinle",
+    "confidence": "high"
+  },
+  "Christopher Creek": {
+    "lat": 34.31531,
+    "lon": -111.01707,
+    "source": "gnis",
+    "ref": "GNIS 40863 Christopher Creek (Populated Place, Gila Co., AZ)",
+    "confidence": "high"
+  },
+  "Church Rock": {
+    "lat": 35.53391,
+    "lon": -108.5998,
+    "source": "gnis",
+    "ref": "GNIS 902212 Church Rock (Populated Place, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "Cibecue": {
+    "lat": 34.04,
+    "lon": -110.48,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Cibecue",
+    "confidence": "high"
+  },
+  "Clints Well": {
+    "lat": 34.55,
+    "lon": -111.31,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Clints Well",
+    "confidence": "high"
+  },
+  "Coalmine Canyon": {
+    "lat": 36.14678,
+    "lon": -111.03256,
+    "source": "gnis",
+    "ref": "GNIS 3049 Coal Mine Canyon (Valley, Coconino Co., AZ)",
+    "confidence": "medium"
+  },
+  "Concho": {
+    "lat": 34.44,
+    "lon": -109.64,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Concho",
+    "confidence": "high"
+  },
+  "Coppermine": {
+    "lat": 36.57241,
+    "lon": -111.45424,
+    "source": "gnis",
+    "ref": "GNIS 2418880 Coppermine Chapter (Civil, Coconino Co., AZ)",
+    "confidence": "high"
+  },
+  "Cordes Junction": {
+    "lat": 34.33225,
+    "lon": -112.12044,
+    "source": "gnis",
+    "ref": "GNIS 27941 Cordes Junction (Populated Place, Yavapai Co., AZ)",
+    "confidence": "high"
+  },
+  "Cornfields": {
+    "lat": 35.65223,
+    "lon": -109.67928,
+    "source": "gnis",
+    "ref": "GNIS 3279 Cornfields (Populated Place, Apache Co., AZ)",
+    "confidence": "high"
+  },
+  "Cornville": {
+    "lat": 34.7178,
+    "lon": -111.92154,
+    "source": "gnis",
+    "ref": "GNIS 27961 Cornville (Populated Place, Yavapai Co., AZ)",
+    "confidence": "high"
+  },
+  "Cottonwood": {
+    "lat": 34.73,
+    "lon": -112.02,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Cottonwood",
+    "confidence": "high"
+  },
+  "Counselor": {
+    "lat": 36.20918,
+    "lon": -107.45783,
+    "source": "gnis",
+    "ref": "GNIS 902808 Counselor (Populated Place, Sandoval Co., NM)",
+    "confidence": "high"
+  },
+  "Cove": {
+    "lat": 36.56528,
+    "lon": -109.21788,
+    "source": "gnis",
+    "ref": "GNIS 25261 Cove (Populated Place, Apache Co., AZ)",
+    "confidence": "high"
+  },
+  "Coyote Canyon": {
+    "lat": 35.77474,
+    "lon": -108.62092,
+    "source": "gnis",
+    "ref": "GNIS 898537 Coyote Canyon (Populated Place, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "Crown King": {
+    "lat": 34.21,
+    "lon": -112.34,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Crown King",
+    "confidence": "high"
+  },
+  "Crownpoint": {
+    "lat": 35.67808,
+    "lon": -108.15118,
+    "source": "gnis",
+    "ref": "GNIS 902810 Crownpoint (Populated Place, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "Crystal": {
+    "lat": 36.04584,
+    "lon": -108.9662,
+    "source": "gnis",
+    "ref": "GNIS 902227 Crystal (Populated Place, San Juan Co., NM)",
+    "confidence": "high"
+  },
+  "Dennehotso": {
+    "lat": 36.84,
+    "lon": -109.85,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Dennehotso",
+    "confidence": "high"
+  },
+  "Dilkon": {
+    "lat": 35.38,
+    "lon": -110.32,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Dilkon",
+    "confidence": "high"
+  },
+  "Doney Park": {
+    "lat": 35.27,
+    "lon": -111.51,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Doney Park",
+    "confidence": "high"
+  },
+  "Eagar": {
+    "lat": 34.1,
+    "lon": -109.29,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Eagar",
+    "confidence": "high"
+  },
+  "East Fork": {
+    "lat": 33.08,
+    "lon": -109.92,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: East Fork",
+    "confidence": "high"
+  },
+  "Flagstaff - Airport": {
+    "lat": 35.14,
+    "lon": -111.67,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Flagstaff Airport",
+    "confidence": "high"
+  },
+  "Flagstaff - Downtown": {
+    "lat": 35.2,
+    "lon": -111.65,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Flagstaff Downtown",
+    "confidence": "high"
+  },
+  "Flagstaff - Mall": {
+    "lat": 35.22315,
+    "lon": -111.58146,
+    "source": "osm",
+    "ref": "OSM way/144449026 Flagstaff Mall, Spur Street, Flagstaff, Coconino County, Arizona, 86004, United States",
+    "confidence": "low"
+  },
+  "Flagstaff - NAU": {
+    "lat": 35.18309,
+    "lon": -111.65496,
+    "source": "osm",
+    "ref": "OSM way/201526317 Northern Arizona University, South Milton Road, Green Tree Shopping Center, Flagstaff, Coconino County, Arizona, 86011, United States",
+    "confidence": "low"
+  },
+  "Flagstaff - University Heights": {
+    "lat": 35.17125,
+    "lon": -111.67571,
+    "source": "osm",
+    "ref": "OSM relation/8735493 University Heights/Highlands, Flagstaff, Coconino County, Arizona, United States",
+    "confidence": "low"
+  },
+  "Forest Lakes": {
+    "lat": 34.33,
+    "lon": -110.8,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Forest Lakes",
+    "confidence": "high"
+  },
+  "Fort Apache": {
+    "lat": 33.79,
+    "lon": -109.98,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Fort Apache",
+    "confidence": "high"
+  },
+  "Fort Defiance": {
+    "lat": 35.74446,
+    "lon": -109.07648,
+    "source": "gnis",
+    "ref": "GNIS 4747 Fort Defiance (Populated Place, Apache Co., AZ)",
+    "confidence": "high"
+  },
+  "Fort Valley": {
+    "lat": 35.26,
+    "lon": -111.73,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Fort Valley",
+    "confidence": "high"
+  },
+  "Frazier Wells": {
+    "lat": 35.78249,
+    "lon": -113.07215,
+    "source": "gnis",
+    "ref": "GNIS 4832 Frazier Wells (Populated Place, Coconino Co., AZ)",
+    "confidence": "high"
+  },
+  "Fredonia": {
+    "lat": 36.96,
+    "lon": -112.51,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Fredonia",
+    "confidence": "high"
+  },
+  "GCNP - North Rim": {
+    "lat": 36.21054,
+    "lon": -112.06128,
+    "source": "gnis",
+    "ref": "GNIS 8757 North Rim (Populated Place, Coconino Co., AZ)",
+    "confidence": "medium"
+  },
+  "GCNP - South Rim": {
+    "lat": 36.04743,
+    "lon": -112.16232,
+    "source": "gnis",
+    "ref": "GNIS 2408314 Grand Canyon Village Census Designated Place (Census, Coconino Co., AZ)",
+    "confidence": "medium"
+  },
+  "Gadii'ahi": {
+    "lat": 36.93195,
+    "lon": -108.78157,
+    "source": "gnis",
+    "ref": "GNIS 2418947 Gadii'ahi Chapter (Civil, San Juan Co., NM)",
+    "confidence": "high"
+  },
+  "Ganado": {
+    "lat": 35.7,
+    "lon": -109.55,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Ganado",
+    "confidence": "high"
+  },
+  "Goldwater Lake": {
+    "lat": 34.49877,
+    "lon": -112.4556,
+    "source": "osm",
+    "ref": "OSM way/68773552 Lower Goldwater Lake, Yavapai County, Arizona, United States",
+    "confidence": "low"
+  },
+  "Grand Canyon West": {
+    "lat": 35.99979,
+    "lon": -113.81025,
+    "source": "gnis",
+    "ref": "GNIS 2582791 Grand Canyon West Census Designated Place (Census, Mohave Co., AZ)",
+    "confidence": "low"
+  },
+  "Granite Mountain": {
+    "lat": 34.64065,
+    "lon": -112.57664,
+    "source": "gnis",
+    "ref": "GNIS 25343 Granite Mountain (Summit, Yavapai Co., AZ)",
+    "confidence": "medium"
+  },
+  "Greasewood": {
+    "lat": 35.52251,
+    "lon": -109.85734,
+    "source": "gnis",
+    "ref": "GNIS 5336 Greasewood (Populated Place, Navajo Co., AZ)",
+    "confidence": "high"
+  },
+  "Greer": {
+    "lat": 34.01,
+    "lon": -109.45,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Greer",
+    "confidence": "high"
+  },
+  "Happy Jack": {
+    "lat": 34.74335,
+    "lon": -111.40737,
+    "source": "gnis",
+    "ref": "GNIS 29736 Happy Jack (Populated Place, Coconino Co., AZ)",
+    "confidence": "high"
+  },
+  "Hardrock": {
+    "lat": 36.10545,
+    "lon": -110.46798,
+    "source": "gnis",
+    "ref": "GNIS 2418956 Hard Rock Chapter (Civil, Navajo Co., AZ)",
+    "confidence": "high"
+  },
+  "Havasu Falls": {
+    "lat": 36.25515,
+    "lon": -112.69795,
+    "source": "gnis",
+    "ref": "GNIS 44804 Havasu Falls (Falls, Coconino Co., AZ)",
+    "confidence": "medium"
+  },
+  "Hawley Lake": {
+    "lat": 33.98,
+    "lon": -109.74,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Hawley Lake",
+    "confidence": "high"
+  },
+  "Heber": {
+    "lat": 34.43143,
+    "lon": -110.59401,
+    "source": "gnis",
+    "ref": "GNIS 29842 Heber (Populated Place, Navajo Co., AZ)",
+    "confidence": "high"
+  },
+  "Hilltop": {
+    "lat": 35.20805,
+    "lon": -114.02495,
+    "source": "gnis",
+    "ref": "GNIS 5830 Hilltop (Populated Place, Mohave Co., AZ)",
+    "confidence": "high"
+  },
+  "Hindu Canyon": {
+    "lat": 35.71316,
+    "lon": -113.56626,
+    "source": "gnis",
+    "ref": "GNIS 5836 Hindu Canyon (Valley, Mohave Co., AZ)",
+    "confidence": "medium"
+  },
+  "Hogback": {
+    "lat": 36.79274,
+    "lon": -108.59438,
+    "source": "gnis",
+    "ref": "GNIS 2418964 Hogback Chapter (Civil, San Juan Co., NM)",
+    "confidence": "high"
+  },
+  "Holbrook": {
+    "lat": 34.9,
+    "lon": -110.16,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Holbrook",
+    "confidence": "high"
+  },
+  "Hon-Dah": {
+    "lat": 34.08609,
+    "lon": -109.91534,
+    "source": "gnis",
+    "ref": "GNIS 2582798 Hondah Census Designated Place (Census, Navajo Co., AZ)",
+    "confidence": "low"
+  },
+  "Hotevilla": {
+    "lat": 35.92,
+    "lon": -110.67,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Hotevilla",
+    "confidence": "high"
+  },
+  "Houck": {
+    "lat": 35.28308,
+    "lon": -109.20704,
+    "source": "gnis",
+    "ref": "GNIS 24465 Houck (Populated Place, Apache Co., AZ)",
+    "confidence": "high"
+  },
+  "Huerfano": {
+    "lat": 36.52695,
+    "lon": -108.03146,
+    "source": "gnis",
+    "ref": "GNIS 1852626 Huerfano (Populated Place, San Juan Co., NM)",
+    "confidence": "high"
+  },
+  "Hyde Peak": {
+    "lat": 34.8353,
+    "lon": -112.91852,
+    "source": "osm",
+    "ref": "OSM node/359266880 Hyde Creek Mountain, Yavapai County, Arizona, United States",
+    "confidence": "low"
+  },
+  "Indian Wells": {
+    "lat": 35.40557,
+    "lon": -110.08485,
+    "source": "gnis",
+    "ref": "GNIS 24470 Indian Wells (Populated Place, Navajo Co., AZ)",
+    "confidence": "high"
+  },
+  "Iron Springs": {
+    "lat": 34.6,
+    "lon": -112.61,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Iron Springs",
+    "confidence": "high"
+  },
+  "Iyanbito": {
+    "lat": 35.52224,
+    "lon": -108.47758,
+    "source": "gnis",
+    "ref": "GNIS 899682 Iyanbito (Populated Place, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "Jacob Lake": {
+    "lat": 36.71,
+    "lon": -112.22,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Jacob Lake",
+    "confidence": "high"
+  },
+  "Jeddito": {
+    "lat": 35.77445,
+    "lon": -110.13679,
+    "source": "gnis",
+    "ref": "GNIS 24262 Jeddito (Populated Place, Navajo Co., AZ)",
+    "confidence": "high"
+  },
+  "Juniper Mesa": {
+    "lat": 34.948,
+    "lon": -112.91773,
+    "source": "gnis",
+    "ref": "GNIS 30661 Juniper Mesa (Summit, Yavapai Co., AZ)",
+    "confidence": "medium"
+  },
+  "Kachina Village": {
+    "lat": 35.1,
+    "lon": -111.69,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Kachina Village",
+    "confidence": "high"
+  },
+  "Kaibeto": {
+    "lat": 36.66276,
+    "lon": -111.04554,
+    "source": "gnis",
+    "ref": "GNIS 2418981 Kaibeto Chapter (Civil, Coconino Co., AZ)",
+    "confidence": "high"
+  },
+  "Kayenta": {
+    "lat": 36.72,
+    "lon": -110.25,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Kayenta",
+    "confidence": "high"
+  },
+  "Keams Canyon": {
+    "lat": 35.81,
+    "lon": -110.19,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Keams Canyon",
+    "confidence": "high"
+  },
+  "Kinlichee": {
+    "lat": 35.75612,
+    "lon": -109.42566,
+    "source": "gnis",
+    "ref": "GNIS 25267 Kinlichee (Populated Place, Apache Co., AZ)",
+    "confidence": "high"
+  },
+  "Klagetoh": {
+    "lat": 35.50196,
+    "lon": -109.52816,
+    "source": "gnis",
+    "ref": "GNIS 6730 Klagetoh (Populated Place, Apache Co., AZ)",
+    "confidence": "high"
+  },
+  "Kohls Ranch": {
+    "lat": 34.33,
+    "lon": -111.08,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Kohls Ranch",
+    "confidence": "high"
+  },
+  "Kykotsmovi": {
+    "lat": 35.87,
+    "lon": -110.61,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Kykotsmovi",
+    "confidence": "high"
+  },
+  "Lake Valley": {
+    "lat": 36.09168,
+    "lon": -108.15729,
+    "source": "gnis",
+    "ref": "GNIS 899712 Lake Valley (Populated Place, San Juan Co., NM)",
+    "confidence": "high"
+  },
+  "Lakeside": {
+    "lat": 34.15449,
+    "lon": -109.97344,
+    "source": "gnis",
+    "ref": "GNIS 30856 Lakeside (Populated Place, Navajo Co., AZ)",
+    "confidence": "high"
+  },
+  "LeChee": {
+    "lat": 35.03224,
+    "lon": -110.75291,
+    "source": "gnis",
+    "ref": "GNIS 1853161 LeChee (Populated Place, Coconino Co., AZ)",
+    "confidence": "high"
+  },
+  "Leupp": {
+    "lat": 35.29,
+    "lon": -111,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Leupp",
+    "confidence": "high"
+  },
+  "Little Water": {
+    "lat": 36.44639,
+    "lon": -108.72481,
+    "source": "gnis",
+    "ref": "GNIS 899727 Little Water (Populated Place, San Juan Co., NM)",
+    "confidence": "high"
+  },
+  "Low Mountain": {
+    "lat": 35.94028,
+    "lon": -110.11346,
+    "source": "gnis",
+    "ref": "GNIS 7437 Low Mountain (Populated Place, Navajo Co., AZ)",
+    "confidence": "high"
+  },
+  "Lukachukai": {
+    "lat": 36.41,
+    "lon": -109.26,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Lukachukai",
+    "confidence": "high"
+  },
+  "Lupton": {
+    "lat": 35.35,
+    "lon": -109.04,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Lupton",
+    "confidence": "high"
+  },
+  "Manuelito": {
+    "lat": 35.42197,
+    "lon": -108.99398,
+    "source": "gnis",
+    "ref": "GNIS 902831 Manuelito (Populated Place, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "Many Farms": {
+    "lat": 36.36,
+    "lon": -109.64,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Many Farms",
+    "confidence": "high"
+  },
+  "Mariano Lake": {
+    "lat": 35.57808,
+    "lon": -108.32202,
+    "source": "gnis",
+    "ref": "GNIS 899751 Mariano Lake (Populated Place, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "McNary": {
+    "lat": 34.07,
+    "lon": -109.85,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: McNary",
+    "confidence": "high"
+  },
+  "Mexican Springs": {
+    "lat": 35.79279,
+    "lon": -108.82703,
+    "source": "gnis",
+    "ref": "GNIS 902834 Mexican Springs (Populated Place, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "Mingus Mountain": {
+    "lat": 34.7,
+    "lon": -112.13,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Mingus Mountain",
+    "confidence": "high"
+  },
+  "Mishongovi": {
+    "lat": 35.80501,
+    "lon": -110.49263,
+    "source": "gnis",
+    "ref": "GNIS 8122 Mishongnovi (Populated Place, Navajo Co., AZ)",
+    "confidence": "medium"
+  },
+  "Moenkopi": {
+    "lat": 36.11,
+    "lon": -111.22,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Moenkopi",
+    "confidence": "high"
+  },
+  "Mormon Lake": {
+    "lat": 34.90835,
+    "lon": -111.46321,
+    "source": "gnis",
+    "ref": "GNIS 32047 Mormon Lake (Populated Place, Coconino Co., AZ)",
+    "confidence": "high"
+  },
+  "Mount Union": {
+    "lat": 34.41499,
+    "lon": -112.40447,
+    "source": "gnis",
+    "ref": "GNIS 35662 Mount Union (Summit, Yavapai Co., AZ)",
+    "confidence": "medium"
+  },
+  "Mt Baldy": {
+    "lat": 33.9,
+    "lon": -109.56,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Mt. Baldy",
+    "confidence": "high"
+  },
+  "Munds Park": {
+    "lat": 34.94,
+    "lon": -111.64,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Munds Park",
+    "confidence": "high"
+  },
+  "Nageezi": {
+    "lat": 36.26668,
+    "lon": -107.742,
+    "source": "gnis",
+    "ref": "GNIS 902312 Nageezi (Populated Place, San Juan Co., NM)",
+    "confidence": "high"
+  },
+  "Nahata Dziil": {
+    "lat": 35.07654,
+    "lon": -109.32785,
+    "source": "gnis",
+    "ref": "GNIS 2419027 Nahatadziil Chapter (Civil, Apache Co., AZ)",
+    "confidence": "high"
+  },
+  "Nahodshgsh": {
+    "lat": 35.71919,
+    "lon": -108.32375,
+    "source": "gnis",
+    "ref": "GNIS 2419028 Nahodishgish Chapter (Civil, McKinley Co., NM)",
+    "confidence": "medium"
+  },
+  "Naschitti": {
+    "lat": 36.06501,
+    "lon": -108.68203,
+    "source": "gnis",
+    "ref": "GNIS 902313 Naschitti (Populated Place, San Juan Co., NM)",
+    "confidence": "high"
+  },
+  "Navajo N.M": {
+    "lat": 36.68,
+    "lon": -110.53,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Navajo National Monument",
+    "confidence": "high"
+  },
+  "Nazlini": {
+    "lat": 35.8964,
+    "lon": -109.44871,
+    "source": "gnis",
+    "ref": "GNIS 8549 Nazlini (Populated Place, Apache Co., AZ)",
+    "confidence": "high"
+  },
+  "Nenahnezad": {
+    "lat": 36.73611,
+    "lon": -108.41814,
+    "source": "gnis",
+    "ref": "GNIS 1877178 Nenahnezad (Populated Place, San Juan Co., NM)",
+    "confidence": "high"
+  },
+  "Newcomb": {
+    "lat": 36.28473,
+    "lon": -108.70592,
+    "source": "gnis",
+    "ref": "GNIS 902319 Newcomb (Populated Place, San Juan Co., NM)",
+    "confidence": "high"
+  },
+  "Nutrioso": {
+    "lat": 33.98,
+    "lon": -109.2,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Nutrioso",
+    "confidence": "high"
+  },
+  "Oak Springs": {
+    "lat": 35.47558,
+    "lon": -109.12759,
+    "source": "gnis",
+    "ref": "GNIS 25269 Oak Springs (Populated Place, Apache Co., AZ)",
+    "confidence": "high"
+  },
+  "Ojo Encino": {
+    "lat": 35.95557,
+    "lon": -107.34782,
+    "source": "gnis",
+    "ref": "GNIS 932944 Ojo Encino (Populated Place, McKinley Co., NM)",
+    "confidence": "medium"
+  },
+  "Oraibi": {
+    "lat": 35.87,
+    "lon": -110.64,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Oraibi",
+    "confidence": "high"
+  },
+  "Page": {
+    "lat": 36.91,
+    "lon": -111.45,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Page",
+    "confidence": "high"
+  },
+  "Parks": {
+    "lat": 35.26057,
+    "lon": -111.94877,
+    "source": "gnis",
+    "ref": "GNIS 32699 Parks (Populated Place, Coconino Co., AZ)",
+    "confidence": "high"
+  },
+  "Payson": {
+    "lat": 34.24,
+    "lon": -111.32,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Payson",
+    "confidence": "high"
+  },
+  "Peach Springs": {
+    "lat": 35.52916,
+    "lon": -113.42549,
+    "source": "gnis",
+    "ref": "GNIS 9278 Peach Springs (Populated Place, Mohave Co., AZ)",
+    "confidence": "high"
+  },
+  "Petrified Forest N.P.": {
+    "lat": 35.06,
+    "lon": -109.45,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Petrified Forest National Park",
+    "confidence": "high"
+  },
+  "Pine": {
+    "lat": 34.38,
+    "lon": -111.44,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Pine",
+    "confidence": "high"
+  },
+  "Pine Springs": {
+    "lat": 35.4053,
+    "lon": -109.2801,
+    "source": "gnis",
+    "ref": "GNIS 9479 Pine Springs (Populated Place, Apache Co., AZ)",
+    "confidence": "high"
+  },
+  "Pinedale": {
+    "lat": 35.60391,
+    "lon": -108.44702,
+    "source": "gnis",
+    "ref": "GNIS 902839 Pinedale (Populated Place, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "Pinetop": {
+    "lat": 34.12588,
+    "lon": -109.93761,
+    "source": "gnis",
+    "ref": "GNIS 32990 Pinetop (Populated Place, Navajo Co., AZ)",
+    "confidence": "high"
+  },
+  "Pinon": {
+    "lat": 36.10083,
+    "lon": -110.22596,
+    "source": "gnis",
+    "ref": "GNIS 9512 Pinon (Populated Place, Navajo Co., AZ)",
+    "confidence": "high"
+  },
+  "Polacca": {
+    "lat": 35.87,
+    "lon": -110.64,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Polacca",
+    "confidence": "high"
+  },
+  "Prescott Airport": {
+    "lat": 34.65,
+    "lon": -112.42,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Prescott Airport",
+    "confidence": "high"
+  },
+  "Prescott Courthouse": {
+    "lat": 34.54092,
+    "lon": -112.46946,
+    "source": "osm",
+    "ref": "OSM way/89160962 Yavapai County Courthouse, Courthouse Plaza, Prescott, Yavapai County, Arizona, 86313, United States",
+    "confidence": "low"
+  },
+  "Prescott Valley": {
+    "lat": 34.6,
+    "lon": -112.31,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Prescott Valley",
+    "confidence": "high"
+  },
+  "Pueblo Ptdo": {
+    "lat": 35.97724,
+    "lon": -107.67339,
+    "source": "gnis",
+    "ref": "GNIS 902332 Pueblo Pintado (Populated Place, McKinley Co., NM)",
+    "confidence": "low"
+  },
+  "Ramah": {
+    "lat": 35.13309,
+    "lon": -108.49174,
+    "source": "gnis",
+    "ref": "GNIS 909970 Ramah (Populated Place, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "Red Lake #18": {
+    "lat": 35.88355,
+    "lon": -109.03844,
+    "source": "gnis",
+    "ref": "GNIS 2419069 Red Lake Chapter (Civil, McKinley Co., NM)",
+    "confidence": "low"
+  },
+  "Red Rock": {
+    "lat": 35.45419,
+    "lon": -108.75592,
+    "source": "gnis",
+    "ref": "GNIS 902339 Red Rock (Populated Place, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "Red Valley": {
+    "lat": 36.6432,
+    "lon": -109.04583,
+    "source": "gnis",
+    "ref": "GNIS 2419073 Red Valley Chapter (Civil, San Juan Co., AZ)",
+    "confidence": "high"
+  },
+  "Rock Point": {
+    "lat": 36.71806,
+    "lon": -109.62594,
+    "source": "gnis",
+    "ref": "GNIS 10415 Rock Point (Populated Place, Apache Co., AZ)",
+    "confidence": "high"
+  },
+  "Rock Springs": {
+    "lat": 35.60946,
+    "lon": -108.82925,
+    "source": "gnis",
+    "ref": "GNIS 1852634 Rock Springs (Populated Place, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "Rough Rock": {
+    "lat": 36.40722,
+    "lon": -109.87289,
+    "source": "gnis",
+    "ref": "GNIS 10520 Rough Rock (Populated Place, Apache Co., AZ)",
+    "confidence": "high"
+  },
+  "Round Rock": {
+    "lat": 36.51306,
+    "lon": -109.47344,
+    "source": "gnis",
+    "ref": "GNIS 24590 Round Rock (Populated Place, Apache Co., AZ)",
+    "confidence": "high"
+  },
+  "Saint Johns": {
+    "lat": 34.5,
+    "lon": -109.36,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: St. Johns",
+    "confidence": "high"
+  },
+  "Sanders": {
+    "lat": 35.21,
+    "lon": -109.33,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Sanders",
+    "confidence": "high"
+  },
+  "Sanostee": {
+    "lat": 36.42473,
+    "lon": -108.87426,
+    "source": "gnis",
+    "ref": "GNIS 902349 Sanostee (Populated Place, San Juan Co., NM)",
+    "confidence": "high"
+  },
+  "Sawmill": {
+    "lat": 33.62,
+    "lon": -110.4,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Saw Mill",
+    "confidence": "high"
+  },
+  "Sedona": {
+    "lat": 34.87,
+    "lon": -111.76,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Sedona",
+    "confidence": "high"
+  },
+  "Seligman": {
+    "lat": 35.33,
+    "lon": -112.88,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Seligman",
+    "confidence": "high"
+  },
+  "Sevenmile": {
+    "lat": 33.78533,
+    "lon": -109.95676,
+    "source": "gnis",
+    "ref": "GNIS 25322 Sevenmile (Populated Place, Navajo Co., AZ)",
+    "confidence": "high"
+  },
+  "Sheep Springs": {
+    "lat": 36.14306,
+    "lon": -108.71028,
+    "source": "gnis",
+    "ref": "GNIS 902352 Sheep Springs (Populated Place, San Juan Co., NM)",
+    "confidence": "medium"
+  },
+  "Shiprock": {
+    "lat": 36.78555,
+    "lon": -108.68703,
+    "source": "gnis",
+    "ref": "GNIS 902354 Shiprock (Populated Place, San Juan Co., NM)",
+    "confidence": "high"
+  },
+  "Shonto": {
+    "lat": 36.58,
+    "lon": -110.66,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Shonto",
+    "confidence": "high"
+  },
+  "Show Low": {
+    "lat": 34.25,
+    "lon": -110,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Show Low",
+    "confidence": "high"
+  },
+  "Shungopavi": {
+    "lat": 35.8,
+    "lon": -110.52,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Shungopavi",
+    "confidence": "high"
+  },
+  "Sichomovi": {
+    "lat": 35.83,
+    "lon": -110.39,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Sichomovi",
+    "confidence": "high"
+  },
+  "Sipaulovi": {
+    "lat": 35.8,
+    "lon": -110.49,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Sipaulovi",
+    "confidence": "high"
+  },
+  "Smith Lake": {
+    "lat": 35.52225,
+    "lon": -108.13979,
+    "source": "gnis",
+    "ref": "GNIS 902845 Smith Lake (Populated Place, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "Snowflake": {
+    "lat": 34.51,
+    "lon": -110.08,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Snowflake",
+    "confidence": "high"
+  },
+  "Springerville": {
+    "lat": 34.13,
+    "lon": -109.28,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Springerville",
+    "confidence": "high"
+  },
+  "St. Michaels": {
+    "lat": 35.64474,
+    "lon": -109.09565,
+    "source": "gnis",
+    "ref": "GNIS 10723 Saint Michaels (Populated Place, Apache Co., AZ)",
+    "confidence": "high"
+  },
+  "Standing Rock": {
+    "lat": 35.80307,
+    "lon": -108.36091,
+    "source": "gnis",
+    "ref": "GNIS 902846 Standing Rock (Populated Place, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "Steamboat": {
+    "lat": 35.7514,
+    "lon": -109.84789,
+    "source": "gnis",
+    "ref": "GNIS 1853166 Steamboat (Populated Place, Apache Co., AZ)",
+    "confidence": "high"
+  },
+  "Stoneman Lake Rd at Stoneman Lake": {
+    "lat": 34.78141,
+    "lon": -111.51265,
+    "source": "gnis",
+    "ref": "GNIS 34873 Stoneman Lake (Populated Place, Coconino Co., AZ)",
+    "confidence": "medium"
+  },
+  "Strawberry": {
+    "lat": 34.4,
+    "lon": -111.49,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Strawberry",
+    "confidence": "high"
+  },
+  "Sunrise Lake": {
+    "lat": 34.01443,
+    "lon": -109.54845,
+    "source": "gnis",
+    "ref": "GNIS 34966 Sunrise Lake (Reservoir, Apache Co., AZ)",
+    "confidence": "medium"
+  },
+  "Sunrise Ski Resort": {
+    "lat": 33.97344,
+    "lon": -109.56396,
+    "source": "osm",
+    "ref": "OSM node/2629270135 Sunrise Park Resort, R58, Apache County, Arizona, United States",
+    "confidence": "low"
+  },
+  "Sunset Point": {
+    "lat": 34.18364,
+    "lon": -112.14127,
+    "source": "gnis",
+    "ref": "GNIS 34976 Sunset Point (Cliff, Yavapai Co., AZ)",
+    "confidence": "medium"
+  },
+  "Supai": {
+    "lat": 36.23,
+    "lon": -112.68,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Supai",
+    "confidence": "high"
+  },
+  "Taylor": {
+    "lat": 34.46504,
+    "lon": -110.09123,
+    "source": "gnis",
+    "ref": "GNIS 35160 Taylor (Populated Place, Navajo Co., AZ)",
+    "confidence": "high"
+  },
+  "Teec Nos Pos": {
+    "lat": 36.92,
+    "lon": -109.08,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Teec Nos Pos",
+    "confidence": "high"
+  },
+  "Teesto": {
+    "lat": 35.46307,
+    "lon": -110.47619,
+    "source": "gnis",
+    "ref": "GNIS 2419490 Teesto Chapter (Civil, Navajo Co., AZ)",
+    "confidence": "high"
+  },
+  "Tewa": {
+    "lat": 35.85,
+    "lon": -110.38,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Tewa",
+    "confidence": "high"
+  },
+  "Thoreau": {
+    "lat": 35.40253,
+    "lon": -108.2234,
+    "source": "gnis",
+    "ref": "GNIS 911673 Thoreau (Populated Place, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "To'hajiile": {
+    "lat": 35.06208,
+    "lon": -107.10236,
+    "source": "osm",
+    "ref": "OSM node/9312605242 To'hajiilee, Bernalillo County, New Mexico, 87125, United States",
+    "confidence": "low"
+  },
+  "Toadlena": {
+    "lat": 36.23695,
+    "lon": -108.89259,
+    "source": "gnis",
+    "ref": "GNIS 902369 Toadlena (Populated Place, San Juan Co., NM)",
+    "confidence": "high"
+  },
+  "Tohatchi": {
+    "lat": 35.8589,
+    "lon": -108.76147,
+    "source": "gnis",
+    "ref": "GNIS 902849 Tohatchi (Populated Place, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "Tolani Lake": {
+    "lat": 35.43473,
+    "lon": -110.84458,
+    "source": "gnis",
+    "ref": "GNIS 25255 Tolani Lake (Populated Place, Coconino Co., AZ)",
+    "confidence": "high"
+  },
+  "Tolikan": {
+    "lat": 36.81217,
+    "lon": -109.36286,
+    "source": "gnis",
+    "ref": "GNIS 2419482 Sweetwater Chapter (Civil, Apache Co., AZ)",
+    "confidence": "medium"
+  },
+  "Tonalea": {
+    "lat": 36.32249,
+    "lon": -110.96348,
+    "source": "gnis",
+    "ref": "GNIS 1853169 Tonalea (Populated Place, Coconino Co., AZ)",
+    "confidence": "high"
+  },
+  "Tonto Village": {
+    "lat": 34.31615,
+    "lon": -111.13208,
+    "source": "gnis",
+    "ref": "GNIS 35390 Tonto Village (Populated Place, Gila Co., AZ)",
+    "confidence": "high"
+  },
+  "Torreon": {
+    "lat": 35.79724,
+    "lon": -107.21393,
+    "source": "gnis",
+    "ref": "GNIS 1852637 Torreon (Populated Place, Sandoval Co., NM)",
+    "confidence": "high"
+  },
+  "Tsah Bii Kin": {
+    "lat": 36.63248,
+    "lon": -110.83515,
+    "source": "gnis",
+    "ref": "GNIS 2418976 Inscription House Chapter (Civil, Coconino Co., AZ)",
+    "confidence": "medium"
+  },
+  "Tsaile": {
+    "lat": 36.31,
+    "lon": -109.22,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Tsaile",
+    "confidence": "high"
+  },
+  "Tsayatoh": {
+    "lat": 35.54133,
+    "lon": -108.95071,
+    "source": "gnis",
+    "ref": "GNIS 2419500 Tsayatoh Chapter (Civil, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "Tselani": {
+    "lat": 36.03215,
+    "lon": -109.79557,
+    "source": "gnis",
+    "ref": "GNIS 2419501 Tselani Chapter (Civil, Apache Co., AZ)",
+    "confidence": "high"
+  },
+  "Tuba City": {
+    "lat": 36.13,
+    "lon": -111.24,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Tuba City",
+    "confidence": "high"
+  },
+  "Tusayan": {
+    "lat": 35.96,
+    "lon": -112.15,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Tusayan",
+    "confidence": "high"
+  },
+  "Twin Arrows": {
+    "lat": 35.16,
+    "lon": -111.25,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Twin Arrows",
+    "confidence": "high"
+  },
+  "Upper Fruitland": {
+    "lat": 36.71584,
+    "lon": -108.31424,
+    "source": "gnis",
+    "ref": "GNIS 1852638 Upper Fruitland (Populated Place, San Juan Co., NM)",
+    "confidence": "high"
+  },
+  "Vernon": {
+    "lat": 34.28,
+    "lon": -109.7,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Vernon",
+    "confidence": "high"
+  },
+  "Walker Fire": {
+    "lat": 34.4562,
+    "lon": -112.37849,
+    "source": "osm",
+    "ref": "OSM way/1009884759 Walker Fire Department, East Walker Road, Walker, Yavapai County, Arizona, United States",
+    "confidence": "low"
+  },
+  "Walpi": {
+    "lat": 35.83,
+    "lon": -110.39,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Walpi",
+    "confidence": "high"
+  },
+  "Wheatfields": {
+    "lat": 36.23778,
+    "lon": -109.12871,
+    "source": "gnis",
+    "ref": "GNIS 25274 Wheatfields (Populated Place, Apache Co., AZ)",
+    "confidence": "high"
+  },
+  "Whippoorwill": {
+    "lat": 36.0151,
+    "lon": -110.09279,
+    "source": "gnis",
+    "ref": "GNIS 2419518 Whippoorwill Chapter (Civil, Navajo Co., AZ)",
+    "confidence": "high"
+  },
+  "White Cone": {
+    "lat": 35.60529,
+    "lon": -110.06818,
+    "source": "gnis",
+    "ref": "GNIS 13608 White Cone (Populated Place, Navajo Co., AZ)",
+    "confidence": "high"
+  },
+  "White Horse Lake": {
+    "lat": 35.83991,
+    "lon": -107.67428,
+    "source": "gnis",
+    "ref": "GNIS 2419521 White Horse Lake Chapter (Civil, McKinley Co., NM)",
+    "confidence": "high"
+  },
+  "White Rock": {
+    "lat": 36.08862,
+    "lon": -108.27063,
+    "source": "gnis",
+    "ref": "GNIS 936838 White Rock (Populated Place, San Juan Co., NM)",
+    "confidence": "high"
+  },
+  "Whiteriver": {
+    "lat": 33.83,
+    "lon": -109.96,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Whiteriver",
+    "confidence": "high"
+  },
+  "Wide Ruins": {
+    "lat": 35.41946,
+    "lon": -109.49649,
+    "source": "gnis",
+    "ref": "GNIS 13740 Wide Ruins (Populated Place, Apache Co., AZ)",
+    "confidence": "high"
+  },
+  "Williams": {
+    "lat": 35.25,
+    "lon": -112.19,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Williams",
+    "confidence": "high"
+  },
+  "Window Rock": {
+    "lat": 35.66,
+    "lon": -109.08,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Window Rock",
+    "confidence": "high"
+  },
+  "Winslow": {
+    "lat": 35.02,
+    "lon": -110.7,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Winslow",
+    "confidence": "high"
+  },
+  "Yarnell": {
+    "lat": 34.22,
+    "lon": -112.74,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Yarnell",
+    "confidence": "high"
+  },
+  "Young": {
+    "lat": 34.1,
+    "lon": -110.94,
+    "source": "nws",
+    "ref": "ProbSnow_WebData: Young",
+    "confidence": "high"
+  }
+}

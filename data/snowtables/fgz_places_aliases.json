@@ -1,0 +1,70 @@
+{
+  "Bahast'lah": {
+    "gnis": "Twin Lakes Chapter",
+    "note": "Bahastl'ah is the Navajo name of Twin Lakes Chapter, NM - verify"
+  },
+  "Canyon de Chelly N.M.": {
+    "osm": "Canyon de Chelly National Monument, Arizona",
+    "note": "national monument; point is OSM's representative location"
+  },
+  "Flagstaff - NAU": {
+    "osm": "Northern Arizona University, Flagstaff, Arizona",
+    "note": "NAU campus"
+  },
+  "Flagstaff - University Heights": {
+    "osm": "University Heights, Flagstaff, Arizona",
+    "note": "Flagstaff neighborhood"
+  },
+  "GCNP - North Rim": {
+    "gnis": "North Rim",
+    "note": "Grand Canyon National Park, North Rim community"
+  },
+  "GCNP - South Rim": {
+    "gnis": "Grand Canyon Village Census Designated Place",
+    "note": "Grand Canyon National Park, South Rim (Grand Canyon Village)"
+  },
+  "Hyde Peak": {
+    "osm": "Hyde Peak, Yavapai County, Arizona",
+    "note": "summit in Yavapai County; not in GNIS"
+  },
+  "Prescott Courthouse": {
+    "osm": "Yavapai County Courthouse, Prescott, Arizona",
+    "note": "Courthouse Plaza, Prescott"
+  },
+  "Rim Top Trail": {
+    "skip": true,
+    "note": "dropped by maintainer (no reliable location); shown in tables, not on the map"
+  },
+  "San Juan": {
+    "skip": true,
+    "note": "dropped by maintainer (no reliable location); shown in tables, not on the map"
+  },
+  "Stoneman Lake Rd at Lake Mary Rd": {
+    "skip": true,
+    "note": "dropped by maintainer (no reliable location); shown in tables, not on the map"
+  },
+  "Stoneman Lake Rd at Stoneman Lake": {
+    "gnis": "Stoneman Lake",
+    "note": "Stoneman Lake community, where Stoneman Lake Rd ends"
+  },
+  "Sunrise Ski Resort": {
+    "osm": "Sunrise Park Resort, Arizona",
+    "note": "Sunrise Park Resort (White Mountain Apache)"
+  },
+  "Sunset Point": {
+    "gnis": "Sunset Point",
+    "note": "I-17 Sunset Point rest area area, Yavapai County (not the Maricopa summit)"
+  },
+  "To'hajiile": {
+    "osm": "To'hajiilee, New Mexico",
+    "note": "To'hajiilee Chapter (formerly Canoncito), NM"
+  },
+  "Tolikan": {
+    "gnis": "Sweetwater Chapter",
+    "note": "Tolikan (Toolikan) is the Navajo name of Sweetwater Chapter - verify"
+  },
+  "Tsah Bii Kin": {
+    "gnis": "Inscription House Chapter",
+    "note": "Tsah Bii Kin is the Navajo name of Inscription House Chapter - verify"
+  }
+}

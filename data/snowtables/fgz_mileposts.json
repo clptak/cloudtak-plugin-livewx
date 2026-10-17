@@ -1,0 +1,2994 @@
+{
+  "I-17": {
+    "MP 240": {
+      "lat": 34.023123,
+      "lon": -112.14444,
+      "elev_ft": 2054,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 10375 (I 017 MP 240)",
+      "confidence": "high"
+    },
+    "MP 260": {
+      "lat": 34.291917,
+      "lon": -112.123804,
+      "elev_ft": 3755,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1050 (I 017 MP 260)",
+      "confidence": "high"
+    },
+    "MP 280": {
+      "lat": 34.533124,
+      "lon": -111.976404,
+      "elev_ft": 4636,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1099 (I 017 MP 280)",
+      "confidence": "high"
+    },
+    "MP 300": {
+      "lat": 34.703837,
+      "lon": -111.738904,
+      "elev_ft": 4139,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1100 (I 017 MP 300)",
+      "confidence": "high"
+    },
+    "MP 305": {
+      "lat": 34.751825,
+      "lon": -111.673833,
+      "elev_ft": 5223,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 262 (I 017 MP 305)",
+      "confidence": "high"
+    },
+    "MP 310": {
+      "lat": 34.785638,
+      "lon": -111.598698,
+      "elev_ft": 6076,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 782 (I 017 MP 310)",
+      "confidence": "high"
+    },
+    "MP 315": {
+      "lat": 34.845022,
+      "lon": -111.603493,
+      "elev_ft": 6456,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 275 (I 017 MP 315)",
+      "confidence": "high"
+    },
+    "MP 320": {
+      "lat": 34.904937,
+      "lon": -111.641763,
+      "elev_ft": 6484,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1101 (I 017 MP 320)",
+      "confidence": "high"
+    },
+    "MP 325": {
+      "lat": 34.964582,
+      "lon": -111.681051,
+      "elev_ft": 6608,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 263 (I 017 MP 325)",
+      "confidence": "high"
+    },
+    "MP 330": {
+      "lat": 35.036226,
+      "lon": -111.684094,
+      "elev_ft": 6665,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 699 (I 017 MP 330)",
+      "confidence": "high"
+    },
+    "MP 335": {
+      "lat": 35.105914,
+      "lon": -111.680998,
+      "elev_ft": 6794,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 270 (I 017 MP 335)",
+      "confidence": "high"
+    },
+    "MP 340": {
+      "lat": 35.171143,
+      "lon": -111.662488,
+      "elev_ft": 6902,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1058 (I 017 MP 340)",
+      "confidence": "high"
+    }
+  },
+  "I-40": {
+    "MP 0": {
+      "lat": 34.717125,
+      "lon": -114.487802,
+      "elev_ft": 0,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 11085 (I 040 MP 0)",
+      "confidence": "high"
+    },
+    "MP 20": {
+      "lat": 34.793338,
+      "lon": -114.162299,
+      "elev_ft": 1548,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 991 (I 040 MP 20)",
+      "confidence": "high"
+    },
+    "MP 40": {
+      "lat": 35.076132,
+      "lon": -114.122184,
+      "elev_ft": 2598,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 992 (I 040 MP 40)",
+      "confidence": "high"
+    },
+    "MP 60": {
+      "lat": 35.197328,
+      "lon": -113.900156,
+      "elev_ft": 4117,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 993 (I 040 MP 60)",
+      "confidence": "high"
+    },
+    "MP 80": {
+      "lat": 35.158695,
+      "lon": -113.55776,
+      "elev_ft": 3994,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 980 (I 040 MP 80)",
+      "confidence": "high"
+    },
+    "MP 100": {
+      "lat": 35.226226,
+      "lon": -113.234344,
+      "elev_ft": 5298,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 981 (I 040 MP 100)",
+      "confidence": "high"
+    },
+    "MP 120": {
+      "lat": 35.322334,
+      "lon": -112.91202,
+      "elev_ft": 5216,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 982 (I 040 MP 120)",
+      "confidence": "high"
+    },
+    "MP 140": {
+      "lat": 35.2289,
+      "lon": -112.583284,
+      "elev_ft": 5060,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1051 (I 040 MP 140)",
+      "confidence": "high"
+    },
+    "MP 145": {
+      "lat": 35.220061,
+      "lon": -112.496106,
+      "elev_ft": 5137,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 105 (I 040 MP 145)",
+      "confidence": "high"
+    },
+    "MP 150": {
+      "lat": 35.213221,
+      "lon": -112.40931,
+      "elev_ft": 5409,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 730 (I 040 MP 150)",
+      "confidence": "high"
+    },
+    "MP 155": {
+      "lat": 35.222992,
+      "lon": -112.324389,
+      "elev_ft": 6475,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 106 (I 040 MP 155)",
+      "confidence": "high"
+    },
+    "MP 160": {
+      "lat": 35.224799,
+      "lon": -112.238013,
+      "elev_ft": 6960,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1025 (I 040 MP 160)",
+      "confidence": "high"
+    },
+    "MP 165": {
+      "lat": 35.263877,
+      "lon": -112.168466,
+      "elev_ft": 6832,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 107 (I 040 MP 165)",
+      "confidence": "high"
+    },
+    "MP 170": {
+      "lat": 35.258526,
+      "lon": -112.078379,
+      "elev_ft": 6943,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 700 (I 040 MP 170)",
+      "confidence": "high"
+    },
+    "MP 175": {
+      "lat": 35.250409,
+      "lon": -111.994247,
+      "elev_ft": 6946,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 164 (I 040 MP 175)",
+      "confidence": "high"
+    },
+    "MP 180": {
+      "lat": 35.252608,
+      "lon": -111.908755,
+      "elev_ft": 7196,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1052 (I 040 MP 180)",
+      "confidence": "high"
+    },
+    "MP 185": {
+      "lat": 35.237084,
+      "lon": -111.82508,
+      "elev_ft": 7129,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 184 (I 040 MP 185)",
+      "confidence": "high"
+    },
+    "MP 190": {
+      "lat": 35.198925,
+      "lon": -111.751799,
+      "elev_ft": 7336,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 731 (I 040 MP 190)",
+      "confidence": "high"
+    },
+    "MP 195": {
+      "lat": 35.173895,
+      "lon": -111.668492,
+      "elev_ft": 6900,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 182 (I 040 MP 195)",
+      "confidence": "high"
+    },
+    "MP 200": {
+      "lat": 35.208526,
+      "lon": -111.598955,
+      "elev_ft": 6828,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1108 (I 040 MP 200)",
+      "confidence": "high"
+    },
+    "MP 205": {
+      "lat": 35.207868,
+      "lon": -111.515035,
+      "elev_ft": 6672,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 276 (I 040 MP 205)",
+      "confidence": "high"
+    },
+    "MP 210": {
+      "lat": 35.201205,
+      "lon": -111.427639,
+      "elev_ft": 6284,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 765 (I 040 MP 210)",
+      "confidence": "high"
+    },
+    "MP 215": {
+      "lat": 35.177502,
+      "lon": -111.346964,
+      "elev_ft": 6088,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 239 (I 040 MP 215)",
+      "confidence": "high"
+    },
+    "MP 220": {
+      "lat": 35.158811,
+      "lon": -111.265262,
+      "elev_ft": 5868,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1075 (I 040 MP 220)",
+      "confidence": "high"
+    },
+    "MP 240": {
+      "lat": 35.093216,
+      "lon": -110.924799,
+      "elev_ft": 5002,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1076 (I 040 MP 240)",
+      "confidence": "high"
+    },
+    "MP 260": {
+      "lat": 35.00145,
+      "lon": -110.603012,
+      "elev_ft": 4891,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1091 (I 040 MP 260)",
+      "confidence": "high"
+    },
+    "MP 280": {
+      "lat": 34.928726,
+      "lon": -110.269226,
+      "elev_ft": 5041,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1077 (I 040 MP 280)",
+      "confidence": "high"
+    },
+    "MP 300": {
+      "lat": 34.991086,
+      "lon": -109.963125,
+      "elev_ft": 5262,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1078 (I 040 MP 300)",
+      "confidence": "high"
+    },
+    "MP 320": {
+      "lat": 35.099258,
+      "lon": -109.641546,
+      "elev_ft": 5667,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1079 (I 040 MP 320)",
+      "confidence": "high"
+    },
+    "MP 340": {
+      "lat": 35.219867,
+      "lon": -109.326108,
+      "elev_ft": 5849,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1057 (I 040 MP 340)",
+      "confidence": "high"
+    },
+    "MP 359": {
+      "lat": 35.362409,
+      "lon": -109.046785,
+      "elev_ft": 0,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 2864 (I 040 MP 359)",
+      "confidence": "high"
+    }
+  },
+  "I-15": {
+    "MP 0": {
+      "lat": 36.817551,
+      "lon": -114.050154,
+      "elev_ft": 0,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1465 (I 015 MP 0)",
+      "confidence": "high"
+    },
+    "MP 10": {
+      "lat": 36.898164,
+      "lon": -113.906217,
+      "elev_ft": 1922,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 660 (I 015 MP 10)",
+      "confidence": "high"
+    },
+    "MP 20": {
+      "lat": 36.959603,
+      "lon": -113.768914,
+      "elev_ft": 2514,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 979 (I 015 MP 20)",
+      "confidence": "high"
+    },
+    "MP 29": {
+      "lat": 36.994293,
+      "lon": -113.62378,
+      "elev_ft": 2775,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1461 (I 015 MP 29)",
+      "confidence": "high"
+    }
+  },
+  "U.S. Route 60": {
+    "MP 200": {
+      "lat": 33.379159,
+      "lon": -111.490444,
+      "elev_ft": 1709,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 8143 (U 060 MP 200)",
+      "confidence": "high"
+    },
+    "MP 220": {
+      "lat": 33.273458,
+      "lon": -111.209425,
+      "elev_ft": 2483,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1205 (U 060 MP 220)",
+      "confidence": "high"
+    },
+    "MP 240": {
+      "lat": 33.369097,
+      "lon": -110.928677,
+      "elev_ft": 4121,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1204 (U 060 MP 240)",
+      "confidence": "high"
+    },
+    "MP 260": {
+      "lat": 33.492397,
+      "lon": -110.717085,
+      "elev_ft": 4496,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1206 (U 060 MP 260)",
+      "confidence": "high"
+    },
+    "MP 280": {
+      "lat": 33.67693,
+      "lon": -110.572895,
+      "elev_ft": 5799,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1041 (U 060 MP 280)",
+      "confidence": "high"
+    },
+    "MP 300": {
+      "lat": 33.839961,
+      "lon": -110.432118,
+      "elev_ft": 4710,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1042 (U 060 MP 300)",
+      "confidence": "high"
+    },
+    "MP 310": {
+      "lat": 33.933862,
+      "lon": -110.339511,
+      "elev_ft": 5460,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 794 (U 060 MP 310)",
+      "confidence": "high"
+    },
+    "MP 315": {
+      "lat": 33.98258,
+      "lon": -110.28909,
+      "elev_ft": 4850,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 297 (U 060 MP 315)",
+      "confidence": "high"
+    },
+    "MP 320": {
+      "lat": 34.023902,
+      "lon": -110.238134,
+      "elev_ft": 5076,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1116 (U 060 MP 320)",
+      "confidence": "high"
+    },
+    "MP 325": {
+      "lat": 34.073514,
+      "lon": -110.193441,
+      "elev_ft": 5664,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 298 (U 060 MP 325)",
+      "confidence": "high"
+    },
+    "MP 330": {
+      "lat": 34.11981,
+      "lon": -110.128911,
+      "elev_ft": 5939,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 795 (U 060 MP 330)",
+      "confidence": "high"
+    },
+    "MP 335": {
+      "lat": 34.180881,
+      "lon": -110.094979,
+      "elev_ft": 6329,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 299 (U 060 MP 335)",
+      "confidence": "high"
+    },
+    "MP 340": {
+      "lat": 34.243813,
+      "lon": -110.054818,
+      "elev_ft": 6447,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1117 (U 060 MP 340)",
+      "confidence": "high"
+    },
+    "MP 345": {
+      "lat": 34.26318,
+      "lon": -109.971344,
+      "elev_ft": 6448,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 285 (U 060 MP 345)",
+      "confidence": "high"
+    },
+    "MP 350": {
+      "lat": 34.27733,
+      "lon": -109.886471,
+      "elev_ft": 6643,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 796 (U 060 MP 350)",
+      "confidence": "high"
+    },
+    "MP 355": {
+      "lat": 34.279515,
+      "lon": -109.80156,
+      "elev_ft": 6836,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 300 (U 060 MP 355)",
+      "confidence": "high"
+    },
+    "MP 360": {
+      "lat": 34.270853,
+      "lon": -109.715062,
+      "elev_ft": 6912,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1118 (U 060 MP 360)",
+      "confidence": "high"
+    },
+    "MP 365": {
+      "lat": 34.268669,
+      "lon": -109.626789,
+      "elev_ft": 6942,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 314 (U 060 MP 365)",
+      "confidence": "high"
+    },
+    "MP 370": {
+      "lat": 34.254761,
+      "lon": -109.544804,
+      "elev_ft": 7290,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 714 (U 060 MP 370)",
+      "confidence": "high"
+    },
+    "MP 375": {
+      "lat": 34.218013,
+      "lon": -109.470741,
+      "elev_ft": 7312,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 135 (U 060 MP 375)",
+      "confidence": "high"
+    },
+    "MP 380": {
+      "lat": 34.197731,
+      "lon": -109.388387,
+      "elev_ft": 6819,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1123 (U 060 MP 380)",
+      "confidence": "high"
+    },
+    "MP 385": {
+      "lat": 34.168654,
+      "lon": -109.311715,
+      "elev_ft": 7017,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 315 (U 060 MP 385)",
+      "confidence": "high"
+    },
+    "MP 390": {
+      "lat": 34.13246,
+      "lon": -109.247701,
+      "elev_ft": 7024,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 797 (U 060 MP 390)",
+      "confidence": "high"
+    },
+    "MP 395": {
+      "lat": 34.151105,
+      "lon": -109.166366,
+      "elev_ft": 7146,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 301 (U 060 MP 395)",
+      "confidence": "high"
+    },
+    "MP 400": {
+      "lat": 34.161438,
+      "lon": -109.080436,
+      "elev_ft": 7212,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1119 (U 060 MP 400)",
+      "confidence": "high"
+    }
+  },
+  "U.S. Route 89": {
+    "MP 420": {
+      "lat": 35.239806,
+      "lon": -111.570748,
+      "elev_ft": 0,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 3499 (U 089 MP 420)",
+      "confidence": "high"
+    },
+    "MP 425": {
+      "lat": 35.302089,
+      "lon": -111.542815,
+      "elev_ft": 6723,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 237 (U 089 MP 425)",
+      "confidence": "high"
+    },
+    "MP 430": {
+      "lat": 35.366736,
+      "lon": -111.572328,
+      "elev_ft": 7198,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 735 (U 089 MP 430)",
+      "confidence": "high"
+    },
+    "MP 435": {
+      "lat": 35.436169,
+      "lon": -111.566698,
+      "elev_ft": 6437,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 236 (U 089 MP 435)",
+      "confidence": "high"
+    },
+    "MP 440": {
+      "lat": 35.506805,
+      "lon": -111.548177,
+      "elev_ft": 6034,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1090 (U 089 MP 440)",
+      "confidence": "high"
+    },
+    "MP 445": {
+      "lat": 35.577812,
+      "lon": -111.530289,
+      "elev_ft": 5596,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 243 (U 089 MP 445)",
+      "confidence": "high"
+    },
+    "MP 450": {
+      "lat": 35.649302,
+      "lon": -111.516384,
+      "elev_ft": 5371,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 767 (U 089 MP 450)",
+      "confidence": "high"
+    },
+    "MP 460": {
+      "lat": 35.784146,
+      "lon": -111.454011,
+      "elev_ft": 4542,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1098 (U 089 MP 460)",
+      "confidence": "high"
+    },
+    "MP 470": {
+      "lat": 35.920665,
+      "lon": -111.402639,
+      "elev_ft": 4216,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 724 (U 089 MP 470)",
+      "confidence": "high"
+    },
+    "MP 480": {
+      "lat": 36.064452,
+      "lon": -111.393629,
+      "elev_ft": 4446,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1023 (U 089 MP 480)",
+      "confidence": "high"
+    },
+    "MP 490": {
+      "lat": 36.201834,
+      "lon": -111.393509,
+      "elev_ft": 4867,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 725 (U 089 MP 490)",
+      "confidence": "high"
+    },
+    "MP 495": {
+      "lat": 36.266684,
+      "lon": -111.430579,
+      "elev_ft": 5192,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 155 (U 089 MP 495)",
+      "confidence": "high"
+    },
+    "MP 500": {
+      "lat": 36.325077,
+      "lon": -111.483785,
+      "elev_ft": 5439,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1048 (U 089 MP 500)",
+      "confidence": "high"
+    },
+    "MP 505": {
+      "lat": 36.389037,
+      "lon": -111.52319,
+      "elev_ft": 5928,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 101 (U 089 MP 505)",
+      "confidence": "high"
+    },
+    "MP 510": {
+      "lat": 36.454062,
+      "lon": -111.561908,
+      "elev_ft": 5682,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 726 (U 089 MP 510)",
+      "confidence": "high"
+    },
+    "MP 515": {
+      "lat": 36.519707,
+      "lon": -111.597055,
+      "elev_ft": 5455,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 156 (U 089 MP 515)",
+      "confidence": "high"
+    },
+    "MP 520": {
+      "lat": 36.579343,
+      "lon": -111.645823,
+      "elev_ft": 5245,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1022 (U 089 MP 520)",
+      "confidence": "high"
+    },
+    "MP 525": {
+      "lat": 36.634683,
+      "lon": -111.634515,
+      "elev_ft": 5330,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 100 (U 089 MP 525)",
+      "confidence": "high"
+    },
+    "MP 530": {
+      "lat": 36.691426,
+      "lon": -111.604752,
+      "elev_ft": 6086,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 696 (U 089 MP 530)",
+      "confidence": "high"
+    },
+    "MP 535": {
+      "lat": 36.758008,
+      "lon": -111.569392,
+      "elev_ft": 5643,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 99 (U 089 MP 535)",
+      "confidence": "high"
+    },
+    "MP 540": {
+      "lat": 36.809317,
+      "lon": -111.518746,
+      "elev_ft": 4869,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1047 (U 089 MP 540)",
+      "confidence": "high"
+    },
+    "MP 545": {
+      "lat": 36.879605,
+      "lon": -111.49907,
+      "elev_ft": 4285,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 153 (U 089 MP 545)",
+      "confidence": "high"
+    },
+    "MP 550": {
+      "lat": 36.934863,
+      "lon": -111.48939,
+      "elev_ft": 3887,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 697 (U 089 MP 550)",
+      "confidence": "high"
+    },
+    "MP 555": {
+      "lat": 36.98253,
+      "lon": -111.546777,
+      "elev_ft": 4184,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 98 (U 089 MP 555)",
+      "confidence": "high"
+    }
+  },
+  "U.S. Route 89A": {
+    "MP 525": {
+      "lat": 36.649245,
+      "lon": -111.651249,
+      "elev_ft": 5043,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 146 (UA089 MP 525)",
+      "confidence": "high"
+    },
+    "MP 530": {
+      "lat": 36.717713,
+      "lon": -111.649096,
+      "elev_ft": 4292,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 722 (UA089 MP 530)",
+      "confidence": "high"
+    },
+    "MP 540": {
+      "lat": 36.808834,
+      "lon": -111.664956,
+      "elev_ft": 3649,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1044 (UA089 MP 540)",
+      "confidence": "high"
+    },
+    "MP 550": {
+      "lat": 36.708701,
+      "lon": -111.782678,
+      "elev_ft": 4378,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 651 (UA089 MP 550)",
+      "confidence": "high"
+    },
+    "MP 560": {
+      "lat": 36.705743,
+      "lon": -111.950629,
+      "elev_ft": 5039,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 974 (UA089 MP 560)",
+      "confidence": "high"
+    },
+    "MP 565": {
+      "lat": 36.72811,
+      "lon": -112.035937,
+      "elev_ft": 5314,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 5 (UA089 MP 565)",
+      "confidence": "high"
+    },
+    "MP 570": {
+      "lat": 36.729713,
+      "lon": -112.092508,
+      "elev_ft": 6471,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 654 (UA089 MP 570)",
+      "confidence": "high"
+    },
+    "MP 575": {
+      "lat": 36.731909,
+      "lon": -112.157993,
+      "elev_ft": 7363,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 10914 (UA089 MP 575)",
+      "confidence": "high"
+    },
+    "MP 580": {
+      "lat": 36.723216,
+      "lon": -112.21339,
+      "elev_ft": 7881,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 10673 (UA089 MP 580)",
+      "confidence": "high"
+    },
+    "MP 585": {
+      "lat": 36.758221,
+      "lon": -112.266712,
+      "elev_ft": 7603,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 8 (UA089 MP 585)",
+      "confidence": "high"
+    },
+    "MP 590": {
+      "lat": 36.822827,
+      "lon": -112.253874,
+      "elev_ft": 6963,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 652 (UA089 MP 590)",
+      "confidence": "high"
+    },
+    "MP 595": {
+      "lat": 36.856523,
+      "lon": -112.302813,
+      "elev_ft": 5785,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 7 (UA089 MP 595)",
+      "confidence": "high"
+    },
+    "MP 600": {
+      "lat": 36.89972,
+      "lon": -112.37461,
+      "elev_ft": 5219,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 973 (UA089 MP 600)",
+      "confidence": "high"
+    },
+    "MP 605": {
+      "lat": 36.924252,
+      "lon": -112.458166,
+      "elev_ft": 4747,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 6 (UA089 MP 605)",
+      "confidence": "high"
+    },
+    "MP 610": {
+      "lat": 36.956924,
+      "lon": -112.527018,
+      "elev_ft": 4697,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 653 (UA089 MP 610)",
+      "confidence": "high"
+    }
+  },
+  "U.S. Route 160": {
+    "MP 315": {
+      "lat": 36.098662,
+      "lon": -111.341248,
+      "elev_ft": 4527,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 194 (U 160 MP 315)",
+      "confidence": "high"
+    },
+    "MP 320": {
+      "lat": 36.106861,
+      "lon": -111.254042,
+      "elev_ft": 4585,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1067 (U 160 MP 320)",
+      "confidence": "high"
+    },
+    "MP 330": {
+      "lat": 36.165682,
+      "lon": -111.093347,
+      "elev_ft": 5188,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 741 (U 160 MP 330)",
+      "confidence": "high"
+    },
+    "MP 340": {
+      "lat": 36.286951,
+      "lon": -110.996058,
+      "elev_ft": 5627,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1072 (U 160 MP 340)",
+      "confidence": "high"
+    },
+    "MP 345": {
+      "lat": 36.332298,
+      "lon": -110.923599,
+      "elev_ft": 5488,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 206 (U 160 MP 345)",
+      "confidence": "high"
+    },
+    "MP 350": {
+      "lat": 36.393028,
+      "lon": -110.875884,
+      "elev_ft": 5656,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 742 (U 160 MP 350)",
+      "confidence": "high"
+    },
+    "MP 355": {
+      "lat": 36.423476,
+      "lon": -110.793164,
+      "elev_ft": 5953,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 204 (U 160 MP 355)",
+      "confidence": "high"
+    },
+    "MP 360": {
+      "lat": 36.450289,
+      "lon": -110.717977,
+      "elev_ft": 6150,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1068 (U 160 MP 360)",
+      "confidence": "high"
+    },
+    "MP 365": {
+      "lat": 36.48601,
+      "lon": -110.639928,
+      "elev_ft": 6314,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 203 (U 160 MP 365)",
+      "confidence": "high"
+    },
+    "MP 370": {
+      "lat": 36.530312,
+      "lon": -110.568573,
+      "elev_ft": 6498,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 743 (U 160 MP 370)",
+      "confidence": "high"
+    },
+    "MP 375": {
+      "lat": 36.566151,
+      "lon": -110.49105,
+      "elev_ft": 6603,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 202 (U 160 MP 375)",
+      "confidence": "high"
+    },
+    "MP 380": {
+      "lat": 36.626544,
+      "lon": -110.456723,
+      "elev_ft": 6256,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1073 (U 160 MP 380)",
+      "confidence": "high"
+    },
+    "MP 385": {
+      "lat": 36.677069,
+      "lon": -110.392807,
+      "elev_ft": 6055,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 201 (U 160 MP 385)",
+      "confidence": "high"
+    },
+    "MP 390": {
+      "lat": 36.699238,
+      "lon": -110.309649,
+      "elev_ft": 5906,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 744 (U 160 MP 390)",
+      "confidence": "high"
+    },
+    "MP 395": {
+      "lat": 36.711751,
+      "lon": -110.221427,
+      "elev_ft": 5654,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 128 (U 160 MP 395)",
+      "confidence": "high"
+    },
+    "MP 400": {
+      "lat": 36.725271,
+      "lon": -110.133024,
+      "elev_ft": 5416,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1034 (U 160 MP 400)",
+      "confidence": "high"
+    },
+    "MP 410": {
+      "lat": 36.784292,
+      "lon": -109.971342,
+      "elev_ft": 5169,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 746 (U 160 MP 410)",
+      "confidence": "high"
+    },
+    "MP 420": {
+      "lat": 36.862668,
+      "lon": -109.824626,
+      "elev_ft": 4982,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1071 (U 160 MP 420)",
+      "confidence": "high"
+    },
+    "MP 430": {
+      "lat": 36.938743,
+      "lon": -109.696136,
+      "elev_ft": 4842,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 712 (U 160 MP 430)",
+      "confidence": "high"
+    },
+    "MP 440": {
+      "lat": 36.947231,
+      "lon": -109.527427,
+      "elev_ft": 5417,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1070 (U 160 MP 440)",
+      "confidence": "high"
+    },
+    "MP 450": {
+      "lat": 36.959757,
+      "lon": -109.351322,
+      "elev_ft": 5440,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 747 (U 160 MP 450)",
+      "confidence": "high"
+    },
+    "MP 460": {
+      "lat": 36.926222,
+      "lon": -109.177527,
+      "elev_ft": 5453,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1069 (U 160 MP 460)",
+      "confidence": "high"
+    },
+    "MP 470": {
+      "lat": 36.982176,
+      "lon": -109.056288,
+      "elev_ft": 4979,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 745 (U 160 MP 470)",
+      "confidence": "high"
+    }
+  },
+  "U.S. Route 180": {
+    "MP 220": {
+      "lat": 35.245692,
+      "lon": -111.686493,
+      "elev_ft": 7199,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1106 (U 180 MP 220)",
+      "confidence": "high"
+    },
+    "MP 225": {
+      "lat": 35.279057,
+      "lon": -111.745994,
+      "elev_ft": 7490,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 272 (U 180 MP 225)",
+      "confidence": "high"
+    },
+    "MP 230": {
+      "lat": 35.336933,
+      "lon": -111.784856,
+      "elev_ft": 7964,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 893 (U 180 MP 230)",
+      "confidence": "high"
+    },
+    "MP 235": {
+      "lat": 35.397153,
+      "lon": -111.761705,
+      "elev_ft": 7939,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 495 (U 180 MP 235)",
+      "confidence": "high"
+    },
+    "MP 240": {
+      "lat": 35.458856,
+      "lon": -111.777438,
+      "elev_ft": 7475,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1209 (U 180 MP 240)",
+      "confidence": "high"
+    },
+    "MP 245": {
+      "lat": 35.514458,
+      "lon": -111.832951,
+      "elev_ft": 6996,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 496 (U 180 MP 245)",
+      "confidence": "high"
+    },
+    "MP 250": {
+      "lat": 35.564159,
+      "lon": -111.893668,
+      "elev_ft": 6602,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 892 (U 180 MP 250)",
+      "confidence": "high"
+    },
+    "MP 255": {
+      "lat": 35.583788,
+      "lon": -111.974861,
+      "elev_ft": 6354,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 494 (U 180 MP 255)",
+      "confidence": "high"
+    },
+    "MP 260": {
+      "lat": 35.608892,
+      "lon": -112.057338,
+      "elev_ft": 6144,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1208 (U 180 MP 260)",
+      "confidence": "high"
+    },
+    "MP 265": {
+      "lat": 35.644151,
+      "lon": -112.130382,
+      "elev_ft": 6006,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 3 (U 180 MP 265)",
+      "confidence": "high"
+    },
+    "MP 310": {
+      "lat": 34.88308,
+      "lon": -110.11619,
+      "elev_ft": 5138,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 766 (U 180 MP 310)",
+      "confidence": "high"
+    },
+    "MP 320": {
+      "lat": 34.842732,
+      "lon": -109.948865,
+      "elev_ft": 5344,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1138 (U 180 MP 320)",
+      "confidence": "high"
+    },
+    "MP 330": {
+      "lat": 34.760761,
+      "lon": -109.811703,
+      "elev_ft": 5406,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 818 (U 180 MP 330)",
+      "confidence": "high"
+    },
+    "MP 340": {
+      "lat": 34.649266,
+      "lon": -109.704233,
+      "elev_ft": 5414,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1137 (U 180 MP 340)",
+      "confidence": "high"
+    },
+    "MP 345": {
+      "lat": 34.600936,
+      "lon": -109.639175,
+      "elev_ft": 5502,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 340 (U 180 MP 345)",
+      "confidence": "high"
+    },
+    "MP 350": {
+      "lat": 34.587219,
+      "lon": -109.554862,
+      "elev_ft": 5482,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 813 (U 180 MP 350)",
+      "confidence": "high"
+    },
+    "MP 355": {
+      "lat": 34.548682,
+      "lon": -109.484214,
+      "elev_ft": 5774,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 339 (U 180 MP 355)",
+      "confidence": "high"
+    },
+    "MP 365": {
+      "lat": 34.508166,
+      "lon": -109.430045,
+      "elev_ft": 5751,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 337 (U 180 MP 365)",
+      "confidence": "high"
+    },
+    "MP 370": {
+      "lat": 34.493929,
+      "lon": -109.37036,
+      "elev_ft": 5764,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 816 (U 180 MP 370)",
+      "confidence": "high"
+    },
+    "MP 375": {
+      "lat": 34.433456,
+      "lon": -109.410663,
+      "elev_ft": 5862,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 338 (U 180 MP 375)",
+      "confidence": "high"
+    },
+    "MP 380": {
+      "lat": 34.36612,
+      "lon": -109.389984,
+      "elev_ft": 5976,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1122 (U 180 MP 380)",
+      "confidence": "high"
+    },
+    "MP 385": {
+      "lat": 34.300029,
+      "lon": -109.376476,
+      "elev_ft": 6347,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 304 (U 180 MP 385)",
+      "confidence": "high"
+    },
+    "MP 390": {
+      "lat": 34.233374,
+      "lon": -109.342254,
+      "elev_ft": 6633,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 801 (U 180 MP 390)",
+      "confidence": "high"
+    },
+    "MP 405": {
+      "lat": 34.095126,
+      "lon": -109.22764,
+      "elev_ft": 7606,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 309 (U 180 MP 405)",
+      "confidence": "high"
+    },
+    "MP 410": {
+      "lat": 34.051523,
+      "lon": -109.187715,
+      "elev_ft": 7437,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 798 (U 180 MP 410)",
+      "confidence": "high"
+    },
+    "MP 415": {
+      "lat": 33.978458,
+      "lon": -109.194239,
+      "elev_ft": 7593,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 302 (U 180 MP 415)",
+      "confidence": "high"
+    },
+    "MP 420": {
+      "lat": 33.920166,
+      "lon": -109.182097,
+      "elev_ft": 8059,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1120 (U 180 MP 420)",
+      "confidence": "high"
+    },
+    "MP 425": {
+      "lat": 33.861314,
+      "lon": -109.162314,
+      "elev_ft": 8098,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 133 (U 180 MP 425)",
+      "confidence": "high"
+    },
+    "MP 430": {
+      "lat": 33.827324,
+      "lon": -109.094468,
+      "elev_ft": 7900,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 713 (U 180 MP 430)",
+      "confidence": "high"
+    }
+  },
+  "U.S. Route 191": {
+    "MP 210": {
+      "lat": 33.462279,
+      "lon": -109.368749,
+      "elev_ft": 7864,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 832 (U 191 MP 210)",
+      "confidence": "high"
+    },
+    "MP 220": {
+      "lat": 33.541366,
+      "lon": -109.316793,
+      "elev_ft": 7601,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1153 (U 191 MP 220)",
+      "confidence": "high"
+    },
+    "MP 230": {
+      "lat": 33.620944,
+      "lon": -109.326903,
+      "elev_ft": 9136,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 716 (U 191 MP 230)",
+      "confidence": "high"
+    },
+    "MP 240": {
+      "lat": 33.699427,
+      "lon": -109.208328,
+      "elev_ft": 8079,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1040 (U 191 MP 240)",
+      "confidence": "high"
+    },
+    "MP 245": {
+      "lat": 33.75884,
+      "lon": -109.215025,
+      "elev_ft": 8031,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 138 (U 191 MP 245)",
+      "confidence": "high"
+    },
+    "MP 250": {
+      "lat": 33.802075,
+      "lon": -109.154417,
+      "elev_ft": 8387,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 717 (U 191 MP 250)",
+      "confidence": "high"
+    },
+    "MP 320": {
+      "lat": 34.56263,
+      "lon": -109.340985,
+      "elev_ft": 5760,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1132 (U 191 MP 320)",
+      "confidence": "high"
+    },
+    "MP 330": {
+      "lat": 34.695222,
+      "lon": -109.274171,
+      "elev_ft": 5687,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 811 (U 191 MP 330)",
+      "confidence": "high"
+    },
+    "MP 340": {
+      "lat": 34.836189,
+      "lon": -109.237542,
+      "elev_ft": 6274,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1086 (U 191 MP 340)",
+      "confidence": "high"
+    },
+    "MP 350": {
+      "lat": 34.979303,
+      "lon": -109.226994,
+      "elev_ft": 6305,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 761 (U 191 MP 350)",
+      "confidence": "high"
+    },
+    "MP 360": {
+      "lat": 35.0978,
+      "lon": -109.312789,
+      "elev_ft": 6065,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1087 (U 191 MP 360)",
+      "confidence": "high"
+    },
+    "MP 365": {
+      "lat": 35.166808,
+      "lon": -109.337969,
+      "elev_ft": 5994,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 223 (U 191 MP 365)",
+      "confidence": "high"
+    },
+    "MP 375": {
+      "lat": 35.204341,
+      "lon": -109.439464,
+      "elev_ft": 5812,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 222 (U 191 MP 375)",
+      "confidence": "high"
+    },
+    "MP 380": {
+      "lat": 35.27628,
+      "lon": -109.441375,
+      "elev_ft": 6130,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1081 (U 191 MP 380)",
+      "confidence": "high"
+    },
+    "MP 385": {
+      "lat": 35.343079,
+      "lon": -109.450002,
+      "elev_ft": 6446,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 221 (U 191 MP 385)",
+      "confidence": "high"
+    },
+    "MP 390": {
+      "lat": 35.402899,
+      "lon": -109.50584,
+      "elev_ft": 6151,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 754 (U 191 MP 390)",
+      "confidence": "high"
+    },
+    "MP 395": {
+      "lat": 35.47022,
+      "lon": -109.52979,
+      "elev_ft": 6554,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 220 (U 191 MP 395)",
+      "confidence": "high"
+    },
+    "MP 400": {
+      "lat": 35.542039,
+      "lon": -109.530046,
+      "elev_ft": 6578,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1080 (U 191 MP 400)",
+      "confidence": "high"
+    },
+    "MP 405": {
+      "lat": 35.613879,
+      "lon": -109.541693,
+      "elev_ft": 6770,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 247 (U 191 MP 405)",
+      "confidence": "high"
+    },
+    "MP 410": {
+      "lat": 35.685854,
+      "lon": -109.547505,
+      "elev_ft": 6642,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 768 (U 191 MP 410)",
+      "confidence": "high"
+    },
+    "MP 420": {
+      "lat": 35.789446,
+      "lon": -109.616872,
+      "elev_ft": 6268,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1097 (U 191 MP 420)",
+      "confidence": "high"
+    },
+    "MP 425": {
+      "lat": 35.859818,
+      "lon": -109.596069,
+      "elev_ft": 6388,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 145 (U 191 MP 425)",
+      "confidence": "high"
+    },
+    "MP 430": {
+      "lat": 35.928571,
+      "lon": -109.603052,
+      "elev_ft": 6041,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 721 (U 191 MP 430)",
+      "confidence": "high"
+    },
+    "MP 440": {
+      "lat": 36.070633,
+      "lon": -109.610574,
+      "elev_ft": 5953,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1033 (U 191 MP 440)",
+      "confidence": "high"
+    },
+    "MP 450": {
+      "lat": 36.18999,
+      "lon": -109.593832,
+      "elev_ft": 5460,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 711 (U 191 MP 450)",
+      "confidence": "high"
+    },
+    "MP 460": {
+      "lat": 36.329553,
+      "lon": -109.621364,
+      "elev_ft": 5338,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1021 (U 191 MP 460)",
+      "confidence": "high"
+    },
+    "MP 470": {
+      "lat": 36.464803,
+      "lon": -109.592882,
+      "elev_ft": 5204,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 693 (U 191 MP 470)",
+      "confidence": "high"
+    },
+    "MP 480": {
+      "lat": 36.527687,
+      "lon": -109.502333,
+      "elev_ft": 5268,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1020 (U 191 MP 480)",
+      "confidence": "high"
+    },
+    "MP 490": {
+      "lat": 36.649371,
+      "lon": -109.591691,
+      "elev_ft": 5079,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 695 (U 191 MP 490)",
+      "confidence": "high"
+    },
+    "MP 500": {
+      "lat": 36.780423,
+      "lon": -109.658037,
+      "elev_ft": 4965,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1019 (U 191 MP 500)",
+      "confidence": "high"
+    },
+    "MP 510": {
+      "lat": 36.920816,
+      "lon": -109.617904,
+      "elev_ft": 4988,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 694 (U 191 MP 510)",
+      "confidence": "high"
+    }
+  },
+  "State Route 61": {
+    "MP 355": {
+      "lat": 34.294227,
+      "lon": -109.801869,
+      "elev_ft": 6871,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 279 (S 061 MP 355)",
+      "confidence": "high"
+    },
+    "MP 360": {
+      "lat": 34.339702,
+      "lon": -109.734333,
+      "elev_ft": 6455,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1110 (S 061 MP 360)",
+      "confidence": "high"
+    },
+    "MP 365": {
+      "lat": 34.389125,
+      "lon": -109.670638,
+      "elev_ft": 6459,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 280 (S 061 MP 365)",
+      "confidence": "high"
+    },
+    "MP 370": {
+      "lat": 34.451326,
+      "lon": -109.629112,
+      "elev_ft": 6299,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 810 (S 061 MP 370)",
+      "confidence": "high"
+    },
+    "MP 375": {
+      "lat": 34.484002,
+      "lon": -109.560452,
+      "elev_ft": 6235,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 334 (S 061 MP 375)",
+      "confidence": "high"
+    },
+    "MP 380": {
+      "lat": 34.505741,
+      "lon": -109.479608,
+      "elev_ft": 5947,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1131 (S 061 MP 380)",
+      "confidence": "high"
+    },
+    "MP 420": {
+      "lat": 34.93384,
+      "lon": -109.190244,
+      "elev_ft": 6377,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1083 (S 061 MP 420)",
+      "confidence": "high"
+    },
+    "MP 425": {
+      "lat": 34.982363,
+      "lon": -109.125802,
+      "elev_ft": 6512,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 227 (S 061 MP 425)",
+      "confidence": "high"
+    },
+    "MP 430": {
+      "lat": 35.018451,
+      "lon": -109.050109,
+      "elev_ft": 6372,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 757 (S 061 MP 430)",
+      "confidence": "high"
+    }
+  },
+  "State Route 64": {
+    "MP 190": {
+      "lat": 35.322711,
+      "lon": -112.153083,
+      "elev_ft": 6660,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 650 (S 064 MP 190)",
+      "confidence": "high"
+    },
+    "MP 195": {
+      "lat": 35.391296,
+      "lon": -112.166434,
+      "elev_ft": 6470,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 2 (S 064 MP 195)",
+      "confidence": "high"
+    },
+    "MP 200": {
+      "lat": 35.460881,
+      "lon": -112.171482,
+      "elev_ft": 6140,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 972 (S 064 MP 200)",
+      "confidence": "high"
+    },
+    "MP 205": {
+      "lat": 35.531589,
+      "lon": -112.165887,
+      "elev_ft": 6158,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1 (S 064 MP 205)",
+      "confidence": "high"
+    },
+    "MP 210": {
+      "lat": 35.602224,
+      "lon": -112.146746,
+      "elev_ft": 6042,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 649 (S 064 MP 210)",
+      "confidence": "high"
+    },
+    "MP 215": {
+      "lat": 35.673898,
+      "lon": -112.136514,
+      "elev_ft": 5970,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 9 (S 064 MP 215)",
+      "confidence": "high"
+    },
+    "MP 220": {
+      "lat": 35.745973,
+      "lon": -112.131028,
+      "elev_ft": 6070,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 975 (S 064 MP 220)",
+      "confidence": "high"
+    },
+    "MP 225": {
+      "lat": 35.818556,
+      "lon": -112.132018,
+      "elev_ft": 6267,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 10 (S 064 MP 225)",
+      "confidence": "high"
+    },
+    "MP 230": {
+      "lat": 35.890372,
+      "lon": -112.130829,
+      "elev_ft": 6485,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 655 (S 064 MP 230)",
+      "confidence": "high"
+    },
+    "MP 235": {
+      "lat": 35.962606,
+      "lon": -112.131292,
+      "elev_ft": 6662,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 11988 (S 064 MP 235)",
+      "confidence": "high"
+    },
+    "MP 270": {
+      "lat": 35.980301,
+      "lon": -111.793259,
+      "elev_ft": 6725,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 657 (S 064 MP 270)",
+      "confidence": "high"
+    },
+    "MP 275": {
+      "lat": 35.922937,
+      "lon": -111.751294,
+      "elev_ft": 6216,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 13 (S 064 MP 275)",
+      "confidence": "high"
+    },
+    "MP 280": {
+      "lat": 35.938291,
+      "lon": -111.661011,
+      "elev_ft": 5596,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1074 (S 064 MP 280)",
+      "confidence": "high"
+    },
+    "MP 285": {
+      "lat": 35.921366,
+      "lon": -111.576314,
+      "elev_ft": 5044,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 207 (S 064 MP 285)",
+      "confidence": "high"
+    },
+    "MP 290": {
+      "lat": 35.874474,
+      "lon": -111.510431,
+      "elev_ft": 4720,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 748 (S 064 MP 290)",
+      "confidence": "high"
+    },
+    "MP 295": {
+      "lat": 35.855689,
+      "lon": -111.428228,
+      "elev_ft": 4402,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 209 (S 064 MP 295)",
+      "confidence": "high"
+    }
+  },
+  "State Route 67": {
+    "MP 580": {
+      "lat": 36.704427,
+      "lon": -112.218974,
+      "elev_ft": 8038,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 977 (S 067 MP 580)",
+      "confidence": "high"
+    },
+    "MP 585": {
+      "lat": 36.647184,
+      "lon": -112.182028,
+      "elev_ft": 8476,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 15 (S 067 MP 585)",
+      "confidence": "high"
+    },
+    "MP 590": {
+      "lat": 36.587513,
+      "lon": -112.178246,
+      "elev_ft": 8739,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 659 (S 067 MP 590)",
+      "confidence": "high"
+    },
+    "MP 595": {
+      "lat": 36.535043,
+      "lon": -112.157021,
+      "elev_ft": 8626,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 14 (S 067 MP 595)",
+      "confidence": "high"
+    },
+    "MP 600": {
+      "lat": 36.476056,
+      "lon": -112.12582,
+      "elev_ft": 8530,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 978 (S 067 MP 600)",
+      "confidence": "high"
+    },
+    "MP 605": {
+      "lat": 36.413146,
+      "lon": -112.131282,
+      "elev_ft": 8756,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 16 (S 067 MP 605)",
+      "confidence": "high"
+    },
+    "MP 610": {
+      "lat": 36.343216,
+      "lon": -112.117226,
+      "elev_ft": 8791,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 658 (S 067 MP 610)",
+      "confidence": "high"
+    }
+  },
+  "State Route 69": {
+    "MP 270": {
+      "lat": 34.391527,
+      "lon": -112.221273,
+      "elev_ft": 4304,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 729 (S 069 MP 270)",
+      "confidence": "high"
+    },
+    "MP 280": {
+      "lat": 34.514909,
+      "lon": -112.238885,
+      "elev_ft": 4569,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1059 (S 069 MP 280)",
+      "confidence": "high"
+    },
+    "MP 290": {
+      "lat": 34.577694,
+      "lon": -112.364349,
+      "elev_ft": 5275,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 12444 (S 069 MP 290)",
+      "confidence": "high"
+    },
+    "MP 295": {
+      "lat": 34.552035,
+      "lon": -112.431227,
+      "elev_ft": 5446,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 157 (S 069 MP 295)",
+      "confidence": "high"
+    }
+  },
+  "State Route 73": {
+    "MP 320": {
+      "lat": 33.89418,
+      "lon": -110.174693,
+      "elev_ft": 4910,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1130 (S 073 MP 320)",
+      "confidence": "high"
+    },
+    "MP 330": {
+      "lat": 33.791565,
+      "lon": -110.087918,
+      "elev_ft": 5291,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 809 (S 073 MP 330)",
+      "confidence": "high"
+    },
+    "MP 340": {
+      "lat": 33.85043,
+      "lon": -109.964063,
+      "elev_ft": 5295,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1129 (S 073 MP 340)",
+      "confidence": "high"
+    },
+    "MP 345": {
+      "lat": 33.916887,
+      "lon": -109.942386,
+      "elev_ft": 5697,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 331 (S 073 MP 345)",
+      "confidence": "high"
+    },
+    "MP 350": {
+      "lat": 33.984013,
+      "lon": -109.915543,
+      "elev_ft": 6079,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 808 (S 073 MP 350)",
+      "confidence": "high"
+    },
+    "MP 355": {
+      "lat": 34.046116,
+      "lon": -109.921123,
+      "elev_ft": 6876,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 319 (S 073 MP 355)",
+      "confidence": "high"
+    }
+  },
+  "State Route 77": {
+    "MP 345": {
+      "lat": 34.295413,
+      "lon": -110.03306,
+      "elev_ft": 6386,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 290 (S 077 MP 345)",
+      "confidence": "high"
+    },
+    "MP 350": {
+      "lat": 34.364163,
+      "lon": -110.052453,
+      "elev_ft": 6026,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 789 (S 077 MP 350)",
+      "confidence": "high"
+    },
+    "MP 360": {
+      "lat": 34.496533,
+      "lon": -110.078868,
+      "elev_ft": 5648,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1133 (S 077 MP 360)",
+      "confidence": "high"
+    },
+    "MP 370": {
+      "lat": 34.640175,
+      "lon": -110.095989,
+      "elev_ft": 5542,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 817 (S 077 MP 370)",
+      "confidence": "high"
+    },
+    "MP 380": {
+      "lat": 34.782557,
+      "lon": -110.130587,
+      "elev_ft": 5380,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1136 (S 077 MP 380)",
+      "confidence": "high"
+    },
+    "MP 400": {
+      "lat": 35.042618,
+      "lon": -110.092657,
+      "elev_ft": 5279,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1092 (S 077 MP 400)",
+      "confidence": "high"
+    }
+  },
+  "State Route 87": {
+    "MP 230": {
+      "lat": 33.9741,
+      "lon": -111.384095,
+      "elev_ft": 3464,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 787 (S 087 MP 230)",
+      "confidence": "high"
+    },
+    "MP 250": {
+      "lat": 34.206109,
+      "lon": -111.331269,
+      "elev_ft": 4983,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 803 (S 087 MP 250)",
+      "confidence": "high"
+    },
+    "MP 260": {
+      "lat": 34.317843,
+      "lon": -111.382243,
+      "elev_ft": 4742,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1039 (S 087 MP 260)",
+      "confidence": "high"
+    },
+    "MP 265": {
+      "lat": 34.358792,
+      "lon": -111.424536,
+      "elev_ft": 5703,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 312 (S 087 MP 265)",
+      "confidence": "high"
+    },
+    "MP 270": {
+      "lat": 34.406107,
+      "lon": -111.482005,
+      "elev_ft": 6006,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 715 (S 087 MP 270)",
+      "confidence": "high"
+    },
+    "MP 275": {
+      "lat": 34.441493,
+      "lon": -111.490503,
+      "elev_ft": 6872,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 277 (S 087 MP 275)",
+      "confidence": "high"
+    },
+    "MP 280": {
+      "lat": 34.454014,
+      "lon": -111.414988,
+      "elev_ft": 7234,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1135 (S 087 MP 280)",
+      "confidence": "high"
+    },
+    "MP 285": {
+      "lat": 34.500544,
+      "lon": -111.366778,
+      "elev_ft": 6868,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 333 (S 087 MP 285)",
+      "confidence": "high"
+    },
+    "MP 290": {
+      "lat": 34.546022,
+      "lon": -111.321802,
+      "elev_ft": 6857,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 784 (S 087 MP 290)",
+      "confidence": "high"
+    },
+    "MP 295": {
+      "lat": 34.58613,
+      "lon": -111.256188,
+      "elev_ft": 7217,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 143 (S 087 MP 295)",
+      "confidence": "high"
+    },
+    "MP 300": {
+      "lat": 34.61476,
+      "lon": -111.184215,
+      "elev_ft": 6912,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1111 (S 087 MP 300)",
+      "confidence": "high"
+    },
+    "MP 305": {
+      "lat": 34.640631,
+      "lon": -111.110665,
+      "elev_ft": 6817,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 282 (S 087 MP 305)",
+      "confidence": "high"
+    },
+    "MP 310": {
+      "lat": 34.708225,
+      "lon": -111.097594,
+      "elev_ft": 6516,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 785 (S 087 MP 310)",
+      "confidence": "high"
+    },
+    "MP 315": {
+      "lat": 34.754096,
+      "lon": -111.032892,
+      "elev_ft": 6197,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 283 (S 087 MP 315)",
+      "confidence": "high"
+    },
+    "MP 320": {
+      "lat": 34.806658,
+      "lon": -110.975414,
+      "elev_ft": 5880,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1112 (S 087 MP 320)",
+      "confidence": "high"
+    },
+    "MP 330": {
+      "lat": 34.905249,
+      "lon": -110.845346,
+      "elev_ft": 5372,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 755 (S 087 MP 330)",
+      "confidence": "high"
+    },
+    "MP 340": {
+      "lat": 34.993238,
+      "lon": -110.708307,
+      "elev_ft": 4968,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1082 (S 087 MP 340)",
+      "confidence": "high"
+    },
+    "MP 350": {
+      "lat": 35.053149,
+      "lon": -110.593919,
+      "elev_ft": 5059,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 758 (S 087 MP 350)",
+      "confidence": "high"
+    },
+    "MP 360": {
+      "lat": 35.153125,
+      "lon": -110.468195,
+      "elev_ft": 5454,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1084 (S 087 MP 360)",
+      "confidence": "high"
+    },
+    "MP 370": {
+      "lat": 35.287833,
+      "lon": -110.427301,
+      "elev_ft": 5710,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 760 (S 087 MP 370)",
+      "confidence": "high"
+    },
+    "MP 380": {
+      "lat": 35.431788,
+      "lon": -110.425431,
+      "elev_ft": 5829,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1085 (S 087 MP 380)",
+      "confidence": "high"
+    },
+    "MP 390": {
+      "lat": 35.571341,
+      "lon": -110.460406,
+      "elev_ft": 5451,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 759 (S 087 MP 390)",
+      "confidence": "high"
+    },
+    "MP 400": {
+      "lat": 35.709575,
+      "lon": -110.510926,
+      "elev_ft": 5396,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1093 (S 087 MP 400)",
+      "confidence": "high"
+    }
+  },
+  "State Route 89": {
+    "MP 260": {
+      "lat": 34.050945,
+      "lon": -112.8161,
+      "elev_ft": 2560,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1008 (S 089 MP 260)",
+      "confidence": "high"
+    },
+    "MP 280": {
+      "lat": 34.259228,
+      "lon": -112.730112,
+      "elev_ft": 4507,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1016 (S 089 MP 280)",
+      "confidence": "high"
+    },
+    "MP 300": {
+      "lat": 34.448806,
+      "lon": -112.540228,
+      "elev_ft": 5598,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1107 (S 089 MP 300)",
+      "confidence": "high"
+    },
+    "MP 305": {
+      "lat": 34.473882,
+      "lon": -112.510676,
+      "elev_ft": 6027,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 185 (S 089 MP 305)",
+      "confidence": "high"
+    },
+    "MP 310": {
+      "lat": 34.526732,
+      "lon": -112.479099,
+      "elev_ft": 5442,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 777 (S 089 MP 310)",
+      "confidence": "high"
+    },
+    "MP 315": {
+      "lat": 34.577903,
+      "lon": -112.442796,
+      "elev_ft": null,
+      "source": "adot",
+      "ref": "interpolated between ADOT S 089 MP 313 and MP 319",
+      "confidence": "medium"
+    },
+    "MP 320": {
+      "lat": 34.643265,
+      "lon": -112.432281,
+      "elev_ft": 5060,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1102 (S 089 MP 320)",
+      "confidence": "high"
+    },
+    "MP 330": {
+      "lat": 34.786242,
+      "lon": -112.452224,
+      "elev_ft": 4614,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 775 (S 089 MP 330)",
+      "confidence": "high"
+    },
+    "MP 340": {
+      "lat": 34.925285,
+      "lon": -112.449549,
+      "elev_ft": 4618,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1104 (S 089 MP 340)",
+      "confidence": "high"
+    },
+    "MP 350": {
+      "lat": 35.035632,
+      "lon": -112.395207,
+      "elev_ft": 4844,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 776 (S 089 MP 350)",
+      "confidence": "high"
+    },
+    "MP 360": {
+      "lat": 35.167655,
+      "lon": -112.459504,
+      "elev_ft": 5266,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1103 (S 089 MP 360)",
+      "confidence": "high"
+    }
+  },
+  "State Route 89A": {
+    "MP 320": {
+      "lat": 34.632883,
+      "lon": -112.391856,
+      "elev_ft": 5103,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1060 (SA089 MP 320)",
+      "confidence": "high"
+    },
+    "MP 325": {
+      "lat": 34.642119,
+      "lon": -112.30666,
+      "elev_ft": 4937,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 181 (SA089 MP 325)",
+      "confidence": "high"
+    },
+    "MP 330": {
+      "lat": 34.66528,
+      "lon": -112.225972,
+      "elev_ft": 5404,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 11471 (SA089 MP 330)",
+      "confidence": "high"
+    },
+    "MP 335": {
+      "lat": 34.69736,
+      "lon": -112.162503,
+      "elev_ft": 6503,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 11138 (SA089 MP 335)",
+      "confidence": "high"
+    },
+    "MP 340": {
+      "lat": 34.733498,
+      "lon": -112.136171,
+      "elev_ft": 6329,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 11144 (SA089 MP 340)",
+      "confidence": "high"
+    },
+    "MP 345": {
+      "lat": 34.749269,
+      "lon": -112.108935,
+      "elev_ft": 4901,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 11147 (SA089 MP 345)",
+      "confidence": "high"
+    },
+    "MP 350": {
+      "lat": 34.752523,
+      "lon": -112.051706,
+      "elev_ft": 3552,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 11637 (SA089 MP 350)",
+      "confidence": "high"
+    },
+    "MP 355": {
+      "lat": 34.723325,
+      "lon": -112.00521,
+      "elev_ft": 3320,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 271 (SA089 MP 355)",
+      "confidence": "high"
+    },
+    "MP 360": {
+      "lat": 34.764146,
+      "lon": -111.943847,
+      "elev_ft": 3679,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1061 (SA089 MP 360)",
+      "confidence": "high"
+    },
+    "MP 365": {
+      "lat": 34.824434,
+      "lon": -111.897422,
+      "elev_ft": 4006,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 177 (SA089 MP 365)",
+      "confidence": "high"
+    },
+    "MP 370": {
+      "lat": 34.851555,
+      "lon": -111.822512,
+      "elev_ft": null,
+      "source": "adot",
+      "ref": "interpolated between ADOT SA089 MP 369 and MP 374",
+      "confidence": "medium"
+    },
+    "MP 375": {
+      "lat": 34.874712,
+      "lon": -111.755312,
+      "elev_ft": 4288,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 180 (SA089 MP 375)",
+      "confidence": "high"
+    },
+    "MP 380": {
+      "lat": 34.931498,
+      "lon": -111.741154,
+      "elev_ft": 4808,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1062 (SA089 MP 380)",
+      "confidence": "high"
+    },
+    "MP 385": {
+      "lat": 34.98979,
+      "lon": -111.737548,
+      "elev_ft": 5398,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 178 (SA089 MP 385)",
+      "confidence": "high"
+    },
+    "MP 390": {
+      "lat": 35.031215,
+      "lon": -111.733976,
+      "elev_ft": 6429,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 737 (SA089 MP 390)",
+      "confidence": "high"
+    },
+    "MP 395": {
+      "lat": 35.100682,
+      "lon": -111.730702,
+      "elev_ft": 6885,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 179 (SA089 MP 395)",
+      "confidence": "high"
+    },
+    "MP 400": {
+      "lat": 35.157794,
+      "lon": -111.672372,
+      "elev_ft": null,
+      "source": "adot",
+      "ref": "interpolated between ADOT SA089 MP 399 and MP 401",
+      "confidence": "medium"
+    }
+  },
+  "State Route 98": {
+    "MP 300": {
+      "lat": 36.8961,
+      "lon": -111.398058,
+      "elev_ft": 4261,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1054 (S 098 MP 300)",
+      "confidence": "high"
+    },
+    "MP 305": {
+      "lat": 36.853603,
+      "lon": -111.3352,
+      "elev_ft": 4986,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 168 (S 098 MP 305)",
+      "confidence": "high"
+    },
+    "MP 310": {
+      "lat": 36.790796,
+      "lon": -111.296466,
+      "elev_ft": 5466,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 733 (S 098 MP 310)",
+      "confidence": "high"
+    },
+    "MP 315": {
+      "lat": 36.721598,
+      "lon": -111.277487,
+      "elev_ft": 5709,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 169 (S 098 MP 315)",
+      "confidence": "high"
+    },
+    "MP 320": {
+      "lat": 36.65693,
+      "lon": -111.243852,
+      "elev_ft": 5788,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1055 (S 098 MP 320)",
+      "confidence": "high"
+    },
+    "MP 325": {
+      "lat": 36.607435,
+      "lon": -111.180342,
+      "elev_ft": 5636,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 170 (S 098 MP 325)",
+      "confidence": "high"
+    },
+    "MP 330": {
+      "lat": 36.583683,
+      "lon": -111.106412,
+      "elev_ft": 6033,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 734 (S 098 MP 330)",
+      "confidence": "high"
+    },
+    "MP 335": {
+      "lat": 36.612423,
+      "lon": -111.032925,
+      "elev_ft": 6077,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 171 (S 098 MP 335)",
+      "confidence": "high"
+    },
+    "MP 340": {
+      "lat": 36.616132,
+      "lon": -110.943523,
+      "elev_ft": 6323,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1024 (S 098 MP 340)",
+      "confidence": "high"
+    },
+    "MP 345": {
+      "lat": 36.585867,
+      "lon": -110.868831,
+      "elev_ft": 6687,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 205 (S 098 MP 345)",
+      "confidence": "high"
+    },
+    "MP 350": {
+      "lat": 36.578392,
+      "lon": -110.782515,
+      "elev_ft": 6251,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 698 (S 098 MP 350)",
+      "confidence": "high"
+    },
+    "MP 355": {
+      "lat": 36.552493,
+      "lon": -110.704568,
+      "elev_ft": 6272,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 103 (S 098 MP 355)",
+      "confidence": "high"
+    },
+    "MP 360": {
+      "lat": 36.481882,
+      "lon": -110.703763,
+      "elev_ft": 6070,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1056 (S 098 MP 360)",
+      "confidence": "high"
+    }
+  },
+  "State Route 260": {
+    "MP 210": {
+      "lat": 34.676419,
+      "lon": -111.972418,
+      "elev_ft": 3318,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 780 (S 260 MP 210)",
+      "confidence": "high"
+    },
+    "MP 220": {
+      "lat": 34.556516,
+      "lon": -111.874712,
+      "elev_ft": 3245,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1105 (S 260 MP 220)",
+      "confidence": "high"
+    },
+    "MP 230": {
+      "lat": 34.508096,
+      "lon": -111.736623,
+      "elev_ft": 3744,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 779 (S 260 MP 230)",
+      "confidence": "high"
+    },
+    "MP 235": {
+      "lat": 34.506037,
+      "lon": -111.668637,
+      "elev_ft": 5038,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 269 (S 260 MP 235)",
+      "confidence": "high"
+    },
+    "MP 240": {
+      "lat": 34.49217,
+      "lon": -111.59308,
+      "elev_ft": 5932,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1109 (S 260 MP 240)",
+      "confidence": "high"
+    },
+    "MP 245": {
+      "lat": 34.521192,
+      "lon": -111.51343,
+      "elev_ft": 6306,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 238 (S 260 MP 245)",
+      "confidence": "high"
+    },
+    "MP 250": {
+      "lat": 34.478202,
+      "lon": -111.452034,
+      "elev_ft": 6990,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 812 (S 260 MP 250)",
+      "confidence": "high"
+    },
+    "MP 255": {
+      "lat": 34.252213,
+      "lon": -111.271864,
+      "elev_ft": 4733,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 134 (S 260 MP 255)",
+      "confidence": "high"
+    },
+    "MP 260": {
+      "lat": 34.267141,
+      "lon": -111.190823,
+      "elev_ft": 5024,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1037 (S 260 MP 260)",
+      "confidence": "high"
+    },
+    "MP 265": {
+      "lat": 34.296634,
+      "lon": -111.121529,
+      "elev_ft": 5698,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 11551 (S 260 MP 265)",
+      "confidence": "high"
+    },
+    "MP 270": {
+      "lat": 34.323386,
+      "lon": -111.072909,
+      "elev_ft": 5562,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 12188 (S 260 MP 270)",
+      "confidence": "high"
+    },
+    "MP 275": {
+      "lat": 34.312434,
+      "lon": -111.001039,
+      "elev_ft": 6016,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 12072 (S 260 MP 275)",
+      "confidence": "high"
+    },
+    "MP 280": {
+      "lat": 34.307053,
+      "lon": -110.931329,
+      "elev_ft": 6972,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1038 (S 260 MP 280)",
+      "confidence": "high"
+    },
+    "MP 285": {
+      "lat": 34.31053,
+      "lon": -110.85348,
+      "elev_ft": 7588,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 136 (S 260 MP 285)",
+      "confidence": "high"
+    },
+    "MP 290": {
+      "lat": 34.330065,
+      "lon": -110.772511,
+      "elev_ft": 7564,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 799 (S 260 MP 290)",
+      "confidence": "high"
+    },
+    "MP 295": {
+      "lat": 34.35765,
+      "lon": -110.695507,
+      "elev_ft": 7159,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 308 (S 260 MP 295)",
+      "confidence": "high"
+    },
+    "MP 300": {
+      "lat": 34.419484,
+      "lon": -110.656049,
+      "elev_ft": 6860,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1121 (S 260 MP 300)",
+      "confidence": "high"
+    },
+    "MP 305": {
+      "lat": 34.425161,
+      "lon": -110.583696,
+      "elev_ft": 6505,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 303 (S 260 MP 305)",
+      "confidence": "high"
+    },
+    "MP 310": {
+      "lat": 34.39356,
+      "lon": -110.518072,
+      "elev_ft": 6558,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 800 (S 260 MP 310)",
+      "confidence": "high"
+    },
+    "MP 315": {
+      "lat": 34.366433,
+      "lon": -110.439231,
+      "elev_ft": 6590,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 307 (S 260 MP 315)",
+      "confidence": "high"
+    },
+    "MP 320": {
+      "lat": 34.365118,
+      "lon": -110.354781,
+      "elev_ft": 6511,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1036 (S 260 MP 320)",
+      "confidence": "high"
+    },
+    "MP 325": {
+      "lat": 34.338605,
+      "lon": -110.27633,
+      "elev_ft": 6510,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 306 (S 260 MP 325)",
+      "confidence": "high"
+    },
+    "MP 330": {
+      "lat": 34.302845,
+      "lon": -110.20151,
+      "elev_ft": 6492,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 802 (S 260 MP 330)",
+      "confidence": "high"
+    },
+    "MP 335": {
+      "lat": 34.285456,
+      "lon": -110.120046,
+      "elev_ft": 6223,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 305 (S 260 MP 335)",
+      "confidence": "high"
+    },
+    "MP 340": {
+      "lat": 34.242035,
+      "lon": -110.059749,
+      "elev_ft": 6439,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1053 (S 260 MP 340)",
+      "confidence": "high"
+    },
+    "MP 350": {
+      "lat": 34.157001,
+      "lon": -109.974614,
+      "elev_ft": 6715,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 792 (S 260 MP 350)",
+      "confidence": "high"
+    },
+    "MP 360": {
+      "lat": 34.077198,
+      "lon": -109.865547,
+      "elev_ft": 7301,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1035 (S 260 MP 360)",
+      "confidence": "high"
+    },
+    "MP 370": {
+      "lat": 34.043961,
+      "lon": -109.707369,
+      "elev_ft": 8086,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 793 (S 260 MP 370)",
+      "confidence": "high"
+    },
+    "MP 380": {
+      "lat": 34.054517,
+      "lon": -109.550993,
+      "elev_ft": 9131,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1114 (S 260 MP 380)",
+      "confidence": "high"
+    },
+    "MP 390": {
+      "lat": 34.098781,
+      "lon": -109.396778,
+      "elev_ft": 7481,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 790 (S 260 MP 390)",
+      "confidence": "high"
+    }
+  },
+  "State Route 264": {
+    "MP 330": {
+      "lat": 36.032538,
+      "lon": -111.17129,
+      "elev_ft": 5408,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 740 (S 264 MP 330)",
+      "confidence": "high"
+    },
+    "MP 340": {
+      "lat": 35.987542,
+      "lon": -111.004783,
+      "elev_ft": 5962,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1063 (S 264 MP 340)",
+      "confidence": "high"
+    },
+    "MP 350": {
+      "lat": 35.909536,
+      "lon": -110.873577,
+      "elev_ft": 6325,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 738 (S 264 MP 350)",
+      "confidence": "high"
+    },
+    "MP 360": {
+      "lat": 35.977127,
+      "lon": -110.752842,
+      "elev_ft": 5723,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1064 (S 264 MP 360)",
+      "confidence": "high"
+    },
+    "MP 370": {
+      "lat": 35.88773,
+      "lon": -110.651339,
+      "elev_ft": 6172,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 739 (S 264 MP 370)",
+      "confidence": "high"
+    },
+    "MP 380": {
+      "lat": 35.83443,
+      "lon": -110.528689,
+      "elev_ft": 6325,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1065 (S 264 MP 380)",
+      "confidence": "high"
+    },
+    "MP 390": {
+      "lat": 35.817911,
+      "lon": -110.400982,
+      "elev_ft": 5649,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 770 (S 264 MP 390)",
+      "confidence": "high"
+    },
+    "MP 400": {
+      "lat": 35.841892,
+      "lon": -110.242806,
+      "elev_ft": 5996,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1066 (S 264 MP 400)",
+      "confidence": "high"
+    },
+    "MP 410": {
+      "lat": 35.743933,
+      "lon": -110.120617,
+      "elev_ft": 6374,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 769 (S 264 MP 410)",
+      "confidence": "high"
+    },
+    "MP 420": {
+      "lat": 35.757596,
+      "lon": -109.959538,
+      "elev_ft": 6673,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1094 (S 264 MP 420)",
+      "confidence": "high"
+    },
+    "MP 430": {
+      "lat": 35.76824,
+      "lon": -109.795767,
+      "elev_ft": 6743,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 771 (S 264 MP 430)",
+      "confidence": "high"
+    },
+    "MP 440": {
+      "lat": 35.764951,
+      "lon": -109.640049,
+      "elev_ft": 6303,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1095 (S 264 MP 440)",
+      "confidence": "high"
+    },
+    "MP 445": {
+      "lat": 35.719521,
+      "lon": -109.572482,
+      "elev_ft": 6388,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 258 (S 264 MP 445)",
+      "confidence": "high"
+    },
+    "MP 450": {
+      "lat": 35.714098,
+      "lon": -109.487574,
+      "elev_ft": 6627,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 773 (S 264 MP 450)",
+      "confidence": "high"
+    },
+    "MP 455": {
+      "lat": 35.717777,
+      "lon": -109.400303,
+      "elev_ft": 6949,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 256 (S 264 MP 455)",
+      "confidence": "high"
+    },
+    "MP 460": {
+      "lat": 35.706947,
+      "lon": -109.31394,
+      "elev_ft": 7361,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1096 (S 264 MP 460)",
+      "confidence": "high"
+    },
+    "MP 465": {
+      "lat": 35.683781,
+      "lon": -109.229302,
+      "elev_ft": 7623,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 254 (S 264 MP 465)",
+      "confidence": "high"
+    },
+    "MP 470": {
+      "lat": 35.656072,
+      "lon": -109.150967,
+      "elev_ft": 7177,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 772 (S 264 MP 470)",
+      "confidence": "high"
+    },
+    "MP 475": {
+      "lat": 35.661901,
+      "lon": -109.065603,
+      "elev_ft": 6749,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 255 (S 264 MP 475)",
+      "confidence": "high"
+    }
+  },
+  "State Route 277": {
+    "MP 315": {
+      "lat": 34.457184,
+      "lon": -110.441047,
+      "elev_ft": 6318,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 140 (S 277 MP 315)",
+      "confidence": "high"
+    },
+    "MP 320": {
+      "lat": 34.473092,
+      "lon": -110.356704,
+      "elev_ft": 6165,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1043 (S 277 MP 320)",
+      "confidence": "high"
+    },
+    "MP 325": {
+      "lat": 34.483238,
+      "lon": -110.272563,
+      "elev_ft": 5969,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 141 (S 277 MP 325)",
+      "confidence": "high"
+    },
+    "MP 330": {
+      "lat": 34.503612,
+      "lon": -110.189647,
+      "elev_ft": 5851,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 720 (S 277 MP 330)",
+      "confidence": "high"
+    },
+    "MP 335": {
+      "lat": 34.51316,
+      "lon": -110.104278,
+      "elev_ft": 5610,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 344 (S 277 MP 335)",
+      "confidence": "high"
+    }
+  },
+  "State Route 377": {
+    "MP 0": {
+      "lat": 34.463845,
+      "lon": -110.476627,
+      "elev_ft": 0,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 4189 (S 377 MP 0)",
+      "confidence": "high"
+    },
+    "MP 10": {
+      "lat": 34.588846,
+      "lon": -110.398121,
+      "elev_ft": 5906,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 815 (S 377 MP 10)",
+      "confidence": "high"
+    },
+    "MP 20": {
+      "lat": 34.706579,
+      "lon": -110.300839,
+      "elev_ft": 5821,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1134 (S 377 MP 20)",
+      "confidence": "high"
+    },
+    "MP 30": {
+      "lat": 34.820347,
+      "lon": -110.195749,
+      "elev_ft": 5417,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 719 (S 377 MP 30)",
+      "confidence": "high"
+    }
+  },
+  "State Route 389": {
+    "MP 0": {
+      "lat": 37.00008,
+      "lon": -112.998769,
+      "elev_ft": 0,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 1401 (S 389 MP 0)",
+      "confidence": "high"
+    },
+    "MP 10": {
+      "lat": 36.881751,
+      "lon": -112.896784,
+      "elev_ft": 5229,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 656 (S 389 MP 10)",
+      "confidence": "high"
+    },
+    "MP 20": {
+      "lat": 36.859728,
+      "lon": -112.72106,
+      "elev_ft": 4831,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 976 (S 389 MP 20)",
+      "confidence": "high"
+    },
+    "MP 30": {
+      "lat": 36.927193,
+      "lon": -112.565228,
+      "elev_ft": 4646,
+      "source": "adot",
+      "ref": "ADOT Mileposts OBJECTID 12316 (S 389 MP 30)",
+      "confidence": "high"
+    }
+  }
+}
