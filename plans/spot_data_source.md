@@ -1,6 +1,6 @@
 # Spot Forecasts: replacement data source
 
-Status: proposal (no code changed yet). Investigated 2026-10-17.
+Status: implemented 2026-10-17 (NOAA SPOT Forecast Monitor service). Investigated 2026-10-17.
 
 ## Problem
 
