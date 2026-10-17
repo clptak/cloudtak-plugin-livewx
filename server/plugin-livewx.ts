@@ -58,7 +58,6 @@ const PROXY_ALLOW = new Set([
     'data.cocorahs.org',
     'waterservices.usgs.gov',
     'waterdata.usgs.gov',
-    'spot.weather.gov',
     // NWS Flagstaff Snow Tables / Snow Forecast feeds (www.weather.gov/source/fgz/...)
     'www.weather.gov',
     'geocoding.geo.census.gov',

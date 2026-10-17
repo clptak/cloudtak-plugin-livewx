@@ -30,7 +30,7 @@ Requires CloudTAK **13.102** or newer. Apache-2.0 clean-room implementation (not
 
 ### Spot Forecasts
 
-- **Read-only** list of active NWS Spot Forecast requests from the [Spot Forecast Monitor](https://spot.weather.gov/) — this office (from the forecast point), within a radius, or all offices; incident and hide-complete filters
+- **Read-only** list of current NWS Spot Forecast requests (the [Spot Forecast Monitor](https://spot.weather.gov/) list, via NOAA map services) — this office (from the forecast point), within a radius, or all offices; incident and hide-complete filters
 - Each request opens its official forecast page in a small window; **Zoom** flies the map to it
 - **Request a Spot Forecast** opens the official NWS request form in its own window — requests are submitted there, not from CloudTAK
 - Optional **Spot Forecasts** map layer (More) with a popup card linking to the forecast
@@ -112,7 +112,7 @@ Symlink this checkout to `CloudTAK/app/plugins/livewx-radar`, copy or symlink `s
 - Radar: [Iowa Environmental Mesonet](https://mesonet.agron.iastate.edu/ogc/), [RainViewer](https://www.rainviewer.com/)
 - Forecast / alerts / many layers: [NWS API](https://www.weather.gov/documentation/services-web-api) and NOAA map services
 - Open-Meteo: [open-meteo.com](https://open-meteo.com/) (CC BY 4.0)
-- Spot forecasts: [NWS Spot Forecast Monitor](https://spot.weather.gov/) (read-only; unauthenticated active-request list)
+- Spot forecasts: [NOAA SPOT Forecast Monitor map service](https://mapservices.weather.noaa.gov/vector/rest/services/fire_weather/nws_fire_weather_spot/MapServer) (read-only, public, ~15 min updates); forecasts and requests open on [spot.weather.gov](https://spot.weather.gov/)
 - Snow Tables: [NWS Flagstaff](https://www.weather.gov/fgz/SnowTables); location coordinates from USGS GNIS, ADOT milepost data (AZGeo) and © OpenStreetMap contributors (ODbL) — see [`data/snowtables/README.md`](data/snowtables/README.md)
 - Lightning: [Blitzortung.org](https://www.blitzortung.org/) & contributors (CC BY-SA 4.0); display adapted from [cmlaird/CloudTAK-Plugin-Lightning](https://github.com/cmlaird/CloudTAK-Plugin-Lightning) (MIT)
 - Site list / product taxonomy adapted from [Supercell Wx](https://github.com/dpaulat/supercell-wx) (MIT)

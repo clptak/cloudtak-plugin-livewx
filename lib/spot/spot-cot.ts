@@ -61,7 +61,7 @@ export function spotCotId(r: SpotRequest): string {
 function remarksFor(r: SpotRequest): string {
     const lines = [
         `NWS Spot Forecast: ${r.projectName}`,
-        [r.incidentName, r.office, statusLabel(r.actionStatus)].filter(Boolean).join(' · '),
+        [r.requestType, r.office, statusLabel(r.status)].filter(Boolean).join(' · '),
         `Forecast: ${forecastUrl(r.id)}`,
     ];
     return lines.join('\n');
