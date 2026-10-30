@@ -71,7 +71,7 @@ The UI shows attribution and a non-warning disclaimer whenever live lightning is
 ## Install
 
 ```bash
-git clone https://github.com/AdventureSeeker423/cloudtak-plugin-livewx.git
+git clone https://github.com/ValleyTacticalSolutions/cloudtak-plugin-livewx.git
 cd cloudtak-plugin-livewx
 ./install.sh
 ```
@@ -109,7 +109,7 @@ Symlink this checkout to `CloudTAK/app/plugins/livewx-radar`, copy or symlink `s
 
 ## Attribution
 
-- Radar: [Iowa Environmental Mesonet](https://mesonet.agron.iastate.edu/ogc/), [RainViewer](https://www.rainviewer.com/)
+- Radar: [Iowa Environmental Mesonet](https://mesonet.agron.iastate.edu/ogc/) (US NEXRAD), [Environment Canada GeoMet](https://geo.weather.gc.ca/) (Canada), [RainViewer](https://www.rainviewer.com/) (global)
 - Forecast / alerts / many layers: [NWS API](https://www.weather.gov/documentation/services-web-api) and NOAA map services
 - Open-Meteo: [open-meteo.com](https://open-meteo.com/) (CC BY 4.0)
 - Spot forecasts: [NOAA SPOT Forecast Monitor map service](https://mapservices.weather.noaa.gov/vector/rest/services/fire_weather/nws_fire_weather_spot/MapServer) (read-only, public, ~15 min updates); forecasts and requests open on [spot.weather.gov](https://spot.weather.gov/)
