@@ -26,6 +26,8 @@ export const NWS_ALERTS_URL = 'https://api.weather.gov/alerts/active';
 export const RAINVIEWER_API = 'https://api.rainviewer.com/public/weather-maps.json';
 export const NOWCOAST_WMS = 'https://nowcoast.noaa.gov/geoserver/weather_radar/wms';
 export const MAPSERVICES_NWS = 'https://mapservices.weather.noaa.gov';
+/** NOAA National Water Model map services (experimental, lower 48). */
+export const NWM_SERVICES = 'https://maps.water.noaa.gov/server/rest/services/nwm';
 
 export const STORAGE_KEY = 'livewx-radar-settings';
 export const REFRESH_MS = 60_000;
