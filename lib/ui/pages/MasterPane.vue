@@ -35,7 +35,7 @@
                         <label
                             class='form-check-label'
                             for='m-radar'
-                        >NEXRAD Radar</label>
+                        >Radar</label>
                     </div>
                     <button
                         class='btn btn-sm btn-outline-secondary'
@@ -62,6 +62,7 @@
                         step='1'
                         :value='pct("radar_overlay")'
                         @input='onOpacity("radar_overlay", $event)'
+                        @wheel.prevent='onOpacityWheel("radar_overlay", $event)'
                     >
                 </div>
             </div>
@@ -118,6 +119,7 @@
                         step='1'
                         :value='pct("rain_totals")'
                         @input='onOpacity("rain_totals", $event)'
+                        @wheel.prevent='onOpacityWheel("rain_totals", $event)'
                     >
                 </div>
                 <div
@@ -137,6 +139,7 @@
                         step='1'
                         :value='pct(row.id)'
                         @input='onOpacity(row.id, $event)'
+                        @wheel.prevent='onOpacityWheel(row.id, $event)'
                     >
                 </div>
             </div>
@@ -187,6 +190,7 @@
                         step='1'
                         :value='pct(row.id)'
                         @input='onOpacity(row.id, $event)'
+                        @wheel.prevent='onOpacityWheel(row.id, $event)'
                     >
                 </div>
             </div>
@@ -281,6 +285,7 @@
                         step='1'
                         :value='pct("lightning_density")'
                         @input='onOpacity("lightning_density", $event)'
+                        @wheel.prevent='onOpacityWheel("lightning_density", $event)'
                     >
                 </div>
             </div>
@@ -337,6 +342,7 @@
                         step='1'
                         :value='pct(row.id)'
                         @input='onOpacity(row.id, $event)'
+                        @wheel.prevent='onOpacityWheel(row.id, $event)'
                     >
                 </div>
             </div>
@@ -496,6 +502,14 @@ function onOpacity(id: string, ev: Event): void {
     setLayerOpacity(id, Number((ev.target as HTMLInputElement).value) / 100);
 }
 
+function wheelStep(ev: WheelEvent): number {
+    return ev.deltaY < 0 ? 1 : -1;
+}
+
+function onOpacityWheel(id: string, ev: WheelEvent): void {
+    setLayerOpacity(id, (pct(id) + wheelStep(ev)) / 100);
+}
+
 function onRainWindow(ev: Event): void {
     setRainTotalsWindow((ev.target as HTMLSelectElement).value as RainTotalWindowId);
 }
@@ -514,7 +528,7 @@ function onLifetime(ev: Event): void {
     margin-top: 0;
 }
 .sec {
-    border-bottom: 1px solid var(--livewx-border, var(--tblr-border-color, #333));
+    border-bottom: 1px solid var(--cloudtak-surface-border, var(--tblr-border-color, rgba(128, 128, 128, 0.3)));
     padding: 0.75rem 0;
 }
 .sec:first-child {
@@ -537,7 +551,7 @@ function onLifetime(ev: Event): void {
 }
 .sec-meta {
     font-size: 0.8rem;
-    color: var(--tblr-secondary, inherit);
+    color: var(--tblr-secondary-color, var(--tblr-secondary, inherit));
 }
 .opacity-row {
     margin-top: 0.35rem;
